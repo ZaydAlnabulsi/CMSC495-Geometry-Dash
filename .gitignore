@@ -1,9 +1,2 @@
-.import
-.cfg
-.cache
-.ctex
-.md5
-.gdignore
-*
-!/**/
-!*.*
+.godot/
+*.translation
