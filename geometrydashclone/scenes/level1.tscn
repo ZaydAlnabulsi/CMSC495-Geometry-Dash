@@ -27,6 +27,8 @@ position = Vector2(1291, -110)
 position = Vector2(1152, 53)
 scale = Vector2(24.5726, 1.56)
 
+[node name="PlayerUI" type="CanvasGroup" parent="Node2D"]
+
 [node name="PurpleBlock2" parent="." instance=ExtResource("2_dwgg1")]
 position = Vector2(1291, -190)
 

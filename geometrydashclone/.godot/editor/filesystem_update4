@@ -1,0 +1,9 @@
+res://scenes/level1.tscn
+res://objects/player.tscn
+res://scripts/player.gd
+res://scripts/player_death.gd
+res://player_completes.gd
+res://scripts/player_completes.gd
+res://scenes/level2.tscn
+res://objects/obj_puple_block.tscn
+res://objects/floor.tscn

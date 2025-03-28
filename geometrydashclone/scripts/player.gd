@@ -20,7 +20,16 @@ func _physics_process(delta):
 	#Jump
 	if Input.is_action_pressed("jump") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
+	# addition to make jump more responsive to button press and release --- Giana
+	#adds shorter and higher jumps
+	if Input.is_action_just_released("jump") and velocity.y < ( JUMP_VELOCITY / 5 ):
+			velocity.y = JUMP_VELOCITY / 5
+	
 
 	velocity.x = delta * SPEED
 
 	move_and_slide()
+	
+	 
+	
+	
