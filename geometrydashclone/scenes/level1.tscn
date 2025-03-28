@@ -1,0 +1,49 @@
+[gd_scene load_steps=4 format=3 uid="uid://bbu54yl10b86l"]
+
+[ext_resource type="PackedScene" uid="uid://dnx6h0tsjr3m1" path="res://objects/player.tscn" id="1_m7ahb"]
+[ext_resource type="PackedScene" uid="uid://ovyxauv0un6k" path="res://objects/obj_puple_block.tscn" id="2_dwgg1"]
+[ext_resource type="PackedScene" uid="uid://bit3gas0j6u02" path="res://objects/floor.tscn" id="3_ru4tf"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("1_m7ahb")]
+position = Vector2(21, -34)
+
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
+offset = Vector2(0, -20)
+process_callback = 0
+limit_left = -20
+limit_bottom = 100
+position_smoothing_enabled = true
+drag_vertical_enabled = true
+drag_top_margin = 0.4
+drag_bottom_margin = 0.4
+editor_draw_drag_margin = true
+
+[node name="PurpleBlock" parent="." instance=ExtResource("2_dwgg1")]
+position = Vector2(1291, -110)
+
+[node name="Node2D" parent="." instance=ExtResource("3_ru4tf")]
+position = Vector2(1152, 53)
+scale = Vector2(24.5726, 1.56)
+
+[node name="PurpleBlock2" parent="." instance=ExtResource("2_dwgg1")]
+position = Vector2(1291, -190)
+
+[node name="PurpleBlock3" parent="." instance=ExtResource("2_dwgg1")]
+position = Vector2(395, -29)
+
+[node name="PurpleBlock4" parent="." instance=ExtResource("2_dwgg1")]
+position = Vector2(681, -108)
+
+[node name="PurpleBlock5" parent="." instance=ExtResource("2_dwgg1")]
+position = Vector2(681, -29)
+
+[node name="PurpleBlock6" parent="." instance=ExtResource("2_dwgg1")]
+position = Vector2(921, -191)
+
+[node name="PurpleBlock7" parent="." instance=ExtResource("2_dwgg1")]
+position = Vector2(921, -29)
+
+[node name="PurpleBlock8" parent="." instance=ExtResource("2_dwgg1")]
+position = Vector2(921, -110)
