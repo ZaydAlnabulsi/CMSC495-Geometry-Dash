@@ -11,9 +11,13 @@ config_version=5
 [application]
 
 config/name="GeometryDashClone"
-run/main_scene="uid://bbu54yl10b86l"
+run/main_scene="uid://c4fuqbhhxhl07"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+Global="*res://scripts/global.gd"
 
 [display]
 
