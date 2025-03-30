@@ -1,8 +1,13 @@
-[gd_scene load_steps=4 format=3 uid="uid://bbu54yl10b86l"]
+[gd_scene load_steps=7 format=3 uid="uid://bbu54yl10b86l"]
 
 [ext_resource type="PackedScene" uid="uid://dnx6h0tsjr3m1" path="res://objects/player.tscn" id="1_m7ahb"]
 [ext_resource type="PackedScene" uid="uid://ovyxauv0un6k" path="res://objects/obj_puple_block.tscn" id="2_dwgg1"]
 [ext_resource type="PackedScene" uid="uid://bit3gas0j6u02" path="res://objects/floor.tscn" id="3_ru4tf"]
+[ext_resource type="PackedScene" uid="uid://cms7dgunbmxv4" path="res://objects/Spike.tscn" id="4_dwgg1"]
+[ext_resource type="AudioStream" uid="uid://bpa27ly2y5d6c" path="res://Sounds/Relax and take notes(lyric).mp3" id="5_ru4tf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ru4tf"]
+size = Vector2(7649.5, 262)
 
 [node name="Node2D" type="Node2D"]
 
@@ -21,29 +26,94 @@ drag_bottom_margin = 0.4
 editor_draw_drag_margin = true
 
 [node name="PurpleBlock" parent="." instance=ExtResource("2_dwgg1")]
-position = Vector2(1291, -110)
+position = Vector2(1543, -120)
 
 [node name="Node2D" parent="." instance=ExtResource("3_ru4tf")]
-position = Vector2(1152, 53)
-scale = Vector2(24.5726, 1.56)
+position = Vector2(3003, 53)
+scale = Vector2(63.6588, 1.49539)
 
 [node name="PurpleBlock2" parent="." instance=ExtResource("2_dwgg1")]
-position = Vector2(1291, -190)
+position = Vector2(1542, -201)
 
 [node name="PurpleBlock3" parent="." instance=ExtResource("2_dwgg1")]
-position = Vector2(395, -29)
+position = Vector2(526, -29)
 
 [node name="PurpleBlock4" parent="." instance=ExtResource("2_dwgg1")]
-position = Vector2(681, -108)
+position = Vector2(861, -109)
 
 [node name="PurpleBlock5" parent="." instance=ExtResource("2_dwgg1")]
-position = Vector2(681, -29)
+position = Vector2(861, -29)
 
 [node name="PurpleBlock6" parent="." instance=ExtResource("2_dwgg1")]
-position = Vector2(921, -191)
+position = Vector2(1165, -195)
 
 [node name="PurpleBlock7" parent="." instance=ExtResource("2_dwgg1")]
-position = Vector2(921, -29)
+position = Vector2(1167, -32)
 
 [node name="PurpleBlock8" parent="." instance=ExtResource("2_dwgg1")]
-position = Vector2(921, -110)
+position = Vector2(1166, -113)
+
+[node name="Spike" parent="." instance=ExtResource("4_dwgg1")]
+position = Vector2(1861, -36)
+
+[node name="Spike2" parent="." instance=ExtResource("4_dwgg1")]
+position = Vector2(1962, -37)
+
+[node name="Spike3" parent="." instance=ExtResource("4_dwgg1")]
+position = Vector2(2369, -37)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_ru4tf")
+autoplay = true
+
+[node name="Void" type="Area2D" parent="." groups=["kill"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Void"]
+position = Vector2(3656.25, 259)
+shape = SubResource("RectangleShape2D_ru4tf")
+debug_color = Color(0.992411, 0, 0.252393, 0.42)
+
+[node name="PurpleBlock9" parent="." instance=ExtResource("2_dwgg1")]
+position = Vector2(3572, -215)
+
+[node name="PurpleBlock10" parent="." instance=ExtResource("2_dwgg1")]
+position = Vector2(2816, -109)
+
+[node name="PurpleBlock11" parent="." instance=ExtResource("2_dwgg1")]
+position = Vector2(3134, -190)
+
+[node name="PurpleBlock12" parent="." instance=ExtResource("2_dwgg1")]
+position = Vector2(3334, -96)
+
+[node name="Spike4" parent="." instance=ExtResource("4_dwgg1")]
+position = Vector2(3822, -37)
+
+[node name="Spike5" parent="." instance=ExtResource("4_dwgg1")]
+position = Vector2(3924, -37)
+
+[node name="Spike6" parent="." instance=ExtResource("4_dwgg1")]
+position = Vector2(3718, -37)
+
+[node name="Spike7" parent="." instance=ExtResource("4_dwgg1")]
+position = Vector2(3622, -36)
+
+[node name="Spike8" parent="." instance=ExtResource("4_dwgg1")]
+position = Vector2(4264, -36)
+
+[node name="PurpleBlock13" parent="." instance=ExtResource("2_dwgg1")]
+position = Vector2(4704, -139)
+
+[node name="PurpleBlock14" parent="." instance=ExtResource("2_dwgg1")]
+position = Vector2(5002, -249)
+
+[node name="PurpleBlock15" parent="." instance=ExtResource("2_dwgg1")]
+position = Vector2(5205, -147)
+
+[node name="PurpleBlock16" parent="." instance=ExtResource("2_dwgg1")]
+position = Vector2(5392, -62)
+
+[node name="PurpleBlock17" parent="." instance=ExtResource("2_dwgg1")]
+position = Vector2(5698, -156)
+
+[node name="PurpleBlock18" parent="." instance=ExtResource("2_dwgg1")]
+position = Vector2(6015, -247)
