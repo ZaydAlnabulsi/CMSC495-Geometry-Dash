@@ -1,11 +1,16 @@
-[gd_scene load_steps=7 format=3 uid="uid://dnx6h0tsjr3m1"]
+[gd_scene load_steps=10 format=3 uid="uid://dnx6h0tsjr3m1"]
 
 [ext_resource type="Texture2D" uid="uid://s38gs6ij3dpj" path="res://Images/blue_body_square.png" id="1_g2els"]
 [ext_resource type="Script" uid="uid://ce7cs26b413d3" path="res://scripts/player.gd" id="1_qhqgy"]
 [ext_resource type="Texture2D" uid="uid://c46tvpibps1e4" path="res://Images/face_a.png" id="2_qhqgy"]
+[ext_resource type="Script" uid="uid://egaf8h4ntsny" path="res://scripts/external_collsion.gd" id="4_f46kd"]
 [ext_resource type="Script" uid="uid://dmhqd64kpim3l" path="res://scripts/player_death.gd" id="4_nmc1l"]
+[ext_resource type="AudioStream" uid="uid://b7xw1xdxceo3y" path="res://Sounds/pixel-explosion-319166.mp3" id="6_3rerk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dqkch"]
+size = Vector2(80, 80)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3rerk"]
 size = Vector2(80, 80)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f46kd"]
@@ -23,6 +28,12 @@ texture = ExtResource("2_qhqgy")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_dqkch")
 
+[node name="ExternalCollsion" type="Area2D" parent="."]
+script = ExtResource("4_f46kd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ExternalCollsion"]
+shape = SubResource("RectangleShape2D_3rerk")
+
 [node name="Area2D" type="Area2D" parent="."]
 script = ExtResource("4_nmc1l")
 
@@ -30,4 +41,12 @@ script = ExtResource("4_nmc1l")
 shape = SubResource("RectangleShape2D_f46kd")
 debug_color = Color(0.996583, 0, 0.183858, 0.42)
 
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+
+[node name="Death" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_3rerk")
+
+[connection signal="area_entered" from="ExternalCollsion" to="ExternalCollsion" method="_on_area_entered"]
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
