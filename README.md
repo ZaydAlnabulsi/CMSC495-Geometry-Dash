@@ -2,11 +2,17 @@ Make sure that you create your own new project that import all the files in. Cer
 
 
 Version 0.2
+
 -Added Spike object
+
 -Added Death sound effect
+
 -Added Timer delay of scene reload after death
+
 -Added temporary music to the background
+
 -Added External Collision detection for non-touchable objects like Spike to Player
+
 -Changed Level scene
 
 Version 0.1
