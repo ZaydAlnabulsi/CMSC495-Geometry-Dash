@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bpa27ly2y5d6c"
+path="res://.godot/imported/Relax and take notes(lyric).mp3-9856f4b490b71bd20ded3656f6e417ee.mp3str"
+
+[deps]
+
+source_file="res://Sounds/Relax and take notes(lyric).mp3"
+dest_files=["res://.godot/imported/Relax and take notes(lyric).mp3-9856f4b490b71bd20ded3656f6e417ee.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
