@@ -3,8 +3,8 @@ extends CharacterBody2D
 var SPEED = 30000.0
 const JUMP_VELOCITY = -1300.0
 
-var isOrb = false
-var forceOrb = 0
+var is_orb = false
+var force_orb = 0
 var gravity = 4100
 
 func _physics_process(delta):
@@ -25,8 +25,8 @@ func _physics_process(delta):
 
 	velocity.x = delta * SPEED
 	
-	if isOrb and (Input.is_action_just_pressed("jump") or Input.is_action_just_released("jump")):
-		velocity.y = -forceOrb
+	if is_orb and (Input.is_action_just_pressed("jump") or Input.is_action_just_released("jump")):
+		velocity.y = -force_orb
 
 	move_and_slide()
 	
@@ -41,10 +41,10 @@ func _on_timer_timeout():
 
 func _on_external_collsion_area_entered(area):
 	if area.is_in_group("orb") :
-		isOrb = true
-		forceOrb = area.force
+		is_orb = true
+		force_orb = area.force
 
 func _on_external_collsion_area_exited(area):
 	if area.is_in_group("orb") :
-		isOrb = false
-		forceOrb = 0
+		is_orb = false
+		force_orb = 0
