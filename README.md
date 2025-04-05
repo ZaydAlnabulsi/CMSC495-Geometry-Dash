@@ -39,16 +39,16 @@ Follow these steps to set up the Geometry Dash-style game project in Godot.
    - Launch Godot Engine.
    - On the main screen, click **"Import"** (top-left).
    - Navigate to the downloaded project folder.
-   - Select the file `project.godot` and click **"Import & Edit"**.
+   - Select the file `project.godot` and click **"Import"**.
 
 4. **Run the Game**  
    - Once the project is open, click the **Play** button (▶) in the top-right corner to start the game.
 
 ---
 
+# Versions
 **Make sure that you create your own new project that import all the files in. Certain config files like .editorconfig and .gitattributes will not upload correctly onto github.**
 
-# Versions
 ## **Version 0.3**
 
   -Cleaned up folder and file structure with sub folders.
@@ -70,8 +70,6 @@ Follow these steps to set up the Geometry Dash-style game project in Godot.
   -Added External Collision detection for non-touchable objects like Spike to Player
 
   -Changed Level scene
-
-
 
 ## **Version 0.1**
   -Added Player object
