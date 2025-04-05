@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://ovyxauv0un6k"]
 
-[ext_resource type="Texture2D" uid="uid://1e6hdotsvntr" path="res://imagesa/Shiny1.png" id="1_vb5g1"]
+[ext_resource type="Texture2D" uid="uid://1e6hdotsvntr" path="res://images/Shiny1.png" id="1_vb5g1"]
 
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v1d5s"]
