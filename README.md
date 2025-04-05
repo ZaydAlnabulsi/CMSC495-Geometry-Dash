@@ -29,11 +29,12 @@ Follow these steps to set up the Geometry Dash-style game project in Godot.
 4. **Run the Game**  
    - Once the project is open, click the **Play** button (▶) in the top-right corner to start the game.
 
-
+---
 
 **Make sure that you create your own new project that import all the files in. Certain config files like .editorconfig and .gitattributes will not upload correctly onto github.**
 
-**Version 0.3**
+# Versions
+## **Version 0.3**
 
   -Cleaned up folder and file structure with sub folders.
   
@@ -41,7 +42,7 @@ Follow these steps to set up the Geometry Dash-style game project in Godot.
 
   -Menu system is traversable 
 
-**Version 0.2**
+## **Version 0.2**
 
   -Added Spike object
 
@@ -57,7 +58,7 @@ Follow these steps to set up the Geometry Dash-style game project in Godot.
 
 
 
-**Version 0.1**
+## **Version 0.1**
   -Added Player object
 
   -Added Floor object
@@ -71,3 +72,22 @@ Follow these steps to set up the Geometry Dash-style game project in Godot.
   -Added kill Collision Detection for Player
 
   -Changed direction of block collision detection to be downward facing only
+
+---
+# ✏️ Code Formatting & Naming Conventions
+
+To maintain consistency and readability across the project, the following naming conventions are used:
+
+- **Node Names (in scenes):** PascalCase  
+  _Example: `PlayerSprite`, `JumpTimer`_
+
+- **Filenames, Variables, Scene Names:** snake_case  
+  _Example: `player.gd`, `jump_force`, `main_menu.tscn`_
+
+- **Constants:** ALL_CAPS  
+  _Example: `JUMP_FORCE`, `GRAVITY`_
+
+- **Functions:** snake_case with a leading underscore  
+  _Example: `_process(delta)`, `_on_jump_pressed()`_
+
+---
