@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://cms7dgunbmxv4"]
+
+[ext_resource type="Texture2D" uid="uid://6eqn3t8uo55v" path="res://imagesa/platformPack_tile043.png" id="1_f7yod"]
+
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0g5bq"]
+size = Vector2(56, 33)
+
+[node name="Spike" type="Area2D" groups=["kill"]]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("1_f7yod")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, 26.5)
+shape = SubResource("RectangleShape2D_0g5bq")
+debug_color = Color(0.851133, 0, 0.127836, 0.42)
