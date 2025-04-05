@@ -1,5 +1,12 @@
 **Make sure that you create your own new project that import all the files in. Certain config files like .editorconfig and .gitattributes will not upload correctly onto github.**
 
+**Version 0.3**
+
+  -Cleaned up folder and file structure with sub folders.
+  
+  -Created a new gameplay scene that will load the appropriate level and provide gameplay UI
+
+  -Menu system is traversable 
 
 **Version 0.2**
 
