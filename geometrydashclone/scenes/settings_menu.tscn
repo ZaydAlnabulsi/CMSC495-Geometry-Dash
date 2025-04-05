@@ -1,8 +1,8 @@
 [gd_scene load_steps=13 format=3 uid="uid://kwtgggq20hns"]
 
-[ext_resource type="Texture2D" uid="uid://bc8optto3ic5d" path="res://Images/goose background.jpg" id="1_cr101"]
-[ext_resource type="Script" uid="uid://c5elrpbp3qq2n" path="res://scripts/settings_menu.gd" id="1_wswnh"]
-[ext_resource type="FontFile" uid="uid://kix12tgfjm8k" path="res://Images/Slackey-Regular.ttf" id="2_wswnh"]
+[ext_resource type="Texture2D" uid="uid://bc8optto3ic5d" path="res://images/goose background.jpg" id="1_cr101"]
+[ext_resource type="Script" uid="uid://c5elrpbp3qq2n" path="res://scripts/scenes/settings_menu.gd" id="1_wswnh"]
+[ext_resource type="FontFile" uid="uid://kix12tgfjm8k" path="res://images/Slackey-Regular.ttf" id="2_wswnh"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_labj1"]
 texture = ExtResource("1_cr101")
@@ -134,6 +134,7 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_fb6cq")
 text = "-"
 
 [node name="DifficultySettingLabel" type="Label" parent="GridContainer"]
+custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 10
@@ -186,6 +187,7 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_fb6cq")
 text = "-"
 
 [node name="MusicVolumeSettingLabel" type="Label" parent="GridContainer"]
+custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 10
@@ -238,6 +240,7 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_fb6cq")
 text = "-"
 
 [node name="SoundEffectsVolumeSettingLabel" type="Label" parent="GridContainer"]
+custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 10
@@ -290,4 +293,10 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_bgjg7")
 theme_override_styles/normal = SubResource("StyleBoxFlat_48ojb")
 text = "Back"
 
+[connection signal="pressed" from="GridContainer/DifficultyMinusButton" to="." method="_on_difficulty_minus_button_pressed"]
+[connection signal="pressed" from="GridContainer/DifficultyPlusButton" to="." method="_on_difficulty_plus_button_pressed"]
+[connection signal="pressed" from="GridContainer/MusicVolumeMinusButton" to="." method="_on_music_volume_minus_button_pressed"]
+[connection signal="pressed" from="GridContainer/MusicVolumePlusButton" to="." method="_on_music_volume_plus_button_pressed"]
+[connection signal="pressed" from="GridContainer/SoundEffectsVolumeMinusButton" to="." method="_on_sound_effects_volume_minus_button_pressed"]
+[connection signal="pressed" from="GridContainer/SoundEffectsVolumePlusButton" to="." method="_on_sound_effects_volume_plus_button_pressed"]
 [connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]
