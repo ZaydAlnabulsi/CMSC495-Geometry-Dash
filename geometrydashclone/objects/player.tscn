@@ -7,7 +7,6 @@
 [ext_resource type="Script" uid="uid://dmhqd64kpim3l" path="res://scripts/gameplay/player_death.gd" id="4_nmc1l"]
 [ext_resource type="AudioStream" uid="uid://b7xw1xdxceo3y" path="res://sounds/pixel-explosion-319166.mp3" id="6_3rerk"]
 
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dqkch"]
 size = Vector2(80, 80)
 

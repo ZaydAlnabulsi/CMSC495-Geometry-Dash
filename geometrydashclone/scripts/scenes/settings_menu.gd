@@ -1,9 +1,19 @@
 extends Control
 
+func _ready() -> void:
+	match Global.difficulty:
+		1:
+			get_node("GridContainer/DifficultySettingLabel").text = "Easy"
+		2:
+			get_node("GridContainer/DifficultySettingLabel").text = "Medium"
+		3:
+			get_node("GridContainer/DifficultySettingLabel").text = "Hard"
+	get_node("GridContainer/MusicVolumeSettingLabel").text = str(Global.music_volume)
+	get_node("GridContainer/SoundEffectsVolumeSettingLabel").text = str(Global.sound_effects_volume)
+	
 
 func _on_back_button_pressed() -> void:
 	Global.scene_manager.change_scene("res://scenes/main_menu.tscn")
-
 
 func _on_difficulty_minus_button_pressed() -> void:
 	match Global.difficulty:
