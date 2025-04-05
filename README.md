@@ -1,3 +1,36 @@
+# 📦 Godot Project Setup Guide
+
+Follow these steps to set up the Geometry Dash-style game project in Godot.
+
+---
+
+## ✅ Requirements
+
+- **Godot Engine** version 4.4 or later  
+  Download from: [https://godotengine.org/](https://godotengine.org/)
+
+---
+
+## 🚀 Setup Instructions
+
+1. **Install Godot Engine**  
+   Download and install Godot 4.4+ from the official website.
+
+2. **Download the Project Code**  
+   Clone or download the project repository from GitHub:  
+   [https://github.com/ZaydAlnabulsi/CMSC495-Geometry-Dash.git](https://github.com/ZaydAlnabulsi/CMSC495-Geometry-Dash.git)
+
+3. **Import the Project in Godot**  
+   - Launch Godot Engine.
+   - On the main screen, click **"Import"** (top-left).
+   - Navigate to the downloaded project folder.
+   - Select the file `project.godot` and click **"Import & Edit"**.
+
+4. **Run the Game**  
+   - Once the project is open, click the **Play** button (▶) in the top-right corner to start the game.
+
+
+
 **Make sure that you create your own new project that import all the files in. Certain config files like .editorconfig and .gitattributes will not upload correctly onto github.**
 
 **Version 0.3**
