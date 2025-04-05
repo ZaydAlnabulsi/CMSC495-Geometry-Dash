@@ -1,15 +1,30 @@
+# 🕹️ Geometry Dash-Style Platformer Game
+
+This project is a 2D platformer game inspired by Geometry Dash, built using the Godot engine. It features auto-scrolling levels, obstacle navigation, and responsive jump mechanics, with a focus on smooth gameplay and modular design.
+___
+
+## 📚 Table of Contents
+
+- [Godot Project Setup Guide](#-godot-project-setup-guide)
+  - [Requirements](#-requirements)
+  - [Setup Instructions](#-setup-instructions)
+- [Versions](#versions)
+  - [Version 0.3](#version-03)
+  - [Version 0.2](#version-02)
+  - [Version 0.1](#version-01)
+- [Code Formatting & Naming Conventions](#️-code-formatting--naming-conventions)
+
+---
+
+
 # 📦 Godot Project Setup Guide
 
 Follow these steps to set up the Geometry Dash-style game project in Godot.
-
----
 
 ## ✅ Requirements
 
 - **Godot Engine** version 4.4 or later  
   Download from: [https://godotengine.org/](https://godotengine.org/)
-
----
 
 ## 🚀 Setup Instructions
 
