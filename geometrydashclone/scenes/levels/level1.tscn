@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://cevo1b1uejnoa" path="res://objects/orb.tscn" id="6_6sh32"]
 [ext_resource type="PackedScene" uid="uid://bdy0aurth53jw" path="res://objects/saw.tscn" id="7_ejswk"]
 
-[node name="Node2D" type="Node2D"]
+[node name="Level1" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("1_m7ahb")]
 position = Vector2(21, -34)
