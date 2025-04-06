@@ -54,3 +54,6 @@ func _on_external_collsion_area_exited(area):
 	if area.is_in_group("orb") :
 		is_orb = false
 		force_orb = 0
+
+func update_sound_effects_volume() -> void:
+	$Death.volume_db = -30 + (Global.sound_effects_volume * 3)

@@ -51,7 +51,6 @@ func _on_sound_effects_volume_minus_button_pressed() -> void:
 		Global.sound_effects_volume -= 1
 		get_node("GridContainer/SoundEffectsVolumeSettingLabel").text = str(Global.sound_effects_volume)
 
-
 func _on_sound_effects_volume_plus_button_pressed() -> void:
 	if Global.sound_effects_volume < 10:
 		Global.sound_effects_volume += 1

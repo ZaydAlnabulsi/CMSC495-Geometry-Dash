@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://dfv7mcoaviww"]
+[gd_scene load_steps=12 format=3 uid="uid://dfv7mcoaviww"]
 
 [ext_resource type="Script" uid="uid://dvmsk078mqrae" path="res://scripts/scenes/gameplay.gd" id="1_7biu0"]
 [ext_resource type="FontFile" uid="uid://kix12tgfjm8k" path="res://images/Slackey-Regular.ttf" id="2_00tan"]
@@ -44,6 +44,17 @@ corner_radius_top_right = 16
 corner_radius_bottom_right = 16
 corner_radius_bottom_left = 16
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_00tan"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l1v76"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4bh5q"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e124b"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
 [node name="Gameplay" type="Control"]
 layout_mode = 3
 anchors_preset = 15
@@ -81,6 +92,26 @@ theme_override_constants/outline_size = 10
 theme_override_fonts/font = ExtResource("2_00tan")
 theme_override_font_sizes/font_size = 50
 text = "Game Over"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CompletionLabel" type="Label" parent="CanvasLayer/DeathOverlay"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -223.5
+offset_top = -35.5
+offset_right = 223.5
+offset_bottom = 35.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("2_00tan")
+theme_override_font_sizes/font_size = 50
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -161,4 +192,130 @@ text = "Game Paused"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="GridContainer" type="GridContainer" parent="CanvasLayer/PauseMenuOverlay"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -375.5
+offset_top = -100.0
+offset_right = 375.5
+offset_bottom = 100.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/h_separation = 30
+columns = 4
+
+[node name="MusicVolumeLabel" type="Label" parent="CanvasLayer/PauseMenuOverlay/GridContainer"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("2_00tan")
+theme_override_font_sizes/font_size = 30
+text = "Music Volume"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MusicVolumeMinusButton" type="Button" parent="CanvasLayer/PauseMenuOverlay/GridContainer"]
+layout_mode = 2
+theme_override_colors/font_hover_color = Color(0.775063, 0.775063, 0.775063, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0.568973, 0.568973, 0.568973, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("2_00tan")
+theme_override_font_sizes/font_size = 70
+theme_override_styles/focus = SubResource("StyleBoxEmpty_00tan")
+theme_override_styles/hover = SubResource("StyleBoxFlat_l1v76")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_4bh5q")
+theme_override_styles/normal = SubResource("StyleBoxFlat_e124b")
+text = "-"
+
+[node name="MusicVolumeSettingLabel" type="Label" parent="CanvasLayer/PauseMenuOverlay/GridContainer"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("2_00tan")
+theme_override_font_sizes/font_size = 30
+text = "5"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MusicVolumePlusButton" type="Button" parent="CanvasLayer/PauseMenuOverlay/GridContainer"]
+layout_mode = 2
+theme_override_colors/font_hover_color = Color(0.775063, 0.775063, 0.775063, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0.568973, 0.568973, 0.568973, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("2_00tan")
+theme_override_font_sizes/font_size = 70
+theme_override_styles/focus = SubResource("StyleBoxEmpty_00tan")
+theme_override_styles/hover = SubResource("StyleBoxFlat_l1v76")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_4bh5q")
+theme_override_styles/normal = SubResource("StyleBoxFlat_e124b")
+text = "+"
+
+[node name="SoundEffectsVolumeLabel" type="Label" parent="CanvasLayer/PauseMenuOverlay/GridContainer"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("2_00tan")
+theme_override_font_sizes/font_size = 30
+text = "Sound Effects Volume"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SoundEffectsVolumeMinusButton" type="Button" parent="CanvasLayer/PauseMenuOverlay/GridContainer"]
+layout_mode = 2
+theme_override_colors/font_hover_color = Color(0.775063, 0.775063, 0.775063, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0.568973, 0.568973, 0.568973, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("2_00tan")
+theme_override_font_sizes/font_size = 70
+theme_override_styles/focus = SubResource("StyleBoxEmpty_00tan")
+theme_override_styles/hover = SubResource("StyleBoxFlat_l1v76")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_4bh5q")
+theme_override_styles/normal = SubResource("StyleBoxFlat_e124b")
+text = "-"
+
+[node name="SoundEffectsVolumeSettingLabel" type="Label" parent="CanvasLayer/PauseMenuOverlay/GridContainer"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("2_00tan")
+theme_override_font_sizes/font_size = 30
+text = "5"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SoundEffectsVolumePlusButton" type="Button" parent="CanvasLayer/PauseMenuOverlay/GridContainer"]
+layout_mode = 2
+theme_override_colors/font_hover_color = Color(0.775063, 0.775063, 0.775063, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0.568973, 0.568973, 0.568973, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("2_00tan")
+theme_override_font_sizes/font_size = 70
+theme_override_styles/focus = SubResource("StyleBoxEmpty_00tan")
+theme_override_styles/hover = SubResource("StyleBoxFlat_l1v76")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_4bh5q")
+theme_override_styles/normal = SubResource("StyleBoxFlat_e124b")
+text = "+"
+
 [connection signal="pressed" from="CanvasLayer/PauseMenuOverlay/UnpauseButton" to="." method="_on_unpause_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/PauseMenuOverlay/GridContainer/MusicVolumeMinusButton" to="." method="_on_music_volume_minus_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/PauseMenuOverlay/GridContainer/MusicVolumePlusButton" to="." method="_on_music_volume_plus_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/PauseMenuOverlay/GridContainer/SoundEffectsVolumeMinusButton" to="." method="_on_sound_effects_volume_minus_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/PauseMenuOverlay/GridContainer/SoundEffectsVolumePlusButton" to="." method="_on_sound_effects_volume_plus_button_pressed"]
