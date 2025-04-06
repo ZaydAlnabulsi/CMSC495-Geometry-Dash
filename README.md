@@ -100,7 +100,10 @@ To maintain consistency and readability across the project, the following naming
 - **Constants:** ALL_CAPS  
   _Example: `JUMP_FORCE`, `GRAVITY`_
 
-- **Functions:** snake_case with a leading underscore  
-  _Example: `_process(delta)`, `_on_jump_pressed()`_
+- **Functions:** snake_case 
+  _Example: `death()`, `update_sound_effects_volume()`_
+
+- **Godot Functions:** snake_case with a leading underscore
+  _Example: `_physics_process(delta)`, `_on_exit_button_pressed()`_
 
 ---
