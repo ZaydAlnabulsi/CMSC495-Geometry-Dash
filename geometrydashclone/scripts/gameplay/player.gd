@@ -1,5 +1,7 @@
 extends CharacterBody2D
 
+@onready var gameplay = get_node("/root/SceneManager/Gameplay")
+
 var SPEED = 30000.0
 const JUMP_VELOCITY = -1300.0
 
@@ -29,6 +31,10 @@ func _physics_process(delta):
 		velocity.y = -force_orb
 
 	move_and_slide()
+	
+	if Input.is_action_pressed("pause"):
+		get_tree().paused = true
+		gameplay.display_pause_menu_overlay()
 	
 func death():
 	SPEED = 0
