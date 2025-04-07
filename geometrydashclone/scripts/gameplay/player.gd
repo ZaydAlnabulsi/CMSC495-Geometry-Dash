@@ -49,10 +49,6 @@ func death():
 	SPEED = 0
 	$PlayerBody.visible = false
 	$Death.play()
-	$Timer.start()
-
-func _on_timer_timeout():
-	get_tree().reload_current_scene()
 
 ##	Sets the force on entering an orb
 func _on_external_collsion_area_entered(area):

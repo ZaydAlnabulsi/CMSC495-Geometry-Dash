@@ -74,3 +74,9 @@ func update_sound_effects_volume() -> void:
 ##	Updates the music volume
 func update_music_volume() -> void:
 	audio_stream_player.volume_db = -30 + (Global.music_volume * 3)
+
+func _on_new_game_button_pressed() -> void:
+	Global.scene_manager.change_scene("res://scenes/gameplay.tscn")
+
+func _on_return_to_main_menu_button_pressed() -> void:
+	Global.scene_manager.change_scene("res://scenes/main_menu.tscn")
