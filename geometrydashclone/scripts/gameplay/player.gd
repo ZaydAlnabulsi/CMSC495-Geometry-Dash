@@ -1,8 +1,5 @@
 extends CharacterBody2D
 
-##	Variable to hold the GamePlay node
-@onready var gameplay = get_node("/root/SceneManager/Gameplay")
-
 ##	Player constants
 var SPEED = 30000.0
 const JUMP_VELOCITY = -1300.0
@@ -42,7 +39,8 @@ func _physics_process(delta):
 	##	Allows the user to pause the game
 	if Input.is_action_pressed("pause"):
 		get_tree().paused = true
-		gameplay.display_pause_menu_overlay()
+		if Global.scene_manager.current_scene.scene_file_path == "res://scenes/gameplay.tscn":
+			Global.scene_manager.current_scene.display_pause_menu_overlay()
 
 ##	Called upon the player's death
 func death():
