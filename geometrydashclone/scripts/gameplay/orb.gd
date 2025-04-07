@@ -1,9 +1,11 @@
 extends Area2D
 
+##	Variables that hold the orb properties
 @export var type = 0
 @onready var sprite = $Sprite2D
 var force
 
+##	Sets the appropriate force and sprite texture depending on the type
 func _ready():
 	"""
 	0: Yellow
