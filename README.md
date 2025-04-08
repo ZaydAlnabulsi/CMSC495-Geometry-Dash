@@ -9,6 +9,7 @@ ___
   - [Requirements](#-requirements)
   - [Setup Instructions](#-setup-instructions)
 - [Versions](#versions)
+  - [Version 0.4](#version-04)
   - [Version 0.3](#version-03)
   - [Version 0.2](#version-02)
   - [Version 0.1](#version-01)
@@ -48,6 +49,16 @@ Follow these steps to set up the Geometry Dash-style game project in Godot.
 
 # Versions
 **Make sure that you create your own new project that import all the files in. Certain config files like .editorconfig and .gitattributes will not upload correctly onto github.**
+
+## **Version 0.4**
+
+  -Added a trail effect to the player.
+  
+  -Added jump pads
+  
+  -Cleaned up the overlays
+  
+  -Added a level end
 
 ## **Version 0.3**
 
