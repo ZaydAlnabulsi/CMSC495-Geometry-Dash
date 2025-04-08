@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://dvmsk078mqrae" path="res://scripts/scenes/gameplay.gd" id="1_7biu0"]
 [ext_resource type="FontFile" uid="uid://kix12tgfjm8k" path="res://Images/Slackey-Regular.ttf" id="2_00tan"]
 
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7biu0"]
 bg_color = Color(0, 0, 0, 0.392157)
 

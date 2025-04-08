@@ -8,6 +8,7 @@
 [ext_resource type="AudioStream" uid="uid://b7xw1xdxceo3y" path="res://Sounds/pixel-explosion-319166.mp3" id="6_3rerk"]
 [ext_resource type="PackedScene" uid="uid://bwmo2kx7ojl7n" path="res://objects/trail.tscn" id="7_i825w"]
 
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dqkch"]
 size = Vector2(80, 80)
 

@@ -4,6 +4,7 @@ extends CharacterBody2D
 var SPEED = 30000.0
 var JUMP_VELOCITY = -1300.0
 
+
 ##	Variables needed for gameplay
 var is_orb = false
 var force_orb = 0
@@ -11,12 +12,14 @@ var gravity = 4100
 var player_rotation = 360
 var canInvert = false
 
+
 ##	This is called at a fixed frame rate by Godot
 func _physics_process(delta):
 	##	Implements gravity and rotates the player if not on the floor
 	if not is_on_floor():
 		velocity.y += gravity * delta
 		$PlayerBody.rotation_degrees += player_rotation * delta
+
 	else :
 		var module = int($PlayerBody.rotation_degrees) % 90;
 		if module > 45 :
@@ -39,7 +42,7 @@ func _physics_process(delta):
 			JUMP_VELOCITY = -JUMP_VELOCITY
 			player_rotation = -player_rotation
 			is_orb = false
-		
+
 
 	##	Moves the player
 	move_and_slide()
@@ -78,6 +81,7 @@ func _on_external_collsion_area_exited(area):
 	if area.is_in_group("trampoline") :
 		force_orb = 0
 		canInvert = false
+
 
 ##	Function to update the sound effects
 func update_sound_effects_volume() -> void:

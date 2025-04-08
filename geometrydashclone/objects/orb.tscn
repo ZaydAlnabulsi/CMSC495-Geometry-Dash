@@ -1,6 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://cevo1b1uejnoa"]
 
 [ext_resource type="Script" uid="uid://c6h1uqkk1wge3" path="res://scripts/gameplay/orb.gd" id="1_3ycvi"]
+
 [ext_resource type="Texture2D" uid="uid://c0dfwxx8krn8j" path="res://Images/platformPack_tile012.png" id="2_i1flq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sve6i"]

@@ -6,6 +6,7 @@ extends Area2D
 var force = 0
 var invert = false
 
+
 ##	Sets the appropriate force and sprite texture depending on the type
 func _ready():
 	"""
@@ -14,6 +15,7 @@ func _ready():
 	2: Green
 	3: Red
 	4: Purple
+
 	_: Error
 	"""
 	match type :
