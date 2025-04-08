@@ -1,0 +1,302 @@
+[gd_scene load_steps=13 format=3 uid="uid://bk2bbagdu2sak"]
+
+[ext_resource type="Texture2D" path="res://images/goose background.jpg" id="1_cr101"]
+[ext_resource type="Script" path="res://scripts/scenes/settings_menu.gd" id="1_wswnh"]
+[ext_resource type="FontFile" path="res://images/Slackey-Regular.ttf" id="2_wswnh"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_labj1"]
+texture = ExtResource("1_cr101")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wswnh"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_labj1"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n35ux"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fb6cq"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_labj1"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lwwgp"]
+bg_color = Color(0.791999, 0.791999, 0.791999, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bgjg7"]
+bg_color = Color(0.617455, 0.617455, 0.617455, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_48ojb"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[node name="SettingsMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_wswnh")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_labj1")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -223.5
+offset_top = 68.0
+offset_right = 223.5
+offset_bottom = 137.0
+grow_horizontal = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("2_wswnh")
+theme_override_font_sizes/font_size = 50
+text = "Settings"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="GridContainer" type="GridContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -6.5
+offset_top = -11.5
+offset_right = 6.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/h_separation = 30
+columns = 4
+
+[node name="DiffcultyLabel" type="Label" parent="GridContainer"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("2_wswnh")
+theme_override_font_sizes/font_size = 30
+text = "Difficulty"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="DifficultyMinusButton" type="Button" parent="GridContainer"]
+layout_mode = 2
+theme_override_colors/font_hover_color = Color(0.775063, 0.775063, 0.775063, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0.568973, 0.568973, 0.568973, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("2_wswnh")
+theme_override_font_sizes/font_size = 70
+theme_override_styles/focus = SubResource("StyleBoxEmpty_wswnh")
+theme_override_styles/hover = SubResource("StyleBoxFlat_labj1")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_n35ux")
+theme_override_styles/normal = SubResource("StyleBoxFlat_fb6cq")
+text = "-"
+
+[node name="DifficultySettingLabel" type="Label" parent="GridContainer"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("2_wswnh")
+theme_override_font_sizes/font_size = 30
+text = "Medium"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="DifficultyPlusButton" type="Button" parent="GridContainer"]
+layout_mode = 2
+theme_override_colors/font_hover_color = Color(0.775063, 0.775063, 0.775063, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0.568973, 0.568973, 0.568973, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("2_wswnh")
+theme_override_font_sizes/font_size = 70
+theme_override_styles/focus = SubResource("StyleBoxEmpty_wswnh")
+theme_override_styles/hover = SubResource("StyleBoxFlat_labj1")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_n35ux")
+theme_override_styles/normal = SubResource("StyleBoxFlat_fb6cq")
+text = "+"
+
+[node name="MusicVolumeLabel" type="Label" parent="GridContainer"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("2_wswnh")
+theme_override_font_sizes/font_size = 30
+text = "Music Volume"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MusicVolumeMinusButton" type="Button" parent="GridContainer"]
+layout_mode = 2
+theme_override_colors/font_hover_color = Color(0.775063, 0.775063, 0.775063, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0.568973, 0.568973, 0.568973, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("2_wswnh")
+theme_override_font_sizes/font_size = 70
+theme_override_styles/focus = SubResource("StyleBoxEmpty_wswnh")
+theme_override_styles/hover = SubResource("StyleBoxFlat_labj1")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_n35ux")
+theme_override_styles/normal = SubResource("StyleBoxFlat_fb6cq")
+text = "-"
+
+[node name="MusicVolumeSettingLabel" type="Label" parent="GridContainer"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("2_wswnh")
+theme_override_font_sizes/font_size = 30
+text = "5"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MusicVolumePlusButton" type="Button" parent="GridContainer"]
+layout_mode = 2
+theme_override_colors/font_hover_color = Color(0.775063, 0.775063, 0.775063, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0.568973, 0.568973, 0.568973, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("2_wswnh")
+theme_override_font_sizes/font_size = 70
+theme_override_styles/focus = SubResource("StyleBoxEmpty_wswnh")
+theme_override_styles/hover = SubResource("StyleBoxFlat_labj1")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_n35ux")
+theme_override_styles/normal = SubResource("StyleBoxFlat_fb6cq")
+text = "+"
+
+[node name="SoundEffectsVolumeLabel" type="Label" parent="GridContainer"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("2_wswnh")
+theme_override_font_sizes/font_size = 30
+text = "Sound Effects Volume"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SoundEffectsVolumeMinusButton" type="Button" parent="GridContainer"]
+layout_mode = 2
+theme_override_colors/font_hover_color = Color(0.775063, 0.775063, 0.775063, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0.568973, 0.568973, 0.568973, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("2_wswnh")
+theme_override_font_sizes/font_size = 70
+theme_override_styles/focus = SubResource("StyleBoxEmpty_wswnh")
+theme_override_styles/hover = SubResource("StyleBoxFlat_labj1")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_n35ux")
+theme_override_styles/normal = SubResource("StyleBoxFlat_fb6cq")
+text = "-"
+
+[node name="SoundEffectsVolumeSettingLabel" type="Label" parent="GridContainer"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("2_wswnh")
+theme_override_font_sizes/font_size = 30
+text = "5"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SoundEffectsVolumePlusButton" type="Button" parent="GridContainer"]
+layout_mode = 2
+theme_override_colors/font_hover_color = Color(0.775063, 0.775063, 0.775063, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0.568973, 0.568973, 0.568973, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("2_wswnh")
+theme_override_font_sizes/font_size = 70
+theme_override_styles/focus = SubResource("StyleBoxEmpty_wswnh")
+theme_override_styles/hover = SubResource("StyleBoxFlat_labj1")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_n35ux")
+theme_override_styles/normal = SubResource("StyleBoxFlat_fb6cq")
+text = "+"
+
+[node name="BackButton" type="Button" parent="."]
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -100.0
+offset_top = -139.0
+offset_right = 100.0
+offset_bottom = -89.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_vertical = 3
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_wswnh")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = SubResource("StyleBoxEmpty_labj1")
+theme_override_styles/hover = SubResource("StyleBoxFlat_lwwgp")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_bgjg7")
+theme_override_styles/normal = SubResource("StyleBoxFlat_48ojb")
+text = "Back"
+
+[connection signal="pressed" from="GridContainer/DifficultyMinusButton" to="." method="_on_difficulty_minus_button_pressed"]
+[connection signal="pressed" from="GridContainer/DifficultyPlusButton" to="." method="_on_difficulty_plus_button_pressed"]
+[connection signal="pressed" from="GridContainer/MusicVolumeMinusButton" to="." method="_on_music_volume_minus_button_pressed"]
+[connection signal="pressed" from="GridContainer/MusicVolumePlusButton" to="." method="_on_music_volume_plus_button_pressed"]
+[connection signal="pressed" from="GridContainer/SoundEffectsVolumeMinusButton" to="." method="_on_sound_effects_volume_minus_button_pressed"]
+[connection signal="pressed" from="GridContainer/SoundEffectsVolumePlusButton" to="." method="_on_sound_effects_volume_plus_button_pressed"]
+[connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]

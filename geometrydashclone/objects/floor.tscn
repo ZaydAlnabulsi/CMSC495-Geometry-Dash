@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://bit3gas0j6u02"]
 
-[ext_resource type="Texture2D" uid="uid://dwc2xer7mt7jy" path="res://Images/neon_beach.png" id="1_3f04m"]
+[ext_resource type="Texture2D" uid="uid://dwc2xer7mt7jy" path="res://objects/Images/neon_beach.png" id="1_3f04m"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_agi2o"]
 size = Vector2(96, 54)
