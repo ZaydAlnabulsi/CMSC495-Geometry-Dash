@@ -1,12 +1,17 @@
-[gd_scene load_steps=8 format=3 uid="uid://bbu54yl10b86l"]
+[gd_scene load_steps=10 format=3 uid="uid://bbu54yl10b86l"]
 
 [ext_resource type="PackedScene" uid="uid://dnx6h0tsjr3m1" path="res://objects/player.tscn" id="1_m7ahb"]
 [ext_resource type="PackedScene" uid="uid://ovyxauv0un6k" path="res://objects/obj_puple_block.tscn" id="2_dwgg1"]
 [ext_resource type="PackedScene" uid="uid://cixhmlktvwx1" path="res://objects/floor.tscn" id="3_ru4tf"]
-[ext_resource type="PackedScene" uid="uid://cms7dgunbmxv4" path="res://objects/spike.tscn" id="4_dwgg1"]
-[ext_resource type="AudioStream" uid="uid://bpa27ly2y5d6c" path="res://sounds/Relax and take notes(lyric).mp3" id="5_ru4tf"]
+
+[ext_resource type="PackedScene" uid="uid://cms7dgunbmxv4" path="res://objects/Spike.tscn" id="4_dwgg1"]
+[ext_resource type="AudioStream" uid="uid://bpa27ly2y5d6c" path="res://Sounds/Relax and take notes(lyric).mp3" id="5_ru4tf"]
 [ext_resource type="PackedScene" uid="uid://cevo1b1uejnoa" path="res://objects/orb.tscn" id="6_6sh32"]
 [ext_resource type="PackedScene" uid="uid://bdy0aurth53jw" path="res://objects/saw.tscn" id="7_ejswk"]
+[ext_resource type="PackedScene" uid="uid://6ojuf0fx1t7p" path="res://objects/trampoline.tscn" id="8_8a7m2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_plydf"]
+size = Vector2(225, 450.25)
 
 [node name="Level1" type="Node2D"]
 
@@ -129,3 +134,19 @@ position = Vector2(1030, -136)
 
 [node name="Saw2" parent="." instance=ExtResource("7_ejswk")]
 position = Vector2(703, -60)
+
+[node name="LevelEnd" type="Area2D" parent="." groups=["levelEnd"]]
+position = Vector2(186, -125)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LevelEnd" groups=["levelEnd"]]
+position = Vector2(6137, -108)
+shape = SubResource("RectangleShape2D_plydf")
+
+[node name="yellowOrb6" parent="." instance=ExtResource("6_6sh32")]
+position = Vector2(480, -334)
+type = 4
+
+[node name="trampoline" parent="." instance=ExtResource("8_8a7m2")]
+position = Vector2(1370, -26)
+
+[connection signal="area_entered" from="LevelEnd" to="Player" method="_on_level_end_area_entered"]

@@ -6,7 +6,6 @@ extends Area2D
 var force = 0
 var invert = false
 
-
 ##	Sets the appropriate force and sprite texture depending on the type
 func _ready():
 	"""
@@ -14,28 +13,22 @@ func _ready():
 	1: Blue
 	2: Green
 	3: Red
-	4: Purple
-
 	_: Error
 	"""
 	match type :
 		0 :
 			force = 600
-			sprite.texture = load("res://Images/platformPack_tile012.png")
+			sprite.texture = load("res://Images/platformPack_tile054.png")
 		1 :
 			force = 1200
-			sprite.texture = load("res://Images/platformPack_tile011.png")
+			sprite.texture = load("res://Images/platformPack_tile056.png")
 		2 :
 			force = 1800
-			sprite.texture = load("res://Images/platformPack_tile023.png")
+			sprite.texture = load("res://Images/platformPack_tile063.png")
 		3 :
 			force = -2000
 			invert = true
-			sprite.texture = load("res://Images/platformPack_tile024.png")
-		4 :
-			force = -1000
-			invert = true
-			sprite.texture = load("res://Images/platformPack_tile025.png")
+			sprite.texture = load("res://Images/platformPack_tile065.png")
 		_ :
 			force = 0
 			sprite.texture = load("res://Images/face_h.png")

@@ -1,8 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://cixhmlktvwx1"]
 
-[ext_resource type="Texture2D" uid="uid://dwc2xer7mt7jy" path="res://images/neon_beach.png" id="1_3f04m"]
+[ext_resource type="Texture2D" uid="uid://dwc2xer7mt7jy" path="res://Images/neon_beach.png" id="1_3f04m"]
 [ext_resource type="Script" uid="uid://dqexy2e1hhhct" path="res://scripts/gameplay/floor.gd" id="1_agi2o"]
-
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pnixg"]
 size = Vector2(2000, 118)
