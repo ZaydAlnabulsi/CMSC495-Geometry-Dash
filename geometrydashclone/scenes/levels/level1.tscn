@@ -1,0 +1,151 @@
+[gd_scene load_steps=10 format=3 uid="uid://bbu54yl10b86l"]
+
+[ext_resource type="PackedScene" uid="uid://dnx6h0tsjr3m1" path="res://objects/player.tscn" id="1_m7ahb"]
+[ext_resource type="PackedScene" uid="uid://ovyxauv0un6k" path="res://objects/obj_puple_block.tscn" id="2_dwgg1"]
+[ext_resource type="PackedScene" uid="uid://cixhmlktvwx1" path="res://objects/floor.tscn" id="3_ru4tf"]
+[ext_resource type="PackedScene" uid="uid://cms7dgunbmxv4" path="res://objects/Spike.tscn" id="4_dwgg1"]
+[ext_resource type="AudioStream" uid="uid://bpa27ly2y5d6c" path="res://Sounds/Relax and take notes(lyric).mp3" id="5_ru4tf"]
+[ext_resource type="PackedScene" uid="uid://cevo1b1uejnoa" path="res://objects/orb.tscn" id="6_6sh32"]
+[ext_resource type="PackedScene" uid="uid://bdy0aurth53jw" path="res://objects/saw.tscn" id="7_ejswk"]
+[ext_resource type="PackedScene" uid="uid://6ojuf0fx1t7p" path="res://objects/trampoline.tscn" id="8_8a7m2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_plydf"]
+size = Vector2(225, 450.25)
+
+[node name="Level1" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_m7ahb")]
+position = Vector2(21, -34)
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+offset = Vector2(0, -20)
+process_callback = 0
+limit_left = -20
+limit_bottom = 100
+position_smoothing_enabled = true
+drag_vertical_enabled = true
+drag_top_margin = 0.4
+drag_bottom_margin = 0.4
+editor_draw_drag_margin = true
+
+[node name="PurpleBlock" parent="." instance=ExtResource("2_dwgg1")]
+position = Vector2(1543, -120)
+
+[node name="PurpleBlock2" parent="." instance=ExtResource("2_dwgg1")]
+position = Vector2(1542, -201)
+
+[node name="PurpleBlock3" parent="." instance=ExtResource("2_dwgg1")]
+position = Vector2(526, -29)
+
+[node name="PurpleBlock4" parent="." instance=ExtResource("2_dwgg1")]
+position = Vector2(861, -109)
+
+[node name="PurpleBlock5" parent="." instance=ExtResource("2_dwgg1")]
+position = Vector2(861, -29)
+
+[node name="PurpleBlock6" parent="." instance=ExtResource("2_dwgg1")]
+position = Vector2(1165, -195)
+
+[node name="PurpleBlock7" parent="." instance=ExtResource("2_dwgg1")]
+position = Vector2(1167, -32)
+
+[node name="PurpleBlock8" parent="." instance=ExtResource("2_dwgg1")]
+position = Vector2(1166, -113)
+
+[node name="Spike" parent="." instance=ExtResource("4_dwgg1")]
+position = Vector2(1861, -36)
+
+[node name="Spike2" parent="." instance=ExtResource("4_dwgg1")]
+position = Vector2(1962, -37)
+
+[node name="Spike3" parent="." instance=ExtResource("4_dwgg1")]
+position = Vector2(2369, -37)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_ru4tf")
+autoplay = true
+
+[node name="PurpleBlock9" parent="." instance=ExtResource("2_dwgg1")]
+position = Vector2(3572, -215)
+
+[node name="PurpleBlock10" parent="." instance=ExtResource("2_dwgg1")]
+position = Vector2(2816, -109)
+
+[node name="PurpleBlock11" parent="." instance=ExtResource("2_dwgg1")]
+position = Vector2(3134, -190)
+
+[node name="PurpleBlock12" parent="." instance=ExtResource("2_dwgg1")]
+position = Vector2(3334, -96)
+
+[node name="Spike4" parent="." instance=ExtResource("4_dwgg1")]
+position = Vector2(3822, -37)
+
+[node name="Spike5" parent="." instance=ExtResource("4_dwgg1")]
+position = Vector2(3924, -37)
+
+[node name="Spike6" parent="." instance=ExtResource("4_dwgg1")]
+position = Vector2(3718, -37)
+
+[node name="Spike7" parent="." instance=ExtResource("4_dwgg1")]
+position = Vector2(3622, -36)
+
+[node name="Spike8" parent="." instance=ExtResource("4_dwgg1")]
+position = Vector2(4264, -36)
+
+[node name="PurpleBlock13" parent="." instance=ExtResource("2_dwgg1")]
+position = Vector2(4704, -139)
+
+[node name="PurpleBlock14" parent="." instance=ExtResource("2_dwgg1")]
+position = Vector2(5002, -249)
+
+[node name="PurpleBlock15" parent="." instance=ExtResource("2_dwgg1")]
+position = Vector2(5205, -147)
+
+[node name="PurpleBlock16" parent="." instance=ExtResource("2_dwgg1")]
+position = Vector2(5392, -62)
+
+[node name="PurpleBlock17" parent="." instance=ExtResource("2_dwgg1")]
+position = Vector2(5698, -156)
+
+[node name="PurpleBlock18" parent="." instance=ExtResource("2_dwgg1")]
+position = Vector2(6015, -247)
+
+[node name="Floor" parent="." instance=ExtResource("3_ru4tf")]
+position = Vector2(21, 65)
+
+[node name="yellowOrb" parent="." instance=ExtResource("6_6sh32")]
+position = Vector2(2252, -111)
+
+[node name="yellowOrb2" parent="." instance=ExtResource("6_6sh32")]
+position = Vector2(1685, -282)
+type = 1
+
+[node name="yellowOrb3" parent="." instance=ExtResource("6_6sh32")]
+position = Vector2(2643, -219)
+type = 2
+
+[node name="yellowOrb4" parent="." instance=ExtResource("6_6sh32")]
+position = Vector2(3684, -314)
+type = 3
+
+[node name="Saw" parent="." instance=ExtResource("7_ejswk")]
+position = Vector2(1030, -136)
+
+[node name="Saw2" parent="." instance=ExtResource("7_ejswk")]
+position = Vector2(703, -60)
+
+[node name="LevelEnd" type="Area2D" parent="." groups=["levelEnd"]]
+position = Vector2(186, -125)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LevelEnd" groups=["levelEnd"]]
+position = Vector2(6137, -108)
+shape = SubResource("RectangleShape2D_plydf")
+
+[node name="yellowOrb6" parent="." instance=ExtResource("6_6sh32")]
+position = Vector2(480, -334)
+type = 4
+
+[node name="trampoline" parent="." instance=ExtResource("8_8a7m2")]
+position = Vector2(1370, -26)
+
+[connection signal="area_entered" from="LevelEnd" to="Player" method="_on_level_end_area_entered"]

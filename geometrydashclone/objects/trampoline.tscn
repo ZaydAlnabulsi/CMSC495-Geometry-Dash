@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://6ojuf0fx1t7p"]
+
+[ext_resource type="Script" uid="uid://cu6wk2du0yy64" path="res://scripts/gameplay/trampoline.gd" id="1_dqeiu"]
+[ext_resource type="Texture2D" uid="uid://bvf7jda48x6bx" path="res://Images/platformPack_tile054.png" id="2_ihf0f"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x04n0"]
+size = Vector2(56, 22)
+
+[node name="trampoline" type="Area2D" groups=["trampoline"]]
+script = ExtResource("1_dqeiu")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_ihf0f")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 21)
+shape = SubResource("RectangleShape2D_x04n0")
