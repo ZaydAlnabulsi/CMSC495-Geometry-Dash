@@ -8,6 +8,7 @@ extends Control
 var instance	##	Level scene instance
 var player	##	Player node of level scene
 var audio_stream_player	##	Audio stream player of level scene
+var level_end	##	Level end node
 
 ##	Godot engine _ready() function
 ##	Loads the appropriate level and sets the variables
@@ -17,6 +18,7 @@ func _ready() -> void:
 	instance = scene.instantiate()
 	audio_stream_player = instance.get_node("AudioStreamPlayer")
 	player = instance.get_node("Player")
+	level_end = instance.get_node("LevelEnd")
 	update_music_volume()
 	update_sound_effects_volume()
 	add_child(instance)
@@ -24,7 +26,7 @@ func _ready() -> void:
 ##	Displays the death overlay
 func display_death_overlay() -> void:
 	death_overlay.visible = true
-	get_node("CanvasLayer/DeathOverlay/CompletionLabel").text = "You completed " + str(player.position.x)
+	get_node("CanvasLayer/DeathOverlay/CompletionLabel").text = "Level Complete: " + str("%0.2f" % (player.position.x/level_end.position.x)) + "%"
 
 ##	Displays the pause menu overlay
 func display_pause_menu_overlay() -> void:
@@ -32,7 +34,7 @@ func display_pause_menu_overlay() -> void:
 
 func display_level_end_overlay() -> void:
 	end_overlay.visible = true
-	get_node("CanvasLayer/LevelCompleteOverlay/Label").text = "You Win! You completed " + str(player.position.x)
+	get_node("CanvasLayer/LevelCompleteOverlay/Label").text = "You Win! You completed " + str("%0.2f" % (player.position.x/level_end.position.x)) + "%"
 
 ##	Pause menu overlay unpause button connected function
 ##	Hides the pause menu overlay and unpauses the game
