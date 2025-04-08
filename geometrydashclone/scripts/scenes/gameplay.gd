@@ -1,6 +1,7 @@
 extends Control
 
 ##	Variables to hold the gameplay overlays
+@onready var end_overlay = get_node("CanvasLayer/LevelCompleteOverlay")
 @onready var death_overlay = get_node("CanvasLayer/DeathOverlay")
 @onready var pause_menu_overlay = get_node("CanvasLayer/PauseMenuOverlay")
 
@@ -28,6 +29,10 @@ func display_death_overlay() -> void:
 ##	Displays the pause menu overlay
 func display_pause_menu_overlay() -> void:
 	pause_menu_overlay.visible = true
+
+func display_level_end_overlay() -> void:
+	end_overlay.visible = true
+	get_node("CanvasLayer/LevelCompleteOverlay/Label").text = "You Win! You completed " + str(player.position.x)
 
 ##	Pause menu overlay unpause button connected function
 ##	Hides the pause menu overlay and unpauses the game
