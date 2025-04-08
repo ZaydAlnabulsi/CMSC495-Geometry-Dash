@@ -1,13 +1,12 @@
 [gd_scene load_steps=11 format=3 uid="uid://dnx6h0tsjr3m1"]
 
-[ext_resource type="Texture2D" uid="uid://s38gs6ij3dpj" path="res://Images/blue_body_square.png" id="1_g2els"]
+[ext_resource type="Texture2D" uid="uid://s38gs6ij3dpj" path="res://images/blue_body_square.png" id="1_g2els"]
 [ext_resource type="Script" uid="uid://ce7cs26b413d3" path="res://scripts/gameplay/player.gd" id="1_qhqgy"]
-[ext_resource type="Texture2D" uid="uid://c46tvpibps1e4" path="res://Images/face_a.png" id="2_qhqgy"]
+[ext_resource type="Texture2D" uid="uid://c46tvpibps1e4" path="res://images/face_a.png" id="2_qhqgy"]
 [ext_resource type="Script" uid="uid://egaf8h4ntsny" path="res://scripts/gameplay/external_collsion.gd" id="4_f46kd"]
 [ext_resource type="Script" uid="uid://dmhqd64kpim3l" path="res://scripts/gameplay/player_death.gd" id="4_nmc1l"]
-[ext_resource type="AudioStream" uid="uid://b7xw1xdxceo3y" path="res://Sounds/pixel-explosion-319166.mp3" id="6_3rerk"]
+[ext_resource type="AudioStream" uid="uid://b7xw1xdxceo3y" path="res://sounds/pixel-explosion-319166.mp3" id="6_3rerk"]
 [ext_resource type="PackedScene" uid="uid://bwmo2kx7ojl7n" path="res://objects/trail.tscn" id="7_i825w"]
-
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dqkch"]
 size = Vector2(80, 80)
