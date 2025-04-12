@@ -20,7 +20,7 @@ func _ready():
 	"""
 	match type :
 		0 :
-			force = 600
+			force = 800 ## 600
 			sprite.texture = load("res://Images/platformPack_tile012.png")
 		1 :
 			force = 1200
