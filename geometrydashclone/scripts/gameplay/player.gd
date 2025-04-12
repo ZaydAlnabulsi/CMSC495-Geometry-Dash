@@ -9,7 +9,7 @@ var JUMP_VELOCITY = -1300.0
 var is_orb = false
 var force_orb = 0
 var gravity = 4100
-var player_rotation = 360
+var player_rotation = 395
 var canInvert = false
 
 
@@ -30,6 +30,12 @@ func _physics_process(delta):
 	##	Jump if the jump action input is pressed and the player is on the floor
 	if Input.is_action_pressed("jump") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
+		
+		# addition to make jump more responsive to button press and release 
+	#adds ability to do shorter + higher jump in one. also makes jump feel more lively (I think) 
+	#--press of the jump button
+	if Input.is_action_just_released("jump") and velocity.y < ( JUMP_VELOCITY / 5 ):	
+			velocity.y = JUMP_VELOCITY / 5
 
 	## 	Moves the player
 	velocity.x = delta * SPEED
@@ -37,9 +43,10 @@ func _physics_process(delta):
 	##	Applies force to the player depending on the orb type
 	if is_orb and (Input.is_action_just_pressed("jump") or Input.is_action_just_released("jump")):
 		velocity.y = -force_orb
-		if canInvert == true :
+		# added on_floor so jump response works correctly with orbs
+		if canInvert == true and not is_on_floor():
 			gravity = -gravity
-			JUMP_VELOCITY = -JUMP_VELOCITY
+			JUMP_VELOCITY = -JUMP_VELOCITY 
 			player_rotation = -player_rotation
 			is_orb = false
 
