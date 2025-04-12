@@ -14,7 +14,7 @@ var level_end	##	Level end node
 ##	Loads the appropriate level and sets the variables
 ##	Updates the volumes based on global variables
 func _ready() -> void:
-	var scene = preload("res://scenes/levels/level1.tscn")
+	var scene = preload("res://scenes/levels/level1.exp.tscn")
 	instance = scene.instantiate()
 	audio_stream_player = instance.get_node("AudioStreamPlayer")
 	player = instance.get_node("Player")
