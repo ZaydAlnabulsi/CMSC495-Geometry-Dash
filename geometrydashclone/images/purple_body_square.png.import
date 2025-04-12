@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bh6sq2n545mr8"
-path="res://.godot/imported/purple_body_square.png-75b8ae172a0b2798ac7bba5c8f5fd104.ctex"
+path="res://.godot/imported/purple_body_square.png-a1c4859a7ed7e7b5fb8ca5b6c9884f1b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Images/purple_body_square.png"
-dest_files=["res://.godot/imported/purple_body_square.png-75b8ae172a0b2798ac7bba5c8f5fd104.ctex"]
+source_file="res://images/purple_body_square.png"
+dest_files=["res://.godot/imported/purple_body_square.png-a1c4859a7ed7e7b5fb8ca5b6c9884f1b.ctex"]
 
 [params]
 
