@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b8y3heql8vork"
-path="res://.godot/imported/facial_part_eye_closed_up.png-daa4332b402b5161d0a8dfd9c53d7124.ctex"
+path="res://.godot/imported/facial_part_eye_closed_up.png-9cd0417ae631de6987e1eb0cdcf6c920.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images/facial_part_eye_closed_up.png"
-dest_files=["res://.godot/imported/facial_part_eye_closed_up.png-daa4332b402b5161d0a8dfd9c53d7124.ctex"]
+source_file="res://Images/facial_part_eye_closed_up.png"
+dest_files=["res://.godot/imported/facial_part_eye_closed_up.png-9cd0417ae631de6987e1eb0cdcf6c920.ctex"]
 
 [params]
 
