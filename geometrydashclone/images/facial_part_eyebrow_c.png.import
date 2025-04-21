@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://jjsivn4p00ai"
-path="res://.godot/imported/facial_part_eyebrow_c.png-3b36634148f08a9a8b5455db78a4d625.ctex"
+path="res://.godot/imported/facial_part_eyebrow_c.png-677b8727831113db41668dc501b9961e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Images/facial_part_eyebrow_c.png"
-dest_files=["res://.godot/imported/facial_part_eyebrow_c.png-3b36634148f08a9a8b5455db78a4d625.ctex"]
+source_file="res://images/facial_part_eyebrow_c.png"
+dest_files=["res://.godot/imported/facial_part_eyebrow_c.png-677b8727831113db41668dc501b9961e.ctex"]
 
 [params]
 

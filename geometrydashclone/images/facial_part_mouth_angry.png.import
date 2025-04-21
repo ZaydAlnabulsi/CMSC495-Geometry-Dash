@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bvb74333afthq"
-path="res://.godot/imported/facial_part_mouth_angry.png-cd09249e777251a0996f0e0238228f72.ctex"
+path="res://.godot/imported/facial_part_mouth_angry.png-e1ac3a43b118abecbef34d477b11b3d7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Images/facial_part_mouth_angry.png"
-dest_files=["res://.godot/imported/facial_part_mouth_angry.png-cd09249e777251a0996f0e0238228f72.ctex"]
+source_file="res://images/facial_part_mouth_angry.png"
+dest_files=["res://.godot/imported/facial_part_mouth_angry.png-e1ac3a43b118abecbef34d477b11b3d7.ctex"]
 
 [params]
 
