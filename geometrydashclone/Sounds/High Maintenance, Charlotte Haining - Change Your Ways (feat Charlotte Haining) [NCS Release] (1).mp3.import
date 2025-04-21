@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://da6x7mnd0ikf8"
-path="res://.godot/imported/High Maintenance, Charlotte Haining - Change Your Ways (feat Charlotte Haining) [NCS Release] (1).mp3-812db4ca5b85aa7ecce9af68cc447c0d.mp3str"
+path="res://.godot/imported/High Maintenance, Charlotte Haining - Change Your Ways (feat Charlotte Haining) [NCS Release] (1).mp3-35a15f9d14a9242e722478b1ee0df4d4.mp3str"
 
 [deps]
 
-source_file="res://sounds/High Maintenance, Charlotte Haining - Change Your Ways (feat Charlotte Haining) [NCS Release] (1).mp3"
-dest_files=["res://.godot/imported/High Maintenance, Charlotte Haining - Change Your Ways (feat Charlotte Haining) [NCS Release] (1).mp3-812db4ca5b85aa7ecce9af68cc447c0d.mp3str"]
+source_file="res://Sounds/High Maintenance, Charlotte Haining - Change Your Ways (feat Charlotte Haining) [NCS Release] (1).mp3"
+dest_files=["res://.godot/imported/High Maintenance, Charlotte Haining - Change Your Ways (feat Charlotte Haining) [NCS Release] (1).mp3-35a15f9d14a9242e722478b1ee0df4d4.mp3str"]
 
 [params]
 

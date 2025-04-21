@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://b7xw1xdxceo3y"
-path="res://.godot/imported/pixel-explosion-319166.mp3-d1257c74a31bf5e906091ca2e0530c11.mp3str"
+path="res://.godot/imported/pixel-explosion-319166.mp3-ccdcdd1d86d13db418bac13b75452378.mp3str"
 
 [deps]
 
-source_file="res://sounds/pixel-explosion-319166.mp3"
-dest_files=["res://.godot/imported/pixel-explosion-319166.mp3-d1257c74a31bf5e906091ca2e0530c11.mp3str"]
+source_file="res://Sounds/pixel-explosion-319166.mp3"
+dest_files=["res://.godot/imported/pixel-explosion-319166.mp3-ccdcdd1d86d13db418bac13b75452378.mp3str"]
 
 [params]
 
