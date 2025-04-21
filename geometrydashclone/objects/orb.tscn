@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://c0dfwxx8krn8j" path="res://Images/platformPack_tile012.png" id="2_i1flq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sve6i"]
-size = Vector2(67, 66)
+size = Vector2(96.5, 136.812)
 
 [node name="yellowOrb" type="Area2D" groups=["orb"]]
 script = ExtResource("1_3ycvi")
@@ -13,5 +13,5 @@ script = ExtResource("1_3ycvi")
 texture = ExtResource("2_i1flq")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0.5, 0)
+position = Vector2(1, -2)
 shape = SubResource("RectangleShape2D_sve6i")
