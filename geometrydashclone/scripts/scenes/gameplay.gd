@@ -15,10 +15,10 @@ var level_end	##	Level end node
 ##	Updates the volumes based on global variables
 func _ready() -> void:
 	if Global.get_scene_change_root() == 1 :
-		var scene = preload("res://scenes/levels/level1.exp.tscn")
+		var scene = preload("res://scenes/levels/level_1.tscn")
 		instance = scene.instantiate()
 	if Global.get_scene_change_root() == 2 :
-		var scene = preload("res://scenes/levels/level1.tscn")
+		var scene = preload("res://scenes/levels/test_level.tscn")
 		instance = scene.instantiate()
 	audio_stream_player = instance.get_node("AudioStreamPlayer")
 	player = instance.get_node("Player")
