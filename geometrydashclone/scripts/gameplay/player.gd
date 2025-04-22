@@ -9,7 +9,7 @@ var JUMP_VELOCITY = -1300.0
 var is_orb = false
 var force_orb = 0
 var gravity = 4100
-var player_rotation = 395
+var player_rotation = 270
 var can_invert = false
 var is_dead = false
 
@@ -23,11 +23,7 @@ func _physics_process(delta):
 		$PlayerBody.rotation_degrees += player_rotation * delta
 
 	else :
-		var module = int($PlayerBody.rotation_degrees) % 90;
-		if module > 45 :
-			$PlayerBody.rotation_degrees += (90 - module)
-		else :
-			$PlayerBody.rotation_degrees -= module
+		$PlayerBody.rotation_degrees = round(round($PlayerBody.rotation_degrees/90)*90)
 
 	##	Jump if the jump action input is pressed and the player is on the floor
 	if Input.is_action_pressed("jump") and on_ground:
