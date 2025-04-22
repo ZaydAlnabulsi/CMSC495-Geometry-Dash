@@ -14,3 +14,7 @@ func _on_settings_button_pressed() -> void:
 ##	Exits the game
 func _on_exit_button_pressed() -> void:
 	get_tree().quit()
+
+
+func _on_how_to_play_button_pressed() -> void:
+	Global.scene_manager.change_scene("res://scenes/how_to_play.tscn")

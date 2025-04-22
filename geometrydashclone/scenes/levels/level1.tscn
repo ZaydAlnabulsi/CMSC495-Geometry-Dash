@@ -10,7 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://6ojuf0fx1t7p" path="res://objects/trampoline.tscn" id="8_8a7m2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_plydf"]
-size = Vector2(225, 450.25)
+size = Vector2(102.75, 5059.56)
 
 [node name="Level1" type="Node2D"]
 
@@ -135,10 +135,9 @@ position = Vector2(1030, 427)
 position = Vector2(703, 503)
 
 [node name="LevelEnd" type="Area2D" parent="." groups=["levelEnd"]]
-position = Vector2(186, -125)
+position = Vector2(7694, -1187)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="LevelEnd" groups=["levelEnd"]]
-position = Vector2(6137, 455)
 shape = SubResource("RectangleShape2D_plydf")
 
 [node name="yellowOrb6" parent="." instance=ExtResource("6_6sh32")]
