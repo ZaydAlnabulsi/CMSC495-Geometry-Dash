@@ -57,6 +57,7 @@ func death():
 	SPEED = 0
 	gravity = 0
 	velocity.y = 0
+	velocity.x = 0
 	is_dead = true
 	$PlayerBody.visible = false
 	$Death.play()
