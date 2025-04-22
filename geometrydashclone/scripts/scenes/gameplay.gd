@@ -30,7 +30,8 @@ func _ready() -> void:
 ##	Displays the death overlay
 func display_death_overlay() -> void:
 	death_overlay.visible = true
-	get_node("CanvasLayer/DeathOverlay/CompletionLabel").text = "Level Complete: " + str("%0.2f" % (player.position.x/level_end.position.x)) + "%"
+	audio_stream_player.playing = false
+	get_node("CanvasLayer/DeathOverlay/CompletionLabel").text = "Level Complete: " + str("%0.2f" % (100 * player.position.x / level_end.position.x)) + "%"
 
 ##	Displays the pause menu overlay
 func display_pause_menu_overlay() -> void:
@@ -38,7 +39,7 @@ func display_pause_menu_overlay() -> void:
 
 func display_level_end_overlay() -> void:
 	end_overlay.visible = true
-	get_node("CanvasLayer/LevelCompleteOverlay/Label").text = "You Win! You completed " + str("%0.2f" % (player.position.x/level_end.position.x)) + "%"
+	get_node("CanvasLayer/LevelCompleteOverlay/Label").text = "You Win! You completed " + str("%0.2f" % (100 * player.position.x / level_end.position.x)) + "%"
 
 ##	Pause menu overlay unpause button connected function
 ##	Hides the pause menu overlay and unpauses the game

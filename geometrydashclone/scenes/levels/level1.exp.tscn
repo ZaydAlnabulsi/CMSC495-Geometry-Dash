@@ -8,10 +8,10 @@
 [ext_resource type="AudioStream" uid="uid://da6x7mnd0ikf8" path="res://Sounds/High Maintenance, Charlotte Haining - Change Your Ways (feat Charlotte Haining) [NCS Release] (1).mp3" id="5_8m7gg"]
 [ext_resource type="PackedScene" uid="uid://cevo1b1uejnoa" path="res://objects/orb.tscn" id="6_s4y5u"]
 [ext_resource type="PackedScene" uid="uid://bdy0aurth53jw" path="res://objects/saw.tscn" id="7_5c0m2"]
-[ext_resource type="PackedScene" path="res://objects/trampoline.tscn" id="8_n8gco"]
+[ext_resource type="PackedScene" uid="uid://6ojuf0fx1t7p" path="res://objects/trampoline.tscn" id="8_n8gco"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_plydf"]
-size = Vector2(2692.75, 450.25)
+size = Vector2(345.688, 4322.56)
 
 [node name="Level1" type="Node2D"]
 metadata/_edit_vertical_guides_ = [27533.0]
@@ -589,10 +589,9 @@ scale = Vector2(5, 5)
 position = Vector2(6400, -911)
 
 [node name="LevelEnd" type="Area2D" parent="." groups=["levelEnd"]]
-position = Vector2(186, -125)
+position = Vector2(40000, -2000)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="LevelEnd" groups=["levelEnd"]]
-position = Vector2(42416, -508)
 shape = SubResource("RectangleShape2D_plydf")
 
 [node name="trampoline" parent="." instance=ExtResource("8_n8gco")]
