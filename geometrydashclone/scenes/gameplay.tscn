@@ -1,7 +1,7 @@
 [gd_scene load_steps=16 format=3 uid="uid://dfv7mcoaviww"]
 
 [ext_resource type="Script" uid="uid://dvmsk078mqrae" path="res://scripts/scenes/gameplay.gd" id="1_7biu0"]
-[ext_resource type="FontFile" uid="uid://kix12tgfjm8k" path="res://images/Slackey-Regular.ttf" id="2_00tan"]
+[ext_resource type="FontFile" uid="uid://kix12tgfjm8k" path="res://Images/Slackey-Regular.ttf" id="2_00tan"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7biu0"]
 bg_color = Color(0, 0, 0, 0.392157)
@@ -285,9 +285,9 @@ anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
 offset_left = -163.0
-offset_top = -228.0
+offset_top = -127.0
 offset_right = 163.0
-offset_bottom = -154.0
+offset_bottom = -53.0
 grow_horizontal = 2
 grow_vertical = 0
 size_flags_vertical = 3
@@ -302,32 +302,6 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_ct7aa")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_ocj2s")
 theme_override_styles/normal = SubResource("StyleBoxFlat_din8e")
 text = "Resume Game"
-
-[node name="ExitToMainMenuButton" type="Button" parent="CanvasLayer/PauseMenuOverlay"]
-layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -201.0
-offset_top = -124.0
-offset_right = 201.0
-offset_bottom = -50.0
-grow_horizontal = 2
-grow_vertical = 0
-size_flags_vertical = 3
-theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
-theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("2_00tan")
-theme_override_font_sizes/font_size = 30
-theme_override_styles/focus = SubResource("StyleBoxEmpty_l1v76")
-theme_override_styles/hover = SubResource("StyleBoxFlat_ct7aa")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_ocj2s")
-theme_override_styles/normal = SubResource("StyleBoxFlat_din8e")
-text = "Exit to Main Menu"
 
 [node name="GamePausedLabel" type="Label" parent="CanvasLayer/PauseMenuOverlay"]
 layout_mode = 1
@@ -474,7 +448,6 @@ text = "+"
 [connection signal="pressed" from="CanvasLayer/LevelCompleteOverlay/VBoxContainer/NewGameButton" to="." method="_on_new_game_button_pressed"]
 [connection signal="pressed" from="CanvasLayer/LevelCompleteOverlay/VBoxContainer/ReturnToMainMenuButton" to="." method="_on_return_to_main_menu_button_pressed"]
 [connection signal="pressed" from="CanvasLayer/PauseMenuOverlay/UnpauseButton" to="." method="_on_unpause_button_pressed"]
-[connection signal="pressed" from="CanvasLayer/PauseMenuOverlay/ExitToMainMenuButton" to="." method="_on_exit_to_main_menu_button_pressed"]
 [connection signal="pressed" from="CanvasLayer/PauseMenuOverlay/GridContainer/MusicVolumeMinusButton" to="." method="_on_music_volume_minus_button_pressed"]
 [connection signal="pressed" from="CanvasLayer/PauseMenuOverlay/GridContainer/MusicVolumePlusButton" to="." method="_on_music_volume_plus_button_pressed"]
 [connection signal="pressed" from="CanvasLayer/PauseMenuOverlay/GridContainer/SoundEffectsVolumeMinusButton" to="." method="_on_sound_effects_volume_minus_button_pressed"]
