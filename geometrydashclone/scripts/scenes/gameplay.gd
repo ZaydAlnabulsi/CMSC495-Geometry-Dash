@@ -31,8 +31,6 @@ func _ready() -> void:
 func display_death_overlay() -> void:
 	death_overlay.visible = true
 	audio_stream_player.playing = false
-	print(player.position.x)
-	print(level_end.position.x)
 	get_node("CanvasLayer/DeathOverlay/Panel2/CompletionLabel").text = "Level Complete: " + str("%0.2f" % (100 * player.position.x / level_end.position.x)) + "%"
 
 ##	Displays the pause menu overlay
