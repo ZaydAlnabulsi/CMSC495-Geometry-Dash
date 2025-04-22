@@ -1,0 +1,433 @@
+[gd_scene load_steps=28 format=3 uid="uid://kwtgggq20hns"]
+
+[ext_resource type="Script" uid="uid://c5elrpbp3qq2n" path="res://scripts/scenes/settings_menu.gd" id="1_wswnh"]
+[ext_resource type="FontFile" uid="uid://kix12tgfjm8k" path="res://images/Slackey-Regular.ttf" id="2_wswnh"]
+[ext_resource type="Texture2D" uid="uid://bh6sq2n545mr8" path="res://images/purple_body_square.png" id="4_bgjg7"]
+[ext_resource type="Texture2D" uid="uid://6eqn3t8uo55v" path="res://images/platformPack_tile043.png" id="5_48ojb"]
+[ext_resource type="Texture2D" uid="uid://cg8p18rjpells" path="res://images/platformPack_tile044.png" id="6_n35ux"]
+[ext_resource type="Texture2D" uid="uid://c0dfwxx8krn8j" path="res://images/platformPack_tile012.png" id="7_n0fy7"]
+[ext_resource type="Texture2D" uid="uid://vmvcnopswbrw" path="res://images/platformPack_tile011.png" id="8_jpbdv"]
+[ext_resource type="Texture2D" uid="uid://co4ucb8rfp4gk" path="res://images/platformPack_tile023.png" id="9_puhno"]
+[ext_resource type="Texture2D" uid="uid://ce83b80n15iui" path="res://images/platformPack_tile024.png" id="10_75x6d"]
+[ext_resource type="Texture2D" uid="uid://b8g5ct5vhxyq2" path="res://images/platformPack_tile025.png" id="11_x0dr5"]
+[ext_resource type="Texture2D" uid="uid://bvf7jda48x6bx" path="res://images/platformPack_tile054.png" id="12_gdgfw"]
+
+[sub_resource type="Gradient" id="Gradient_jrqig"]
+colors = PackedColorArray(0, 0, 0, 1, 0.707768, 0.00210505, 0.90159, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_jrqig"]
+gradient = SubResource("Gradient_jrqig")
+fill_to = Vector2(1, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jpbdv"]
+texture = SubResource("GradientTexture2D_jrqig")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_labj1"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lwwgp"]
+bg_color = Color(0.791999, 0.791999, 0.791999, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bgjg7"]
+bg_color = Color(0.617455, 0.617455, 0.617455, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_48ojb"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fb6cq"]
+texture = ExtResource("4_bgjg7")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2ctot"]
+texture = ExtResource("5_48ojb")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jrqig"]
+texture = ExtResource("6_n35ux")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vymnv"]
+texture = ExtResource("7_n0fy7")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2tyyr"]
+texture = ExtResource("8_jpbdv")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wambi"]
+texture = ExtResource("9_puhno")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_khnq6"]
+texture = ExtResource("10_75x6d")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vlw5p"]
+texture = ExtResource("11_x0dr5")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fmx0a"]
+texture = ExtResource("12_gdgfw")
+
+[node name="SettingsMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_wswnh")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_jpbdv")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 15
+alignment = 1
+
+[node name="Label2" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("2_wswnh")
+theme_override_font_sizes/font_size = 50
+text = "Settings"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="GridContainer" type="GridContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/h_separation = 30
+columns = 4
+
+[node name="MusicVolumeLabel" type="Label" parent="VBoxContainer/GridContainer"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("2_wswnh")
+theme_override_font_sizes/font_size = 30
+text = "Music"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MusicVolumeSettingLabel" type="Label" parent="VBoxContainer/GridContainer"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("2_wswnh")
+theme_override_font_sizes/font_size = 30
+text = "5"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MusicVolumeDown" type="Button" parent="VBoxContainer/GridContainer"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_wswnh")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = SubResource("StyleBoxEmpty_labj1")
+theme_override_styles/hover = SubResource("StyleBoxFlat_lwwgp")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_bgjg7")
+theme_override_styles/normal = SubResource("StyleBoxFlat_48ojb")
+text = "-"
+
+[node name="MusicVolumeUp" type="Button" parent="VBoxContainer/GridContainer"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_wswnh")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = SubResource("StyleBoxEmpty_labj1")
+theme_override_styles/hover = SubResource("StyleBoxFlat_lwwgp")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_bgjg7")
+theme_override_styles/normal = SubResource("StyleBoxFlat_48ojb")
+text = "+"
+
+[node name="SoundEffectsVolumeLabel" type="Label" parent="VBoxContainer/GridContainer"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("2_wswnh")
+theme_override_font_sizes/font_size = 30
+text = "Sound Effects"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SoundEffectsVolumeSettingLabel" type="Label" parent="VBoxContainer/GridContainer"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("2_wswnh")
+theme_override_font_sizes/font_size = 30
+text = "5"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SoundEffectsVolumeDown" type="Button" parent="VBoxContainer/GridContainer"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_wswnh")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = SubResource("StyleBoxEmpty_labj1")
+theme_override_styles/hover = SubResource("StyleBoxFlat_lwwgp")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_bgjg7")
+theme_override_styles/normal = SubResource("StyleBoxFlat_48ojb")
+text = "-"
+
+[node name="SoundEffectsVolumeUp" type="Button" parent="VBoxContainer/GridContainer"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_wswnh")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = SubResource("StyleBoxEmpty_labj1")
+theme_override_styles/hover = SubResource("StyleBoxFlat_lwwgp")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_bgjg7")
+theme_override_styles/normal = SubResource("StyleBoxFlat_48ojb")
+text = "+"
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("2_wswnh")
+theme_override_font_sizes/font_size = 50
+text = "How to Play"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("2_wswnh")
+theme_override_font_sizes/font_size = 24
+text = "Spacebar / Left Click to jump.
+Escape to pause game."
+horizontal_alignment = 1
+
+[node name="GridContainer3" type="GridContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/h_separation = 10
+theme_override_constants/v_separation = 10
+columns = 6
+
+[node name="Panel" type="Panel" parent="VBoxContainer/GridContainer3"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/panel = SubResource("StyleBoxTexture_fb6cq")
+
+[node name="Label3" type="Label" parent="VBoxContainer/GridContainer3"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("2_wswnh")
+theme_override_font_sizes/font_size = 20
+text = "Players can jump 
+onto purple blocks"
+
+[node name="Panel2" type="Panel" parent="VBoxContainer/GridContainer3"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/panel = SubResource("StyleBoxTexture_2ctot")
+
+[node name="Label4" type="Label" parent="VBoxContainer/GridContainer3"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("2_wswnh")
+theme_override_font_sizes/font_size = 20
+text = "Spikes lay on the ground 
+and will kill the player"
+
+[node name="Panel3" type="Panel" parent="VBoxContainer/GridContainer3"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/panel = SubResource("StyleBoxTexture_jrqig")
+
+[node name="Label5" type="Label" parent="VBoxContainer/GridContainer3"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("2_wswnh")
+theme_override_font_sizes/font_size = 20
+text = "Saws fly in the air and 
+will kill the player"
+
+[node name="Panel4" type="Panel" parent="VBoxContainer/GridContainer3"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/panel = SubResource("StyleBoxTexture_vymnv")
+
+[node name="Label6" type="Label" parent="VBoxContainer/GridContainer3"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("2_wswnh")
+theme_override_font_sizes/font_size = 20
+text = "Yellows orbs allow a
+small second jump"
+
+[node name="Panel9" type="Panel" parent="VBoxContainer/GridContainer3"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/panel = SubResource("StyleBoxTexture_2tyyr")
+
+[node name="Label11" type="Label" parent="VBoxContainer/GridContainer3"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("2_wswnh")
+theme_override_font_sizes/font_size = 20
+text = "Blue orbs allow a
+medium second jump"
+
+[node name="Panel5" type="Panel" parent="VBoxContainer/GridContainer3"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/panel = SubResource("StyleBoxTexture_wambi")
+
+[node name="Label7" type="Label" parent="VBoxContainer/GridContainer3"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("2_wswnh")
+theme_override_font_sizes/font_size = 20
+text = "Green orbs allow a
+high second jump"
+
+[node name="Panel6" type="Panel" parent="VBoxContainer/GridContainer3"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/panel = SubResource("StyleBoxTexture_khnq6")
+
+[node name="Label8" type="Label" parent="VBoxContainer/GridContainer3"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("2_wswnh")
+theme_override_font_sizes/font_size = 20
+text = "Orange orbs allow the
+highest second jump"
+
+[node name="Panel7" type="Panel" parent="VBoxContainer/GridContainer3"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/panel = SubResource("StyleBoxTexture_vlw5p")
+
+[node name="Label9" type="Label" parent="VBoxContainer/GridContainer3"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("2_wswnh")
+theme_override_font_sizes/font_size = 20
+text = "Purple orbs will
+knock a player down"
+
+[node name="Panel8" type="Panel" parent="VBoxContainer/GridContainer3"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/panel = SubResource("StyleBoxTexture_fmx0a")
+
+[node name="Label10" type="Label" parent="VBoxContainer/GridContainer3"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("2_wswnh")
+theme_override_font_sizes/font_size = 20
+text = "Trampolines provide
+a small bounce"
+
+[node name="BackButton" type="Button" parent="VBoxContainer"]
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_wswnh")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = SubResource("StyleBoxEmpty_labj1")
+theme_override_styles/hover = SubResource("StyleBoxFlat_lwwgp")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_bgjg7")
+theme_override_styles/normal = SubResource("StyleBoxFlat_48ojb")
+text = "Back"
+
+[connection signal="pressed" from="VBoxContainer/GridContainer/MusicVolumeDown" to="." method="_on_music_volume_minus_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/GridContainer/MusicVolumeUp" to="." method="_on_music_volume_plus_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/GridContainer/SoundEffectsVolumeDown" to="." method="_on_sound_effects_volume_minus_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/GridContainer/SoundEffectsVolumeUp" to="." method="_on_sound_effects_volume_plus_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/BackButton" to="." method="_on_back_button_pressed"]
