@@ -37,6 +37,7 @@ func display_death_overlay() -> void:
 func display_pause_menu_overlay() -> void:
 	pause_menu_overlay.visible = true
 
+##	Displays the level end overlay
 func display_level_end_overlay() -> void:
 	end_overlay.visible = true
 
@@ -86,13 +87,15 @@ func update_sound_effects_volume() -> void:
 func update_music_volume() -> void:
 	audio_stream_player.volume_db = -30 + (Global.music_volume * 3)
 
+##	Changes the scene to the gameplay scene
 func _on_new_game_button_pressed() -> void:
 	Global.scene_manager.change_scene("res://scenes/gameplay.tscn")
 
+##	Changes the scene to the main menu scene
 func _on_return_to_main_menu_button_pressed() -> void:
 	Global.scene_manager.change_scene("res://scenes/main_menu.tscn")
 
-
+##	Changes the scene to the main menu scene
 func _on_quit_button_pressed() -> void:
 	get_tree().paused = false
 	Global.scene_manager.change_scene("res://scenes/main_menu.tscn")
