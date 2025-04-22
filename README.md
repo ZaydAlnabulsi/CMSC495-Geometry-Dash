@@ -9,6 +9,7 @@ ___
   - [Requirements](#-requirements)
   - [Setup Instructions](#-setup-instructions)
 - [Versions](#versions)
+  - [Version 0.5](#version-05)
   - [Version 0.4](#version-04)
   - [Version 0.3](#version-03)
   - [Version 0.2](#version-02)
