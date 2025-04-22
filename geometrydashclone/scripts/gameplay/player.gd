@@ -55,6 +55,8 @@ func _physics_process(delta):
 ##	Called upon the player's death
 func death():
 	SPEED = 0
+	gravity = 0
+	velocity.y = 0
 	is_dead = true
 	$PlayerBody.visible = false
 	$Death.play()

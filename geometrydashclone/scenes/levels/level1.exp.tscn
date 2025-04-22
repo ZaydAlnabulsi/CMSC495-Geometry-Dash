@@ -17,12 +17,12 @@ size = Vector2(345.688, 4322.56)
 metadata/_edit_vertical_guides_ = [27533.0]
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
-offset = Vector2(600, 150)
-transform = Transform2D(1, 0, 0, 1, 600, 150)
+offset = Vector2(600, -2100)
+transform = Transform2D(1, 0, 0, 1, 600, -2100)
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
 motion_scale = Vector2(0.3, 0.3)
-motion_mirroring = Vector2(1920, 1080)
+motion_mirroring = Vector2(1920, 5400)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
 texture = ExtResource("1_8m7gg")
@@ -1111,7 +1111,7 @@ scale = Vector2(0.8, 0.8)
 type = 2
 
 [node name="trampoline30" parent="." instance=ExtResource("8_n8gco")]
-position = Vector2(12107, -1324)
+position = Vector2(12107, -1346)
 rotation = 3.14159
 type = 5
 
