@@ -10,7 +10,7 @@ var is_orb = false
 var force_orb = 0
 var gravity = 4100
 var player_rotation = 395
-var canInvert = false
+var can_invert = false
 var is_dead = false
 
 
@@ -46,7 +46,7 @@ func _physics_process(delta):
 	if is_orb and (Input.is_action_just_pressed("jump") or Input.is_action_just_released("jump")):
 		velocity.y = -force_orb
 		# added on_floor so jump response works correctly with orbs
-		if canInvert == true and not is_on_floor():
+		if can_invert == true and not is_on_floor():
 			gravity = -gravity
 			JUMP_VELOCITY = -JUMP_VELOCITY 
 			player_rotation = -player_rotation
@@ -77,7 +77,7 @@ func _on_external_collsion_area_entered(area):
 	if area.is_in_group("orb") :
 		is_orb = true
 		force_orb = area.force
-		canInvert = area.invert
+		can_invert = area.invert
 	if area.is_in_group("trampoline") :
 		velocity.y = -area.force
 		if area.invert == true :
@@ -90,10 +90,10 @@ func _on_external_collsion_area_exited(area):
 	if area.is_in_group("orb") :
 		is_orb = false
 		force_orb = 0
-		canInvert = false
+		can_invert = false
 	if area.is_in_group("trampoline") :
 		force_orb = 0
-		canInvert = false
+		can_invert = false
 
 
 ##	Function to update the sound effects
