@@ -4,8 +4,8 @@
 [ext_resource type="PackedScene" uid="uid://dnx6h0tsjr3m1" path="res://objects/player.tscn" id="1_wx41p"]
 [ext_resource type="PackedScene" uid="uid://ovyxauv0un6k" path="res://objects/obj_puple_block.tscn" id="2_8m7gg"]
 [ext_resource type="PackedScene" uid="uid://cms7dgunbmxv4" path="res://objects/spike.tscn" id="3_n567q"]
-[ext_resource type="AudioStream" uid="uid://da6x7mnd0ikf8" path="res://Sounds/High Maintenance, Charlotte Haining - Change Your Ways (feat Charlotte Haining) [NCS Release] (1).mp3" id="4_3xqfd"]
 [ext_resource type="PackedScene" uid="uid://cixhmlktvwx1" path="res://objects/floor.tscn" id="5_7c1ax"]
+[ext_resource type="AudioStream" uid="uid://da6x7mnd0ikf8" path="res://sounds/High Maintenance, Charlotte Haining - Change Your Ways (feat Charlotte Haining) [NCS Release] (1).mp3" id="5_8m7gg"]
 [ext_resource type="PackedScene" uid="uid://cevo1b1uejnoa" path="res://objects/orb.tscn" id="6_s4y5u"]
 [ext_resource type="PackedScene" uid="uid://bdy0aurth53jw" path="res://objects/saw.tscn" id="7_5c0m2"]
 [ext_resource type="PackedScene" uid="uid://6ojuf0fx1t7p" path="res://objects/trampoline.tscn" id="8_n8gco"]
@@ -71,7 +71,7 @@ position = Vector2(4295, -298)
 position = Vector2(-2735, 256)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("4_3xqfd")
+stream = ExtResource("5_8m7gg")
 autoplay = true
 
 [node name="PurpleBlock9" parent="." instance=ExtResource("2_8m7gg")]

@@ -28,24 +28,24 @@ func _ready():
 	match type :
 		0 :
 			force = 800 ## 600
-			sprite.texture = load("res://Images/disc_yellow.png")
+			sprite.texture = load("res://images/disc_yellow.png")
 		1 :
 			force = 1200
-			sprite.texture = load("res://Images/disc_blue.png")
+			sprite.texture = load("res://images/disc_blue.png")
 		2 :
 			force = 1800
-			sprite.texture = load("res://Images/disc_green.png")
+			sprite.texture = load("res://images/disc_green.png")
 		3 :
 			force = -2000
 			invert = true
-			sprite.texture = load("res://Images/disc_orange.png")
+			sprite.texture = load("res://images/disc_orange.png")
 		4 :
 			force = -1000
 			invert = true
-			sprite.texture = load("res://Images/disc_purple.png")
+			sprite.texture = load("res://images/disc_purple.png")
 		5 :
 			force = 1900
-			sprite.texture = load("res://Images/disc_green.png")
+			sprite.texture = load("res://images/disc_green.png")
 		_ :
 			force = 0
-			sprite.texture = load("res://Images/face_h.png")
+			sprite.texture = load("res://images/face_h.png")
