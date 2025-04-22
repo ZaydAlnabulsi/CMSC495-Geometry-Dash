@@ -1,0 +1,454 @@
+[gd_scene load_steps=16 format=3 uid="uid://dfv7mcoaviww"]
+
+[ext_resource type="Script" uid="uid://dvmsk078mqrae" path="res://scripts/scenes/gameplay.gd" id="1_7biu0"]
+[ext_resource type="FontFile" uid="uid://kix12tgfjm8k" path="res://Images/Slackey-Regular.ttf" id="2_00tan"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7biu0"]
+bg_color = Color(0, 0, 0, 0.392157)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ct7aa"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_101mb"]
+bg_color = Color(0.791999, 0.791999, 0.791999, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hbo4f"]
+bg_color = Color(0.617455, 0.617455, 0.617455, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ctvyo"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_l1v76"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ct7aa"]
+bg_color = Color(0.791999, 0.791999, 0.791999, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ocj2s"]
+bg_color = Color(0.617455, 0.617455, 0.617455, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_din8e"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_00tan"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l1v76"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4bh5q"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e124b"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[node name="Gameplay" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+script = ExtResource("1_7biu0")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+process_mode = 3
+
+[node name="DeathOverlay" type="Panel" parent="CanvasLayer"]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_7biu0")
+
+[node name="GameOverLabel" type="Label" parent="CanvasLayer/DeathOverlay"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -223.5
+offset_top = 68.0
+offset_right = 223.5
+offset_bottom = 137.0
+grow_horizontal = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("2_00tan")
+theme_override_font_sizes/font_size = 50
+text = "Game Over"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CompletionLabel" type="Label" parent="CanvasLayer/DeathOverlay"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -223.5
+offset_top = -35.5
+offset_right = 223.5
+offset_bottom = 35.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("2_00tan")
+theme_override_font_sizes/font_size = 50
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/DeathOverlay"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -239.5
+offset_top = -255.0
+offset_right = 239.5
+offset_bottom = -68.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/separation = 10
+
+[node name="NewGameButton" type="Button" parent="CanvasLayer/DeathOverlay/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_00tan")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ct7aa")
+theme_override_styles/hover = SubResource("StyleBoxFlat_101mb")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_hbo4f")
+theme_override_styles/normal = SubResource("StyleBoxFlat_ctvyo")
+text = "New Game"
+
+[node name="ReturnToMainMenuButton" type="Button" parent="CanvasLayer/DeathOverlay/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_00tan")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ct7aa")
+theme_override_styles/hover = SubResource("StyleBoxFlat_101mb")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_hbo4f")
+theme_override_styles/normal = SubResource("StyleBoxFlat_ctvyo")
+text = "Return to Main Menu"
+
+[node name="LevelCompleteOverlay" type="Panel" parent="CanvasLayer"]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_7biu0")
+
+[node name="Label" type="Label" parent="CanvasLayer/LevelCompleteOverlay"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -56.5
+offset_top = -137.0
+offset_right = 56.5
+offset_bottom = -114.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_00tan")
+theme_override_font_sizes/font_size = 50
+text = "level complete"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/LevelCompleteOverlay"]
+layout_mode = 2
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -239.5
+offset_top = -323.0
+offset_right = 239.5
+offset_bottom = -136.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/separation = 10
+
+[node name="NewGameButton" type="Button" parent="CanvasLayer/LevelCompleteOverlay/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_00tan")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ct7aa")
+theme_override_styles/hover = SubResource("StyleBoxFlat_101mb")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_hbo4f")
+theme_override_styles/normal = SubResource("StyleBoxFlat_ctvyo")
+text = "New Game"
+
+[node name="ReturnToMainMenuButton" type="Button" parent="CanvasLayer/LevelCompleteOverlay/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_00tan")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ct7aa")
+theme_override_styles/hover = SubResource("StyleBoxFlat_101mb")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_hbo4f")
+theme_override_styles/normal = SubResource("StyleBoxFlat_ctvyo")
+text = "Return to Main Menu"
+
+[node name="PauseMenuOverlay" type="Panel" parent="CanvasLayer"]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_7biu0")
+
+[node name="UnpauseButton" type="Button" parent="CanvasLayer/PauseMenuOverlay"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -163.0
+offset_top = -127.0
+offset_right = 163.0
+offset_bottom = -53.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_vertical = 3
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_00tan")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = SubResource("StyleBoxEmpty_l1v76")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ct7aa")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ocj2s")
+theme_override_styles/normal = SubResource("StyleBoxFlat_din8e")
+text = "Resume Game"
+
+[node name="GamePausedLabel" type="Label" parent="CanvasLayer/PauseMenuOverlay"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -223.5
+offset_top = 68.0
+offset_right = 223.5
+offset_bottom = 137.0
+grow_horizontal = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("2_00tan")
+theme_override_font_sizes/font_size = 50
+text = "Game Paused"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="GridContainer" type="GridContainer" parent="CanvasLayer/PauseMenuOverlay"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -375.5
+offset_top = -100.0
+offset_right = 375.5
+offset_bottom = 100.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/h_separation = 30
+columns = 4
+
+[node name="MusicVolumeLabel" type="Label" parent="CanvasLayer/PauseMenuOverlay/GridContainer"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("2_00tan")
+theme_override_font_sizes/font_size = 30
+text = "Music Volume"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MusicVolumeMinusButton" type="Button" parent="CanvasLayer/PauseMenuOverlay/GridContainer"]
+layout_mode = 2
+theme_override_colors/font_hover_color = Color(0.775063, 0.775063, 0.775063, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0.568973, 0.568973, 0.568973, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("2_00tan")
+theme_override_font_sizes/font_size = 70
+theme_override_styles/focus = SubResource("StyleBoxEmpty_00tan")
+theme_override_styles/hover = SubResource("StyleBoxFlat_l1v76")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_4bh5q")
+theme_override_styles/normal = SubResource("StyleBoxFlat_e124b")
+text = "-"
+
+[node name="MusicVolumeSettingLabel" type="Label" parent="CanvasLayer/PauseMenuOverlay/GridContainer"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("2_00tan")
+theme_override_font_sizes/font_size = 30
+text = "5"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MusicVolumePlusButton" type="Button" parent="CanvasLayer/PauseMenuOverlay/GridContainer"]
+layout_mode = 2
+theme_override_colors/font_hover_color = Color(0.775063, 0.775063, 0.775063, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0.568973, 0.568973, 0.568973, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("2_00tan")
+theme_override_font_sizes/font_size = 70
+theme_override_styles/focus = SubResource("StyleBoxEmpty_00tan")
+theme_override_styles/hover = SubResource("StyleBoxFlat_l1v76")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_4bh5q")
+theme_override_styles/normal = SubResource("StyleBoxFlat_e124b")
+text = "+"
+
+[node name="SoundEffectsVolumeLabel" type="Label" parent="CanvasLayer/PauseMenuOverlay/GridContainer"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("2_00tan")
+theme_override_font_sizes/font_size = 30
+text = "Sound Effects Volume"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SoundEffectsVolumeMinusButton" type="Button" parent="CanvasLayer/PauseMenuOverlay/GridContainer"]
+layout_mode = 2
+theme_override_colors/font_hover_color = Color(0.775063, 0.775063, 0.775063, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0.568973, 0.568973, 0.568973, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("2_00tan")
+theme_override_font_sizes/font_size = 70
+theme_override_styles/focus = SubResource("StyleBoxEmpty_00tan")
+theme_override_styles/hover = SubResource("StyleBoxFlat_l1v76")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_4bh5q")
+theme_override_styles/normal = SubResource("StyleBoxFlat_e124b")
+text = "-"
+
+[node name="SoundEffectsVolumeSettingLabel" type="Label" parent="CanvasLayer/PauseMenuOverlay/GridContainer"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("2_00tan")
+theme_override_font_sizes/font_size = 30
+text = "5"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SoundEffectsVolumePlusButton" type="Button" parent="CanvasLayer/PauseMenuOverlay/GridContainer"]
+layout_mode = 2
+theme_override_colors/font_hover_color = Color(0.775063, 0.775063, 0.775063, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0.568973, 0.568973, 0.568973, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("2_00tan")
+theme_override_font_sizes/font_size = 70
+theme_override_styles/focus = SubResource("StyleBoxEmpty_00tan")
+theme_override_styles/hover = SubResource("StyleBoxFlat_l1v76")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_4bh5q")
+theme_override_styles/normal = SubResource("StyleBoxFlat_e124b")
+text = "+"
+
+[connection signal="pressed" from="CanvasLayer/DeathOverlay/VBoxContainer/NewGameButton" to="." method="_on_new_game_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/DeathOverlay/VBoxContainer/ReturnToMainMenuButton" to="." method="_on_return_to_main_menu_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/LevelCompleteOverlay/VBoxContainer/NewGameButton" to="." method="_on_new_game_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/LevelCompleteOverlay/VBoxContainer/ReturnToMainMenuButton" to="." method="_on_return_to_main_menu_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/PauseMenuOverlay/UnpauseButton" to="." method="_on_unpause_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/PauseMenuOverlay/GridContainer/MusicVolumeMinusButton" to="." method="_on_music_volume_minus_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/PauseMenuOverlay/GridContainer/MusicVolumePlusButton" to="." method="_on_music_volume_plus_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/PauseMenuOverlay/GridContainer/SoundEffectsVolumeMinusButton" to="." method="_on_sound_effects_volume_minus_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/PauseMenuOverlay/GridContainer/SoundEffectsVolumePlusButton" to="." method="_on_sound_effects_volume_plus_button_pressed"]

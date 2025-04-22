@@ -1,0 +1,243 @@
+[gd_scene load_steps=10 format=3 uid="uid://bbu54yl10b86l"]
+
+[ext_resource type="PackedScene" uid="uid://dnx6h0tsjr3m1" path="res://objects/player.tscn" id="1_m7ahb"]
+[ext_resource type="PackedScene" uid="uid://ovyxauv0un6k" path="res://objects/obj_puple_block.tscn" id="2_dwgg1"]
+[ext_resource type="PackedScene" uid="uid://cixhmlktvwx1" path="res://objects/floor.tscn" id="3_ru4tf"]
+[ext_resource type="AudioStream" uid="uid://da6x7mnd0ikf8" path="res://Sounds/High Maintenance, Charlotte Haining - Change Your Ways (feat Charlotte Haining) [NCS Release] (1).mp3" id="4_8a7m2"]
+[ext_resource type="PackedScene" uid="uid://cms7dgunbmxv4" path="res://objects/spike.tscn" id="4_dwgg1"]
+[ext_resource type="PackedScene" uid="uid://cevo1b1uejnoa" path="res://objects/orb.tscn" id="6_6sh32"]
+[ext_resource type="PackedScene" uid="uid://bdy0aurth53jw" path="res://objects/saw.tscn" id="7_ejswk"]
+[ext_resource type="PackedScene" uid="uid://6ojuf0fx1t7p" path="res://objects/trampoline.tscn" id="8_8a7m2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_plydf"]
+size = Vector2(485.5, 656.125)
+
+[node name="Level1" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_m7ahb")]
+position = Vector2(40, -35)
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+offset = Vector2(0, -20)
+process_callback = 0
+limit_left = -20
+limit_bottom = 100
+position_smoothing_enabled = true
+drag_vertical_enabled = true
+drag_top_margin = 0.4
+drag_bottom_margin = 0.4
+editor_draw_drag_margin = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_8a7m2")
+autoplay = true
+
+[node name="PurpleBlock18" parent="." instance=ExtResource("2_dwgg1")]
+position = Vector2(1636, -119)
+
+[node name="Floor" parent="." instance=ExtResource("3_ru4tf")]
+position = Vector2(21, 65)
+
+[node name="yellowOrb" parent="." instance=ExtResource("6_6sh32")]
+position = Vector2(4876, -115)
+
+[node name="Saw" parent="." instance=ExtResource("7_ejswk")]
+position = Vector2(587, -27)
+
+[node name="LevelEnd" type="Area2D" parent="." groups=["levelEnd"]]
+position = Vector2(5675, -338)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LevelEnd" groups=["levelEnd"]]
+position = Vector2(8333, 48)
+shape = SubResource("RectangleShape2D_plydf")
+
+[node name="trampoline" parent="." instance=ExtResource("8_8a7m2")]
+position = Vector2(2814, -585)
+
+[node name="Saw2" parent="." instance=ExtResource("7_ejswk")]
+position = Vector2(1128, -142)
+
+[node name="Saw3" parent="." instance=ExtResource("7_ejswk")]
+position = Vector2(1996, -206)
+
+[node name="Spike" parent="." instance=ExtResource("4_dwgg1")]
+position = Vector2(2550, -39)
+
+[node name="Spike2" parent="." instance=ExtResource("4_dwgg1")]
+position = Vector2(3119, -166)
+
+[node name="PurpleBlock" parent="." instance=ExtResource("2_dwgg1")]
+position = Vector2(3814, -138)
+
+[node name="Spike3" parent="." instance=ExtResource("4_dwgg1")]
+position = Vector2(4271, -280)
+
+[node name="yellowOrb2" parent="." instance=ExtResource("6_6sh32")]
+position = Vector2(5493, -122)
+type = 1
+
+[node name="yellowOrb3" parent="." instance=ExtResource("6_6sh32")]
+position = Vector2(6168, -114)
+type = 2
+
+[node name="yellowOrb4" parent="." instance=ExtResource("6_6sh32")]
+position = Vector2(6798, -122)
+type = 3
+
+[node name="PurpleBlock2" parent="." instance=ExtResource("2_dwgg1")]
+position = Vector2(6796, -483)
+rotation = 3.14159
+
+[node name="PurpleBlock3" parent="." instance=ExtResource("2_dwgg1")]
+position = Vector2(6877, -483)
+rotation = 3.14159
+
+[node name="PurpleBlock4" parent="." instance=ExtResource("2_dwgg1")]
+position = Vector2(6957, -483)
+rotation = 3.14159
+
+[node name="PurpleBlock5" parent="." instance=ExtResource("2_dwgg1")]
+position = Vector2(7037, -483)
+rotation = 3.14159
+
+[node name="PurpleBlock6" parent="." instance=ExtResource("2_dwgg1")]
+position = Vector2(7117, -483)
+rotation = 3.14159
+
+[node name="PurpleBlock7" parent="." instance=ExtResource("2_dwgg1")]
+position = Vector2(7197, -483)
+rotation = 3.14159
+
+[node name="PurpleBlock8" parent="." instance=ExtResource("2_dwgg1")]
+position = Vector2(6957, -483)
+rotation = 3.14159
+
+[node name="PurpleBlock9" parent="." instance=ExtResource("2_dwgg1")]
+position = Vector2(7277, -483)
+rotation = 3.14159
+
+[node name="PurpleBlock10" parent="." instance=ExtResource("2_dwgg1")]
+position = Vector2(7358, -483)
+rotation = 3.14159
+
+[node name="PurpleBlock11" parent="." instance=ExtResource("2_dwgg1")]
+position = Vector2(7438, -483)
+rotation = 3.14159
+
+[node name="PurpleBlock12" parent="." instance=ExtResource("2_dwgg1")]
+position = Vector2(7518, -483)
+rotation = 3.14159
+
+[node name="PurpleBlock13" parent="." instance=ExtResource("2_dwgg1")]
+position = Vector2(7598, -483)
+rotation = 3.14159
+
+[node name="PurpleBlock14" parent="." instance=ExtResource("2_dwgg1")]
+position = Vector2(7678, -483)
+rotation = 3.14159
+
+[node name="PurpleBlock15" parent="." instance=ExtResource("2_dwgg1")]
+position = Vector2(7438, -483)
+rotation = 3.14159
+
+[node name="yellowOrb5" parent="." instance=ExtResource("6_6sh32")]
+position = Vector2(7514, -317)
+type = 4
+
+[node name="yellowOrb6" parent="." instance=ExtResource("6_6sh32")]
+position = Vector2(7920, -67)
+type = 5
+
+[node name="trampoline2" parent="." instance=ExtResource("8_8a7m2")]
+position = Vector2(8547, -26)
+
+[node name="trampoline3" parent="." instance=ExtResource("8_8a7m2")]
+position = Vector2(9086, -26)
+type = 1
+
+[node name="trampoline4" parent="." instance=ExtResource("8_8a7m2")]
+position = Vector2(9651, -23)
+type = 2
+
+[node name="trampoline5" parent="." instance=ExtResource("8_8a7m2")]
+position = Vector2(10160, -28)
+type = 3
+
+[node name="PurpleBlock16" parent="." instance=ExtResource("2_dwgg1")]
+position = Vector2(10133, -442)
+rotation = 3.14159
+
+[node name="PurpleBlock17" parent="." instance=ExtResource("2_dwgg1")]
+position = Vector2(10214, -442)
+rotation = 3.14159
+
+[node name="PurpleBlock19" parent="." instance=ExtResource("2_dwgg1")]
+position = Vector2(10294, -442)
+rotation = 3.14159
+
+[node name="PurpleBlock20" parent="." instance=ExtResource("2_dwgg1")]
+position = Vector2(10374, -442)
+rotation = 3.14159
+
+[node name="PurpleBlock21" parent="." instance=ExtResource("2_dwgg1")]
+position = Vector2(10454, -442)
+rotation = 3.14159
+
+[node name="PurpleBlock22" parent="." instance=ExtResource("2_dwgg1")]
+position = Vector2(10534, -442)
+rotation = 3.14159
+
+[node name="PurpleBlock23" parent="." instance=ExtResource("2_dwgg1")]
+position = Vector2(10294, -442)
+rotation = 3.14159
+
+[node name="PurpleBlock24" parent="." instance=ExtResource("2_dwgg1")]
+position = Vector2(10614, -442)
+rotation = 3.14159
+
+[node name="PurpleBlock25" parent="." instance=ExtResource("2_dwgg1")]
+position = Vector2(10695, -442)
+rotation = 3.14159
+
+[node name="PurpleBlock26" parent="." instance=ExtResource("2_dwgg1")]
+position = Vector2(10775, -442)
+rotation = 3.14159
+
+[node name="PurpleBlock27" parent="." instance=ExtResource("2_dwgg1")]
+position = Vector2(10855, -442)
+rotation = 3.14159
+
+[node name="PurpleBlock28" parent="." instance=ExtResource("2_dwgg1")]
+position = Vector2(10935, -442)
+rotation = 3.14159
+
+[node name="PurpleBlock29" parent="." instance=ExtResource("2_dwgg1")]
+position = Vector2(11015, -442)
+rotation = 3.14159
+
+[node name="PurpleBlock30" parent="." instance=ExtResource("2_dwgg1")]
+position = Vector2(10775, -442)
+rotation = 3.14159
+
+[node name="trampoline6" parent="." instance=ExtResource("8_8a7m2")]
+position = Vector2(10823, -366)
+rotation = 3.14159
+type = 5
+
+[node name="trampoline7" parent="." instance=ExtResource("8_8a7m2")]
+position = Vector2(11306, -26)
+type = 4
+
+[node name="trampoline8" parent="." instance=ExtResource("8_8a7m2")]
+position = Vector2(12144, -28)
+type = 6
+
+[node name="trampoline9" parent="." instance=ExtResource("8_8a7m2")]
+position = Vector2(12858, -29)
+type = 7
+
+[node name="trampoline10" parent="." instance=ExtResource("8_8a7m2")]
+position = Vector2(13422, -28)
+type = 8
+
+[connection signal="area_entered" from="LevelEnd" to="Player" method="_on_level_end_area_entered"]
