@@ -87,3 +87,7 @@ func _on_new_game_button_pressed() -> void:
 
 func _on_return_to_main_menu_button_pressed() -> void:
 	Global.scene_manager.change_scene("res://scenes/main_menu.tscn")
+
+func _on_exit_to_main_menu_button_pressed() -> void:
+	get_tree().paused = false
+	Global.scene_manager.change_scene("res://scenes/main_menu.tscn")
