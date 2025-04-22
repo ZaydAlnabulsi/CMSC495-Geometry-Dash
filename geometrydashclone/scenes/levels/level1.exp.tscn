@@ -17,12 +17,12 @@ size = Vector2(345.688, 4322.56)
 metadata/_edit_vertical_guides_ = [27533.0]
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
-offset = Vector2(600, -2100)
-transform = Transform2D(1, 0, 0, 1, 600, -2100)
+offset = Vector2(600, -4300)
+transform = Transform2D(1, 0, 0, 1, 600, -4300)
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
 motion_scale = Vector2(0.3, 0.3)
-motion_mirroring = Vector2(1920, 5400)
+motion_mirroring = Vector2(1920, 9720)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
 texture = ExtResource("1_8m7gg")
