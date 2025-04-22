@@ -45,7 +45,7 @@ func _ready():
 		
 		8:
 			force = 2000
-			sprite.texture = load("res://Images/platformPack_tile063.png")
+			sprite.texture = load("res://Images/btn_blue.png")
 		9:
 			force = 1300
-			sprite.texture = load("res://Images/platformPack_tile063.png")
+			sprite.texture = load("res://Images/btn_blue.png")
