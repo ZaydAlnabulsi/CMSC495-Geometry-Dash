@@ -50,6 +50,12 @@ Follow these steps to set up the Geometry Dash-style game project in Godot.
 # Versions
 **Make sure that you create your own new project that import all the files in. Certain config files like .editorconfig and .gitattributes will not upload correctly onto github.**
 
+## **Version 0.5**
+
+  -Added global scene_change_root variable that allows Gameplay scene to transition into different levels
+  
+  -Added Dev Test level that contains all gameplay objects in sequence
+
 ## **Version 0.4**
 
   -Added a trail effect to the player.
