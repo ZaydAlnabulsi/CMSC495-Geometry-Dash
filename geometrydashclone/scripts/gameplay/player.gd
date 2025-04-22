@@ -53,7 +53,7 @@ func _physics_process(delta):
 	move_and_slide()
 	
 	##	Allows the user to pause the game
-	if Input.is_action_pressed("pause"):
+	if not is_dead and Input.is_action_pressed("pause"):
 		get_tree().paused = true
 		if Global.scene_manager.current_scene.scene_file_path == "res://scenes/gameplay.tscn":
 			Global.scene_manager.current_scene.display_pause_menu_overlay()
