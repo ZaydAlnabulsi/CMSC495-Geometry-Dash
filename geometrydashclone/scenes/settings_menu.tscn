@@ -1,17 +1,8 @@
-[gd_scene load_steps=27 format=3 uid="uid://kwtgggq20hns"]
+[gd_scene load_steps=10 format=3 uid="uid://kwtgggq20hns"]
 
 [ext_resource type="Script" uid="uid://c5elrpbp3qq2n" path="res://scripts/scenes/settings_menu.gd" id="1_wswnh"]
 [ext_resource type="Texture2D" uid="uid://b060uyotkgai4" path="res://Images/menu_background.png" id="2_n0fy7"]
 [ext_resource type="FontFile" uid="uid://kix12tgfjm8k" path="res://Images/Slackey-Regular.ttf" id="2_wswnh"]
-[ext_resource type="Texture2D" uid="uid://c1q1k5yiv3p2h" path="res://Images/image1.png" id="4_bgjg7"]
-[ext_resource type="Texture2D" uid="uid://cmwjdgfbbljma" path="res://Images/game_icons_spikes.png" id="4_jrqig"]
-[ext_resource type="Texture2D" uid="uid://b6rtxkwswys5f" path="res://Images/disc_blue.png" id="5_48ojb"]
-[ext_resource type="Texture2D" uid="uid://d1amlunwur2t8" path="res://Images/game_icons_saw.png" id="5_n0fy7"]
-[ext_resource type="Texture2D" uid="uid://b1we8qgnnxcnt" path="res://Images/disc_green.png" id="6_n35ux"]
-[ext_resource type="Texture2D" uid="uid://bmeo3nb4ernd1" path="res://Images/disc_purple.png" id="7_n0fy7"]
-[ext_resource type="Texture2D" uid="uid://dio5cruttx8fe" path="res://Images/disc_orange.png" id="8_jpbdv"]
-[ext_resource type="Texture2D" uid="uid://d0qo8wrlovkyu" path="res://Images/disc_yellow.png" id="9_puhno"]
-[ext_resource type="Texture2D" uid="uid://dvywqpicomrii" path="res://Images/btn_orange.png" id="12_gdgfw"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jpbdv"]
 texture = ExtResource("2_n0fy7")
@@ -54,32 +45,17 @@ corner_radius_top_right = 16
 corner_radius_bottom_right = 16
 corner_radius_bottom_left = 16
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fb6cq"]
-texture = ExtResource("4_bgjg7")
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2ctot"]
-texture = ExtResource("4_jrqig")
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jrqig"]
-texture = ExtResource("5_n0fy7")
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vymnv"]
-texture = ExtResource("9_puhno")
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2tyyr"]
-texture = ExtResource("5_48ojb")
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wambi"]
-texture = ExtResource("6_n35ux")
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_khnq6"]
-texture = ExtResource("8_jpbdv")
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vlw5p"]
-texture = ExtResource("7_n0fy7")
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fmx0a"]
-texture = ExtResource("12_gdgfw")
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wswnh"]
+bg_color = Color(0.85098, 0.423529, 0.0705882, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
 
 [node name="SettingsMenu" type="Control"]
 layout_mode = 3
@@ -99,18 +75,16 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_jpbdv")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
+[node name="Label2" type="Label" parent="."]
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -271.0
+offset_top = 82.0
+offset_right = 271.0
+offset_bottom = 153.0
 grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/separation = 15
-alignment = 1
-
-[node name="Label2" type="Label" parent="VBoxContainer"]
-layout_mode = 2
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 10
 theme_override_fonts/font = ExtResource("2_wswnh")
@@ -119,294 +93,20 @@ text = "Settings"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="GridContainer" type="GridContainer" parent="VBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-theme_override_constants/h_separation = 30
-columns = 4
-
-[node name="MusicVolumeLabel" type="Label" parent="VBoxContainer/GridContainer"]
-layout_mode = 2
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 10
-theme_override_fonts/font = ExtResource("2_wswnh")
-theme_override_font_sizes/font_size = 30
-text = "Music"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="MusicVolumeSettingLabel" type="Label" parent="VBoxContainer/GridContainer"]
-custom_minimum_size = Vector2(100, 0)
-layout_mode = 2
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 10
-theme_override_fonts/font = ExtResource("2_wswnh")
-theme_override_font_sizes/font_size = 30
-text = "5"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="MusicVolumeDown" type="Button" parent="VBoxContainer/GridContainer"]
-custom_minimum_size = Vector2(50, 50)
-layout_mode = 2
-size_flags_horizontal = 4
-theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
-theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("2_wswnh")
-theme_override_font_sizes/font_size = 30
-theme_override_styles/focus = SubResource("StyleBoxEmpty_labj1")
-theme_override_styles/hover = SubResource("StyleBoxFlat_lwwgp")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_bgjg7")
-theme_override_styles/normal = SubResource("StyleBoxFlat_48ojb")
-text = "-"
-
-[node name="MusicVolumeUp" type="Button" parent="VBoxContainer/GridContainer"]
-custom_minimum_size = Vector2(50, 50)
-layout_mode = 2
-size_flags_horizontal = 4
-theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
-theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("2_wswnh")
-theme_override_font_sizes/font_size = 30
-theme_override_styles/focus = SubResource("StyleBoxEmpty_labj1")
-theme_override_styles/hover = SubResource("StyleBoxFlat_lwwgp")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_bgjg7")
-theme_override_styles/normal = SubResource("StyleBoxFlat_48ojb")
-text = "+"
-
-[node name="SoundEffectsVolumeLabel" type="Label" parent="VBoxContainer/GridContainer"]
-layout_mode = 2
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 10
-theme_override_fonts/font = ExtResource("2_wswnh")
-theme_override_font_sizes/font_size = 30
-text = "Sound Effects"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="SoundEffectsVolumeSettingLabel" type="Label" parent="VBoxContainer/GridContainer"]
-custom_minimum_size = Vector2(100, 0)
-layout_mode = 2
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 10
-theme_override_fonts/font = ExtResource("2_wswnh")
-theme_override_font_sizes/font_size = 30
-text = "5"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="SoundEffectsVolumeDown" type="Button" parent="VBoxContainer/GridContainer"]
-custom_minimum_size = Vector2(50, 50)
-layout_mode = 2
-size_flags_horizontal = 4
-theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
-theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("2_wswnh")
-theme_override_font_sizes/font_size = 30
-theme_override_styles/focus = SubResource("StyleBoxEmpty_labj1")
-theme_override_styles/hover = SubResource("StyleBoxFlat_lwwgp")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_bgjg7")
-theme_override_styles/normal = SubResource("StyleBoxFlat_48ojb")
-text = "-"
-
-[node name="SoundEffectsVolumeUp" type="Button" parent="VBoxContainer/GridContainer"]
-custom_minimum_size = Vector2(50, 50)
-layout_mode = 2
-size_flags_horizontal = 4
-theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
-theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("2_wswnh")
-theme_override_font_sizes/font_size = 30
-theme_override_styles/focus = SubResource("StyleBoxEmpty_labj1")
-theme_override_styles/hover = SubResource("StyleBoxFlat_lwwgp")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_bgjg7")
-theme_override_styles/normal = SubResource("StyleBoxFlat_48ojb")
-text = "+"
-
-[node name="Label" type="Label" parent="VBoxContainer"]
-layout_mode = 2
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 10
-theme_override_fonts/font = ExtResource("2_wswnh")
-theme_override_font_sizes/font_size = 50
-text = "How to Play"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="Label3" type="Label" parent="VBoxContainer"]
-layout_mode = 2
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 5
-theme_override_fonts/font = ExtResource("2_wswnh")
-theme_override_font_sizes/font_size = 24
-text = "Spacebar / Left Click to jump.
-Escape to pause game."
-horizontal_alignment = 1
-
-[node name="GridContainer3" type="GridContainer" parent="VBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-theme_override_constants/h_separation = 10
-theme_override_constants/v_separation = 10
-columns = 6
-
-[node name="Panel" type="Panel" parent="VBoxContainer/GridContainer3"]
-custom_minimum_size = Vector2(64, 64)
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-theme_override_styles/panel = SubResource("StyleBoxTexture_fb6cq")
-
-[node name="Label3" type="Label" parent="VBoxContainer/GridContainer3"]
-layout_mode = 2
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 5
-theme_override_fonts/font = ExtResource("2_wswnh")
-theme_override_font_sizes/font_size = 20
-text = "Players can jump 
-onto grass blocks"
-
-[node name="Panel2" type="Panel" parent="VBoxContainer/GridContainer3"]
-custom_minimum_size = Vector2(64, 64)
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-theme_override_styles/panel = SubResource("StyleBoxTexture_2ctot")
-
-[node name="Label4" type="Label" parent="VBoxContainer/GridContainer3"]
-layout_mode = 2
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 5
-theme_override_fonts/font = ExtResource("2_wswnh")
-theme_override_font_sizes/font_size = 20
-text = "Spikes lay on the ground 
-and will kill the player"
-
-[node name="Panel3" type="Panel" parent="VBoxContainer/GridContainer3"]
-custom_minimum_size = Vector2(64, 64)
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-theme_override_styles/panel = SubResource("StyleBoxTexture_jrqig")
-
-[node name="Label5" type="Label" parent="VBoxContainer/GridContainer3"]
-layout_mode = 2
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 5
-theme_override_fonts/font = ExtResource("2_wswnh")
-theme_override_font_sizes/font_size = 20
-text = "Saws fly in the air and 
-will kill the player"
-
-[node name="Panel4" type="Panel" parent="VBoxContainer/GridContainer3"]
-custom_minimum_size = Vector2(64, 64)
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-theme_override_styles/panel = SubResource("StyleBoxTexture_vymnv")
-
-[node name="Label6" type="Label" parent="VBoxContainer/GridContainer3"]
-layout_mode = 2
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 5
-theme_override_fonts/font = ExtResource("2_wswnh")
-theme_override_font_sizes/font_size = 20
-text = "Yellows orbs allow a
-small second jump"
-
-[node name="Panel9" type="Panel" parent="VBoxContainer/GridContainer3"]
-custom_minimum_size = Vector2(64, 64)
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-theme_override_styles/panel = SubResource("StyleBoxTexture_2tyyr")
-
-[node name="Label11" type="Label" parent="VBoxContainer/GridContainer3"]
-layout_mode = 2
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 5
-theme_override_fonts/font = ExtResource("2_wswnh")
-theme_override_font_sizes/font_size = 20
-text = "Blue orbs allow a
-medium second jump"
-
-[node name="Panel5" type="Panel" parent="VBoxContainer/GridContainer3"]
-custom_minimum_size = Vector2(64, 64)
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-theme_override_styles/panel = SubResource("StyleBoxTexture_wambi")
-
-[node name="Label7" type="Label" parent="VBoxContainer/GridContainer3"]
-layout_mode = 2
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 5
-theme_override_fonts/font = ExtResource("2_wswnh")
-theme_override_font_sizes/font_size = 20
-text = "Green orbs allow a
-high second jump"
-
-[node name="Panel6" type="Panel" parent="VBoxContainer/GridContainer3"]
-custom_minimum_size = Vector2(64, 64)
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-theme_override_styles/panel = SubResource("StyleBoxTexture_khnq6")
-
-[node name="Label8" type="Label" parent="VBoxContainer/GridContainer3"]
-layout_mode = 2
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 5
-theme_override_fonts/font = ExtResource("2_wswnh")
-theme_override_font_sizes/font_size = 20
-text = "Orange orbs allow the
-highest second jump"
-
-[node name="Panel7" type="Panel" parent="VBoxContainer/GridContainer3"]
-custom_minimum_size = Vector2(64, 64)
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-theme_override_styles/panel = SubResource("StyleBoxTexture_vlw5p")
-
-[node name="Label9" type="Label" parent="VBoxContainer/GridContainer3"]
-layout_mode = 2
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 5
-theme_override_fonts/font = ExtResource("2_wswnh")
-theme_override_font_sizes/font_size = 20
-text = "Purple orbs will
-knock a player down"
-
-[node name="Panel8" type="Panel" parent="VBoxContainer/GridContainer3"]
-custom_minimum_size = Vector2(64, 64)
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-theme_override_styles/panel = SubResource("StyleBoxTexture_fmx0a")
-
-[node name="Label10" type="Label" parent="VBoxContainer/GridContainer3"]
-layout_mode = 2
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 5
-theme_override_fonts/font = ExtResource("2_wswnh")
-theme_override_font_sizes/font_size = 20
-text = "Trampolines provide
-a small bounce"
-
-[node name="BackButton" type="Button" parent="VBoxContainer"]
-custom_minimum_size = Vector2(200, 50)
-layout_mode = 2
+[node name="BackButton" type="Button" parent="."]
+custom_minimum_size = Vector2(250, 75)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -125.0
+offset_top = -159.0
+offset_right = 125.0
+offset_bottom = -84.0
+grow_horizontal = 2
+grow_vertical = 0
 size_flags_horizontal = 4
 theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -420,8 +120,147 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_bgjg7")
 theme_override_styles/normal = SubResource("StyleBoxFlat_48ojb")
 text = "Back"
 
-[connection signal="pressed" from="VBoxContainer/GridContainer/MusicVolumeDown" to="." method="_on_music_volume_minus_button_pressed"]
-[connection signal="pressed" from="VBoxContainer/GridContainer/MusicVolumeUp" to="." method="_on_music_volume_plus_button_pressed"]
-[connection signal="pressed" from="VBoxContainer/GridContainer/SoundEffectsVolumeDown" to="." method="_on_sound_effects_volume_minus_button_pressed"]
-[connection signal="pressed" from="VBoxContainer/GridContainer/SoundEffectsVolumeUp" to="." method="_on_sound_effects_volume_plus_button_pressed"]
-[connection signal="pressed" from="VBoxContainer/BackButton" to="." method="_on_back_button_pressed"]
+[node name="Panel2" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -400.0
+offset_top = -125.0
+offset_right = 400.0
+offset_bottom = 125.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_wswnh")
+
+[node name="GridContainer" type="GridContainer" parent="Panel2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -271.0
+offset_top = -52.0
+offset_right = 271.0
+offset_bottom = 52.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/h_separation = 30
+columns = 4
+
+[node name="MusicVolumeLabel" type="Label" parent="Panel2/GridContainer"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("2_wswnh")
+theme_override_font_sizes/font_size = 30
+text = "Music"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MusicVolumeSettingLabel" type="Label" parent="Panel2/GridContainer"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("2_wswnh")
+theme_override_font_sizes/font_size = 30
+text = "5"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MusicVolumeDown" type="Button" parent="Panel2/GridContainer"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_wswnh")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = SubResource("StyleBoxEmpty_labj1")
+theme_override_styles/hover = SubResource("StyleBoxFlat_lwwgp")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_bgjg7")
+theme_override_styles/normal = SubResource("StyleBoxFlat_48ojb")
+text = "-"
+
+[node name="MusicVolumeUp" type="Button" parent="Panel2/GridContainer"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_wswnh")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = SubResource("StyleBoxEmpty_labj1")
+theme_override_styles/hover = SubResource("StyleBoxFlat_lwwgp")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_bgjg7")
+theme_override_styles/normal = SubResource("StyleBoxFlat_48ojb")
+text = "+"
+
+[node name="SoundEffectsVolumeLabel" type="Label" parent="Panel2/GridContainer"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("2_wswnh")
+theme_override_font_sizes/font_size = 30
+text = "Sound Effects"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SoundEffectsVolumeSettingLabel" type="Label" parent="Panel2/GridContainer"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("2_wswnh")
+theme_override_font_sizes/font_size = 30
+text = "5"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SoundEffectsVolumeDown" type="Button" parent="Panel2/GridContainer"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_wswnh")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = SubResource("StyleBoxEmpty_labj1")
+theme_override_styles/hover = SubResource("StyleBoxFlat_lwwgp")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_bgjg7")
+theme_override_styles/normal = SubResource("StyleBoxFlat_48ojb")
+text = "-"
+
+[node name="SoundEffectsVolumeUp" type="Button" parent="Panel2/GridContainer"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_wswnh")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = SubResource("StyleBoxEmpty_labj1")
+theme_override_styles/hover = SubResource("StyleBoxFlat_lwwgp")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_bgjg7")
+theme_override_styles/normal = SubResource("StyleBoxFlat_48ojb")
+text = "+"
+
+[connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]
+[connection signal="pressed" from="Panel2/GridContainer/MusicVolumeDown" to="." method="_on_music_volume_minus_button_pressed"]
+[connection signal="pressed" from="Panel2/GridContainer/MusicVolumeUp" to="." method="_on_music_volume_plus_button_pressed"]
+[connection signal="pressed" from="Panel2/GridContainer/SoundEffectsVolumeDown" to="." method="_on_sound_effects_volume_minus_button_pressed"]
+[connection signal="pressed" from="Panel2/GridContainer/SoundEffectsVolumeUp" to="." method="_on_sound_effects_volume_plus_button_pressed"]
