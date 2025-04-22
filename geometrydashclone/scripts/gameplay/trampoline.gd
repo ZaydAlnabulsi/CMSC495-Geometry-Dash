@@ -18,30 +18,30 @@ func _ready():
 	match type :
 		0 :
 			force = 600
-			sprite.texture = load("res://Images/platformPack_tile054.png")
+			sprite.texture = load("res://Images/btn_yellow.png")
 		1 :
 			force = 1200
-			sprite.texture = load("res://Images/platformPack_tile056.png")
+			sprite.texture = load("res://Images/btn_blue.png")
 		2 :
 			force = 1800
-			sprite.texture = load("res://Images/platformPack_tile063.png")
+			sprite.texture = load("res://Images/btn_green.png")
 		3 :
 			force = -2000
 			invert = true
-			sprite.texture = load("res://Images/platformPack_tile065.png")
+			sprite.texture = load("res://Images/btn_orange.png")
 		4 :
 			force = 10000
-			sprite.texture = load("res://Images/platformPack_tile054.png")
+			sprite.texture = load("res://Images/btn_blue.png")
 		5 :
 			force = 0
 			invert = true
-			sprite.texture = load("res://Images/platformPack_tile054.png")
+			sprite.texture = load("res://Images/btn_blue.png")
 		6 :
 			force = -2000
-			sprite.texture = load("res://Images/platformPack_tile054.png")
+			sprite.texture = load("res://Images/btn_blue.png")
 		7 :
 			force = -1300
-			sprite.texture = load("res://Images/platformPack_tile054.png")
+			sprite.texture = load("res://Images/btn_blue.png")
 		8 :
 			force = 2200
-			sprite.texture = load("res://Images/platformPack_tile063.png")
+			sprite.texture = load("res://Images/btn_green.png")
