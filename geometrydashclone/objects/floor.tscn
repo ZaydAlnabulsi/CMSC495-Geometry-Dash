@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://cixhmlktvwx1"]
 
 [ext_resource type="Script" uid="uid://dqexy2e1hhhct" path="res://scripts/gameplay/floor.gd" id="1_agi2o"]
-[ext_resource type="Texture2D" uid="uid://be15fa5byxqpk" path="res://images/floor.png" id="2_agi2o"]
+[ext_resource type="Texture2D" uid="uid://be15fa5byxqpk" path="res://Images/floor.png" id="2_agi2o"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pnixg"]
 size = Vector2(1921, 112)
