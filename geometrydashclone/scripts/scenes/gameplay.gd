@@ -14,8 +14,12 @@ var level_end	##	Level end node
 ##	Loads the appropriate level and sets the variables
 ##	Updates the volumes based on global variables
 func _ready() -> void:
-	var scene = preload("res://scenes/levels/level1.exp.tscn")
-	instance = scene.instantiate()
+	if Global.get_scene_change_root() == 1 :
+		var scene = preload("res://scenes/levels/level1.exp.tscn")
+		instance = scene.instantiate()
+	if Global.get_scene_change_root() == 2 :
+		var scene = preload("res://scenes/levels/level1.tscn")
+		instance = scene.instantiate()
 	audio_stream_player = instance.get_node("AudioStreamPlayer")
 	player = instance.get_node("Player")
 	level_end = instance.get_node("LevelEnd")
@@ -86,4 +90,9 @@ func _on_new_game_button_pressed() -> void:
 	Global.scene_manager.change_scene("res://scenes/gameplay.tscn")
 
 func _on_return_to_main_menu_button_pressed() -> void:
+	Global.scene_manager.change_scene("res://scenes/main_menu.tscn")
+
+
+func _on_quit_button_pressed() -> void:
+	get_tree().paused = false
 	Global.scene_manager.change_scene("res://scenes/main_menu.tscn")

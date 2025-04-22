@@ -1,10 +1,12 @@
-[gd_scene load_steps=10 format=3 uid="uid://fovebjmdo7v2"]
+[gd_scene load_steps=11 format=3 uid="uid://fovebjmdo7v2"]
 
+[ext_resource type="Texture2D" uid="uid://cw7vm1l618075" path="res://Images/game_background.png" id="1_8m7gg"]
 [ext_resource type="PackedScene" uid="uid://dnx6h0tsjr3m1" path="res://objects/player.tscn" id="1_wx41p"]
 [ext_resource type="PackedScene" uid="uid://ovyxauv0un6k" path="res://objects/obj_puple_block.tscn" id="2_8m7gg"]
-[ext_resource type="PackedScene" uid="uid://cms7dgunbmxv4" path="res://objects/Spike.tscn" id="3_n567q"]
-[ext_resource type="AudioStream" uid="uid://da6x7mnd0ikf8" path="res://Sounds/High Maintenance, Charlotte Haining - Change Your Ways (feat Charlotte Haining) [NCS Release] (1).mp3" id="4_3xqfd"]
+[ext_resource type="PackedScene" uid="uid://cms7dgunbmxv4" path="res://objects/spike.tscn" id="3_n567q"]
+[ext_resource type="AudioStream" uid="uid://da6x7mnd0ikf8" path="res://sounds/High Maintenance, Charlotte Haining - Change Your Ways (feat Charlotte Haining) [NCS Release] (1).mp3" id="4_3xqfd"]
 [ext_resource type="PackedScene" uid="uid://cixhmlktvwx1" path="res://objects/floor.tscn" id="5_7c1ax"]
+[ext_resource type="AudioStream" uid="uid://da6x7mnd0ikf8" path="res://sounds/High Maintenance, Charlotte Haining - Change Your Ways (feat Charlotte Haining) [NCS Release] (1).mp3" id="5_8m7gg"]
 [ext_resource type="PackedScene" uid="uid://cevo1b1uejnoa" path="res://objects/orb.tscn" id="6_s4y5u"]
 [ext_resource type="PackedScene" uid="uid://bdy0aurth53jw" path="res://objects/saw.tscn" id="7_5c0m2"]
 [ext_resource type="PackedScene" uid="uid://6ojuf0fx1t7p" path="res://objects/trampoline.tscn" id="8_n8gco"]
@@ -14,6 +16,17 @@ size = Vector2(2692.75, 450.25)
 
 [node name="Level1" type="Node2D"]
 metadata/_edit_vertical_guides_ = [27533.0]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+offset = Vector2(600, 150)
+transform = Transform2D(1, 0, 0, 1, 600, 150)
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.3, 0.3)
+motion_mirroring = Vector2(1920, 1080)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+texture = ExtResource("1_8m7gg")
 
 [node name="Player" parent="." instance=ExtResource("1_wx41p")]
 position = Vector2(21, -34)
@@ -60,7 +73,7 @@ position = Vector2(4295, -298)
 position = Vector2(-2735, 256)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("4_3xqfd")
+stream = ExtResource("5_8m7gg")
 autoplay = true
 
 [node name="PurpleBlock9" parent="." instance=ExtResource("2_8m7gg")]

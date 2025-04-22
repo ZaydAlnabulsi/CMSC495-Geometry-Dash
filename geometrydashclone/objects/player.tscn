@@ -1,8 +1,7 @@
-[gd_scene load_steps=11 format=3 uid="uid://dnx6h0tsjr3m1"]
+[gd_scene load_steps=10 format=3 uid="uid://dnx6h0tsjr3m1"]
 
-[ext_resource type="Texture2D" uid="uid://s38gs6ij3dpj" path="res://Images/blue_body_square.png" id="1_g2els"]
 [ext_resource type="Script" uid="uid://ce7cs26b413d3" path="res://scripts/gameplay/player.gd" id="1_qhqgy"]
-[ext_resource type="Texture2D" uid="uid://c46tvpibps1e4" path="res://Images/face_a.png" id="2_qhqgy"]
+[ext_resource type="Texture2D" uid="uid://b6i3li2u8vc6e" path="res://Images/game_icons_cube.png" id="2_3rerk"]
 [ext_resource type="Script" uid="uid://egaf8h4ntsny" path="res://scripts/gameplay/external_collsion.gd" id="4_f46kd"]
 [ext_resource type="Script" uid="uid://dmhqd64kpim3l" path="res://scripts/gameplay/player_death.gd" id="4_nmc1l"]
 [ext_resource type="AudioStream" uid="uid://b7xw1xdxceo3y" path="res://Sounds/pixel-explosion-319166.mp3" id="6_3rerk"]
@@ -21,10 +20,7 @@ size = Vector2(70, 70)
 script = ExtResource("1_qhqgy")
 
 [node name="PlayerBody" type="Sprite2D" parent="."]
-texture = ExtResource("1_g2els")
-
-[node name="PlayerFace" type="Sprite2D" parent="PlayerBody"]
-texture = ExtResource("2_qhqgy")
+texture = ExtResource("2_3rerk")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_dqkch")
