@@ -1,21 +1,22 @@
 [gd_scene load_steps=4 format=3 uid="uid://cixhmlktvwx1"]
 
-[ext_resource type="Texture2D" uid="uid://dwc2xer7mt7jy" path="res://Images/neon_beach.png" id="1_3f04m"]
 [ext_resource type="Script" uid="uid://dqexy2e1hhhct" path="res://scripts/gameplay/floor.gd" id="1_agi2o"]
+[ext_resource type="Texture2D" uid="uid://be15fa5byxqpk" path="res://images/floor.png" id="2_agi2o"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pnixg"]
-size = Vector2(2000, 118)
+size = Vector2(1921, 112)
 
 [node name="Floor" type="StaticBody2D"]
 script = ExtResource("1_agi2o")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_repeat = 2
-position = Vector2(3.33786e-06, -4.88758e-06)
-scale = Vector2(0.0666667, 0.118519)
-texture = ExtResource("1_3f04m")
+position = Vector2(2, -0.999992)
+scale = Vector2(5.63343, 0.909358)
+texture = ExtResource("2_agi2o")
 region_enabled = true
-region_rect = Rect2(100, 150, 30000, 995)
+region_rect = Rect2(323.131, 108.952, 341.136, 124.269)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, -1)
 shape = SubResource("RectangleShape2D_pnixg")

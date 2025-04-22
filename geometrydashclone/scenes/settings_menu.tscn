@@ -1,8 +1,8 @@
-[gd_scene load_steps=28 format=3 uid="uid://kwtgggq20hns"]
+[gd_scene load_steps=27 format=3 uid="uid://kwtgggq20hns"]
 
 [ext_resource type="Script" uid="uid://c5elrpbp3qq2n" path="res://scripts/scenes/settings_menu.gd" id="1_wswnh"]
+[ext_resource type="Texture2D" uid="uid://b060uyotkgai4" path="res://images/menu_background.png" id="2_n0fy7"]
 [ext_resource type="FontFile" uid="uid://kix12tgfjm8k" path="res://images/Slackey-Regular.ttf" id="2_wswnh"]
-
 [ext_resource type="Texture2D" uid="uid://c1q1k5yiv3p2h" path="res://images/image1.png" id="4_bgjg7"]
 [ext_resource type="Texture2D" uid="uid://cmwjdgfbbljma" path="res://images/game_icons_spikes.png" id="4_jrqig"]
 [ext_resource type="Texture2D" uid="uid://b6rtxkwswys5f" path="res://images/disc_blue.png" id="5_48ojb"]
@@ -13,15 +13,8 @@
 [ext_resource type="Texture2D" uid="uid://d0qo8wrlovkyu" path="res://images/disc_yellow.png" id="9_puhno"]
 [ext_resource type="Texture2D" uid="uid://dvywqpicomrii" path="res://images/btn_orange.png" id="12_gdgfw"]
 
-[sub_resource type="Gradient" id="Gradient_jrqig"]
-colors = PackedColorArray(0, 0, 0, 1, 0.707768, 0.00210505, 0.90159, 1)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_jrqig"]
-gradient = SubResource("Gradient_jrqig")
-fill_to = Vector2(1, 1)
-
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jpbdv"]
-texture = SubResource("GradientTexture2D_jrqig")
+texture = ExtResource("2_n0fy7")
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_labj1"]
 
@@ -65,7 +58,6 @@ corner_radius_bottom_left = 16
 texture = ExtResource("4_bgjg7")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2ctot"]
-
 texture = ExtResource("4_jrqig")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jrqig"]
@@ -282,9 +274,7 @@ theme_override_constants/outline_size = 5
 theme_override_fonts/font = ExtResource("2_wswnh")
 theme_override_font_sizes/font_size = 20
 text = "Players can jump 
-
 onto grass blocks"
-
 
 [node name="Panel2" type="Panel" parent="VBoxContainer/GridContainer3"]
 custom_minimum_size = Vector2(64, 64)
