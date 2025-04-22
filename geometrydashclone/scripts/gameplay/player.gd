@@ -16,47 +16,47 @@ var is_dead = false
 
 ##	This is called at a fixed frame rate by Godot
 func _physics_process(delta):
-	##	Implements gravity and rotates the player if not on the floor
-	var on_ground = is_on_floor() if gravity > 0 else is_on_ceiling()
-	if not on_ground:
-		velocity.y += gravity * delta
-		$PlayerBody.rotation_degrees += player_rotation * delta
+	if not is_dead:
+		##	Implements gravity and rotates the player if not on the floor
+		var on_ground = is_on_floor() if gravity > 0 else is_on_ceiling()
+		if not on_ground:
+			velocity.y += gravity * delta
+			$PlayerBody.rotation_degrees += player_rotation * delta
 
-	else :
-		$PlayerBody.rotation_degrees = round(round($PlayerBody.rotation_degrees/90)*90)
+		else :
+			$PlayerBody.rotation_degrees = round(round($PlayerBody.rotation_degrees/90)*90)
 
-	##	Jump if the jump action input is pressed and the player is on the floor
-	if Input.is_action_pressed("jump") and on_ground:
-		velocity.y = JUMP_VELOCITY
+		##	Jump if the jump action input is pressed and the player is on the floor
+		if Input.is_action_pressed("jump") and on_ground:
+			velocity.y = JUMP_VELOCITY
+			
+			# addition to make jump more responsive to button press and release 
+		#adds ability to do shorter + higher jump in one. also makes jump feel more lively (I think) 
+		#--press of the jump button
+		#if Input.is_action_just_released("jump") and velocity.y < ( JUMP_VELOCITY / 5 ):	
+		#		velocity.y = JUMP_VELOCITY / 5
+
+		## 	Moves the player
+		velocity.x = delta * SPEED
 		
-		# addition to make jump more responsive to button press and release 
-	#adds ability to do shorter + higher jump in one. also makes jump feel more lively (I think) 
-	#--press of the jump button
-	#if Input.is_action_just_released("jump") and velocity.y < ( JUMP_VELOCITY / 5 ):	
-	#		velocity.y = JUMP_VELOCITY / 5
+		##	Applies force to the player depending on the orb type
+		if is_orb and (Input.is_action_just_pressed("jump") or Input.is_action_just_released("jump")):
+			velocity.y = -force_orb
+			# added on_floor so jump response works correctly with orbs
+			if can_invert == true and not is_on_floor():
+				gravity = -gravity
+				JUMP_VELOCITY = -JUMP_VELOCITY 
+				player_rotation = -player_rotation
+				is_orb = false
 
-	## 	Moves the player
-	velocity.x = delta * SPEED
-	
-	##	Applies force to the player depending on the orb type
-	if is_orb and (Input.is_action_just_pressed("jump") or Input.is_action_just_released("jump")):
-		velocity.y = -force_orb
-		# added on_floor so jump response works correctly with orbs
-		if can_invert == true and not is_on_floor():
-			gravity = -gravity
-			JUMP_VELOCITY = -JUMP_VELOCITY 
-			player_rotation = -player_rotation
-			is_orb = false
-
-
-	##	Moves the player
-	move_and_slide()
-	
-	##	Allows the user to pause the game
-	if not is_dead and Input.is_action_pressed("pause"):
-		get_tree().paused = true
-		if Global.scene_manager.current_scene.scene_file_path == "res://scenes/gameplay.tscn":
-			Global.scene_manager.current_scene.display_pause_menu_overlay()
+		##	Moves the player
+		move_and_slide()
+		
+		##	Allows the user to pause the game
+		if Input.is_action_pressed("pause"):
+			get_tree().paused = true
+			if Global.scene_manager.current_scene.scene_file_path == "res://scenes/gameplay.tscn":
+				Global.scene_manager.current_scene.display_pause_menu_overlay()
 
 ##	Called upon the player's death
 func death():
