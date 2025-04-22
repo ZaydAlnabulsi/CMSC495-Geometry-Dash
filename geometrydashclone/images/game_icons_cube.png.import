@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://qp8yq7y0ipmw"
-path="res://.godot/imported/neon_beach.png-17a6abc1bbe0bc8bb4c28960c59a8e3f.ctex"
+uid="uid://b6i3li2u8vc6e"
+path="res://.godot/imported/game_icons_cube.png-4c374d27631919258f9b54091d221c6c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Images/neon_beach.png"
-dest_files=["res://.godot/imported/neon_beach.png-17a6abc1bbe0bc8bb4c28960c59a8e3f.ctex"]
+source_file="res://Images/game_icons_cube.png"
+dest_files=["res://.godot/imported/game_icons_cube.png-4c374d27631919258f9b54091d221c6c.ctex"]
 
 [params]
 

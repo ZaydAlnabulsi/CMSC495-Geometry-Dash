@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://ovyxauv0un6k"]
 
-[ext_resource type="Texture2D" uid="uid://1e6hdotsvntr" path="res://Images/Shiny1.png" id="1_vb5g1"]
+[ext_resource type="Texture2D" uid="uid://c1q1k5yiv3p2h" path="res://Images/image1.png" id="1_vb5g1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v1d5s"]
 size = Vector2(80, 80)
@@ -8,10 +8,9 @@ size = Vector2(80, 80)
 [node name="PurpleBlock" type="StaticBody2D" groups=["kill"]]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(3.8147e-06, 0)
-scale = Vector2(1.70213, 1.70213)
+position = Vector2(3.09944e-06, -6.67572e-06)
+scale = Vector2(1.12676, 1.25)
 texture = ExtResource("1_vb5g1")
-region_enabled = true
 region_rect = Rect2(432.293, 0.152542, 47.0188, 47.8333)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

@@ -9,26 +9,24 @@ var JUMP_VELOCITY = -1300.0
 var is_orb = false
 var force_orb = 0
 var gravity = 4100
-var player_rotation = 360
+var player_rotation = 270
 var canInvert = false
+
 
 
 ##	This is called at a fixed frame rate by Godot
 func _physics_process(delta):
 	##	Implements gravity and rotates the player if not on the floor
-	if not is_on_floor():
+	var on_ground = is_on_floor() if gravity > 0 else is_on_ceiling()
+	if not on_ground:
 		velocity.y += gravity * delta
 		$PlayerBody.rotation_degrees += player_rotation * delta
 
 	else :
-		var module = int($PlayerBody.rotation_degrees) % 90;
-		if module > 45 :
-			$PlayerBody.rotation_degrees += (90 - module)
-		else :
-			$PlayerBody.rotation_degrees -= module
+		$PlayerBody.rotation_degrees = round(round($PlayerBody.rotation_degrees/90)*90)
 
 	##	Jump if the jump action input is pressed and the player is on the floor
-	if Input.is_action_pressed("jump") and is_on_floor():
+	if Input.is_action_pressed("jump") and on_ground:
 		velocity.y = JUMP_VELOCITY
 
 	## 	Moves the player
