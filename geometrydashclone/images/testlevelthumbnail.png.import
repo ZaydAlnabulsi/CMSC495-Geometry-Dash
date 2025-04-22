@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dkcg0k260nstx"
-path="res://.godot/imported/facial_part_eyebrow_d.png-f33f5b1d6cf0459ed6d5e1e03e067c50.ctex"
+uid="uid://bk8a2wjlwks7u"
+path="res://.godot/imported/testlevelthumbnail.png-824927874e67dc187e85ff308a985c4f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images/facial_part_eyebrow_d.png"
-dest_files=["res://.godot/imported/facial_part_eyebrow_d.png-f33f5b1d6cf0459ed6d5e1e03e067c50.ctex"]
+source_file="res://images/testlevelthumbnail.png"
+dest_files=["res://.godot/imported/testlevelthumbnail.png-824927874e67dc187e85ff308a985c4f.ctex"]
 
 [params]
 
