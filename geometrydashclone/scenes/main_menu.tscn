@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=3 uid="uid://b71uf4h6gea50"]
 
 [ext_resource type="Script" uid="uid://cmw1aai77hwm" path="res://scripts/scenes/main_menu.gd" id="1_l6cm7"]
-[ext_resource type="FontFile" uid="uid://kix12tgfjm8k" path="res://images/Slackey-Regular.ttf" id="3_bqqt6"]
+[ext_resource type="FontFile" uid="uid://kix12tgfjm8k" path="res://Images/Slackey-Regular.ttf" id="3_bqqt6"]
 
 [sub_resource type="Gradient" id="Gradient_ekxnf"]
 colors = PackedColorArray(0, 0, 0, 1, 0.707768, 0.00210505, 0.90159, 1)
@@ -129,6 +129,21 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_bqqt6")
 theme_override_styles/normal = SubResource("StyleBoxFlat_8ln24")
 text = "Exit"
 
+[node name="DevTestButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_bqqt6")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = SubResource("StyleBoxEmpty_bqqt6")
+theme_override_styles/hover = SubResource("StyleBoxFlat_wu84c")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_bqqt6")
+theme_override_styles/normal = SubResource("StyleBoxFlat_8ln24")
+text = "Dev Test"
+
 [node name="Label" type="Label" parent="."]
 layout_mode = 1
 anchors_preset = 5
@@ -148,3 +163,4 @@ text = "Geometry Dash Clone"
 [connection signal="pressed" from="VBoxContainer/NewGameButton" to="." method="_on_new_game_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/SettingsButton" to="." method="_on_settings_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/ExitButton" to="." method="_on_exit_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/DevTestButton" to="." method="_on_dev_test_button_pressed"]
