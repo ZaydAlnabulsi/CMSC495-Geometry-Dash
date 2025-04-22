@@ -11,7 +11,7 @@ var force_orb = 0
 var gravity = 4100
 var player_rotation = 270
 var canInvert = false
-
+var is_dead = false
 
 
 ##	This is called at a fixed frame rate by Godot
@@ -47,13 +47,17 @@ func _physics_process(delta):
 	
 	##	Allows the user to pause the game
 	if Input.is_action_pressed("pause"):
-		get_tree().paused = true
-		if Global.scene_manager.current_scene.scene_file_path == "res://scenes/gameplay.tscn":
-			Global.scene_manager.current_scene.display_pause_menu_overlay()
+		if not is_dead:
+			get_tree().paused = true
+			if Global.scene_manager.current_scene.scene_file_path == "res://scenes/gameplay.tscn":
+				Global.scene_manager.current_scene.display_pause_menu_overlay()
 
 ##	Called upon the player's death
 func death():
 	SPEED = 0
+	gravity = 0
+	velocity.y = 0
+	is_dead = true
 	$PlayerBody.visible = false
 	$Death.play()
 
