@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://fovebjmdo7v2"]
+[gd_scene load_steps=11 format=3 uid="uid://uq30xtv2g7ru"]
 
 [ext_resource type="Texture2D" uid="uid://cw7vm1l618075" path="res://Images/game_background.png" id="1_8m7gg"]
 [ext_resource type="PackedScene" uid="uid://dnx6h0tsjr3m1" path="res://objects/player.tscn" id="1_wx41p"]
@@ -8,7 +8,7 @@
 [ext_resource type="AudioStream" uid="uid://da6x7mnd0ikf8" path="res://Sounds/High Maintenance, Charlotte Haining - Change Your Ways (feat Charlotte Haining) [NCS Release] (1).mp3" id="5_8m7gg"]
 [ext_resource type="PackedScene" uid="uid://cevo1b1uejnoa" path="res://objects/orb.tscn" id="6_s4y5u"]
 [ext_resource type="PackedScene" uid="uid://bdy0aurth53jw" path="res://objects/saw.tscn" id="7_5c0m2"]
-[ext_resource type="PackedScene" uid="uid://6ojuf0fx1t7p" path="res://objects/trampoline.tscn" id="8_n8gco"]
+[ext_resource type="PackedScene" path="res://objects/trampoline.tscn" id="8_n8gco"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_plydf"]
 size = Vector2(2692.75, 450.25)
@@ -592,7 +592,7 @@ position = Vector2(6400, -911)
 position = Vector2(186, -125)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="LevelEnd" groups=["levelEnd"]]
-position = Vector2(39622, -508)
+position = Vector2(42416, -508)
 shape = SubResource("RectangleShape2D_plydf")
 
 [node name="trampoline" parent="." instance=ExtResource("8_n8gco")]
@@ -2072,7 +2072,7 @@ scale = Vector2(2, 2)
 type = 2
 
 [node name="yellowOrb42" parent="." instance=ExtResource("6_s4y5u")]
-position = Vector2(38293, -712)
+position = Vector2(38293, -792)
 scale = Vector2(1.1, 1.1)
 
 [node name="Spike116" parent="." instance=ExtResource("3_n567q")]
@@ -2154,6 +2154,21 @@ position = Vector2(34737, -76)
 
 [node name="PurpleBlock140Down90" parent="." instance=ExtResource("2_8m7gg")]
 position = Vector2(34656, -76)
+
+[node name="PurpleBlock140Down131" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(38464, -485)
+
+[node name="PurpleBlock140Down132" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(38704, -485)
+
+[node name="PurpleBlock140Down133" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(38623, -485)
+
+[node name="PurpleBlock140Down134" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(38624, -485)
+
+[node name="PurpleBlock140Down135" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(38543, -485)
 
 [node name="PurpleBlock140Down91" parent="." instance=ExtResource("2_8m7gg")]
 position = Vector2(36146, -76)
