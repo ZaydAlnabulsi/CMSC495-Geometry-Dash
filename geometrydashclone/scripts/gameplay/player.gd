@@ -32,8 +32,8 @@ func _physics_process(delta):
 		# addition to make jump more responsive to button press and release 
 	#adds ability to do shorter + higher jump in one. also makes jump feel more lively (I think) 
 	#--press of the jump button
-	if Input.is_action_just_released("jump") and velocity.y < ( JUMP_VELOCITY / 5 ):	
-			velocity.y = JUMP_VELOCITY / 5
+	#if Input.is_action_just_released("jump") and velocity.y < ( JUMP_VELOCITY / 5 ):	
+	#		velocity.y = JUMP_VELOCITY / 5
 
 	## 	Moves the player
 	velocity.x = delta * SPEED

@@ -1,10 +1,10 @@
 [gd_scene load_steps=18 format=3 uid="uid://dhtqln3h81jco"]
 
-[ext_resource type="Texture2D" uid="uid://b060uyotkgai4" path="res://Images/menu_background.png" id="1_p0wlc"]
+[ext_resource type="Texture2D" uid="uid://b060uyotkgai4" path="res://images/menu_background.png" id="1_p0wlc"]
 [ext_resource type="Script" uid="uid://5blo4yji0td3" path="res://scripts/scenes/level_select.gd" id="1_rif6e"]
-[ext_resource type="FontFile" uid="uid://kix12tgfjm8k" path="res://Images/Slackey-Regular.ttf" id="2_2epne"]
-[ext_resource type="Texture2D" uid="uid://bcn2hnlnkji7m" path="res://Images/level1thumbnail.png" id="3_2epne"]
-[ext_resource type="Texture2D" uid="uid://dqmdr4sexgo4b" path="res://Images/testlevelthumbnail.png" id="5_chg43"]
+[ext_resource type="FontFile" uid="uid://kix12tgfjm8k" path="res://images/Slackey-Regular.ttf" id="2_2epne"]
+[ext_resource type="Texture2D" uid="uid://buspqkckqiipu" path="res://images/level1thumbnail.png" id="4_chg43"]
+[ext_resource type="Texture2D" uid="uid://bk8a2wjlwks7u" path="res://images/testlevelthumbnail.png" id="5_r77uv"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rif6e"]
 texture = ExtResource("1_p0wlc")
@@ -60,7 +60,7 @@ corner_radius_bottom_right = 20
 corner_radius_bottom_left = 20
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_chg43"]
-texture = ExtResource("3_2epne")
+texture = ExtResource("4_chg43")
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_r77uv"]
 
@@ -101,7 +101,7 @@ corner_radius_bottom_right = 20
 corner_radius_bottom_left = 20
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_r77uv"]
-texture = ExtResource("5_chg43")
+texture = ExtResource("5_r77uv")
 
 [node name="LevelSelect" type="Control"]
 layout_mode = 3
