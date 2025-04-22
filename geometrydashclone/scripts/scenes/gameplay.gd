@@ -52,7 +52,6 @@ func _on_unpause_button_pressed() -> void:
 func _on_music_volume_minus_button_pressed() -> void:
 	if Global.music_volume > 1:
 		Global.music_volume -= 1
-		get_node("CanvasLayer/PauseMenuOverlay/Panel2/GridContainer/MusicVolumeSettingLabel").text = str(Global.music_volume)
 		update_music_volume()
 
 ##	Pause menu overlay increase music volume button connected function
@@ -60,7 +59,6 @@ func _on_music_volume_minus_button_pressed() -> void:
 func _on_music_volume_plus_button_pressed() -> void:
 	if Global.music_volume < 10:
 		Global.music_volume += 1
-		get_node("CanvasLayer/PauseMenuOverlay/Panel2/GridContainer/MusicVolumeSettingLabel").text = str(Global.music_volume)
 		update_music_volume()
 
 ##	Pause menu overlay decrease sound effects volume button connected function
@@ -68,7 +66,6 @@ func _on_music_volume_plus_button_pressed() -> void:
 func _on_sound_effects_volume_minus_button_pressed() -> void:
 	if Global.sound_effects_volume > 1:
 		Global.sound_effects_volume -= 1
-		get_node("CanvasLayer/PauseMenuOverlay/Panel2/GridContainer/SoundEffectsVolumeSettingLabel").text = str(Global.sound_effects_volume)
 		update_sound_effects_volume()
 
 ##	Pause menu overlay increase sound effects volume button connected function
@@ -76,15 +73,16 @@ func _on_sound_effects_volume_minus_button_pressed() -> void:
 func _on_sound_effects_volume_plus_button_pressed() -> void:
 	if Global.sound_effects_volume < 10:
 		Global.sound_effects_volume += 1
-		get_node("CanvasLayer/PauseMenuOverlay/Panel2/GridContainer/SoundEffectsVolumeSettingLabel").text = str(Global.sound_effects_volume)
 		update_sound_effects_volume()
 
 ##	Updates the sound effects volume that plays
 func update_sound_effects_volume() -> void:
+	get_node("CanvasLayer/PauseMenuOverlay/Panel2/GridContainer/SoundEffectsVolumeSettingLabel").text = str(Global.sound_effects_volume)
 	player.update_sound_effects_volume()
 
 ##	Updates the music volume
 func update_music_volume() -> void:
+	get_node("CanvasLayer/PauseMenuOverlay/Panel2/GridContainer/MusicVolumeSettingLabel").text = str(Global.music_volume)
 	audio_stream_player.volume_db = -30 + (Global.music_volume * 3)
 
 ##	Changes the scene to the gameplay scene
