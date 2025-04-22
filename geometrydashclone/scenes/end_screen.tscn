@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://dpq0gp4yrpa5n"]
+[gd_scene load_steps=0 format=3 uid="uid://dpq0gp4yrpa5n"]
 
 [node name="EndScreen" type="Control"]
 layout_mode = 3

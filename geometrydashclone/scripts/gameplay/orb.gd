@@ -1,20 +1,26 @@
 extends Area2D
 
+##	Variables that hold the orb properties
 @export var type = 0
 @onready var sprite = $Sprite2D
-var force
+var force = 0
+var invert = false
 
+
+##	Sets the appropriate force and sprite texture depending on the type
 func _ready():
 	"""
 	0: Yellow
 	1: Blue
 	2: Green
 	3: Red
+	4: Purple
+
 	_: Error
 	"""
 	match type :
 		0 :
-			force = 600
+			force = 800 ## 600
 			sprite.texture = load("res://Images/platformPack_tile012.png")
 		1 :
 			force = 1200
@@ -24,7 +30,15 @@ func _ready():
 			sprite.texture = load("res://Images/platformPack_tile023.png")
 		3 :
 			force = -2000
+			invert = true
 			sprite.texture = load("res://Images/platformPack_tile024.png")
+		4 :
+			force = -1000
+			invert = true
+			sprite.texture = load("res://Images/platformPack_tile025.png")
+		5 :
+			force = 1900
+			sprite.texture = load("res://Images/platformPack_tile023.png")
 		_ :
 			force = 0
 			sprite.texture = load("res://Images/face_h.png")

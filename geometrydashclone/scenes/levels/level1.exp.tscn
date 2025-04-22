@@ -1,0 +1,2384 @@
+[gd_scene load_steps=10 format=3 uid="uid://uq30xtv2g7ru"]
+
+[ext_resource type="PackedScene" uid="uid://dnx6h0tsjr3m1" path="res://objects/player.tscn" id="1_wx41p"]
+[ext_resource type="PackedScene" uid="uid://ovyxauv0un6k" path="res://objects/obj_puple_block.tscn" id="2_8m7gg"]
+[ext_resource type="PackedScene" uid="uid://drhg7r02ojwl" path="res://objects/Spike.tscn" id="3_n567q"]
+[ext_resource type="AudioStream" path="res://Sounds/High Maintenance, Charlotte Haining - Change Your Ways (feat Charlotte Haining) [NCS Release] (1).mp3" id="4_3xqfd"]
+[ext_resource type="PackedScene" uid="uid://cixhmlktvwx1" path="res://objects/floor.tscn" id="5_7c1ax"]
+[ext_resource type="PackedScene" uid="uid://cevo1b1uejnoa" path="res://objects/orb.tscn" id="6_s4y5u"]
+[ext_resource type="PackedScene" uid="uid://bdy0aurth53jw" path="res://objects/saw.tscn" id="7_5c0m2"]
+[ext_resource type="PackedScene" path="res://objects/trampoline.tscn" id="8_n8gco"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_plydf"]
+size = Vector2(2692.75, 10785.9)
+
+[node name="Level1" type="Node2D"]
+metadata/_edit_vertical_guides_ = [27533.0]
+
+[node name="Player" parent="." instance=ExtResource("1_wx41p")]
+position = Vector2(21, -34)
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+offset = Vector2(0, -20)
+process_callback = 0
+limit_left = -20
+limit_bottom = 100
+position_smoothing_enabled = true
+drag_vertical_enabled = true
+drag_top_margin = 0.4
+drag_bottom_margin = 0.4
+editor_draw_drag_margin = true
+
+[node name="PurpleBlock" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(4371, -289)
+
+[node name="PurpleBlock2" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(4465, -367)
+
+[node name="PurpleBlock3" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(2369, -28)
+
+[node name="PurpleBlock4" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(2369, -108)
+
+[node name="PurpleBlock5" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(2449, -108)
+
+[node name="PurpleBlock7" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(4671, -526)
+
+[node name="PurpleBlock8" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(3997, -204)
+
+[node name="Spike" parent="." instance=ExtResource("3_n567q")]
+position = Vector2(3637, -45)
+
+[node name="Spike2" parent="." instance=ExtResource("3_n567q")]
+position = Vector2(4295, -298)
+
+[node name="Spike3" parent="Spike2" instance=ExtResource("3_n567q")]
+position = Vector2(-2735, 256)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_3xqfd")
+autoplay = true
+
+[node name="PurpleBlock9" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(4370, -211)
+
+[node name="PurpleBlock6" parent="PurpleBlock9" instance=ExtResource("2_8m7gg")]
+position = Vector2(-1921, 183)
+
+[node name="PurpleBlock7" parent="PurpleBlock9" instance=ExtResource("2_8m7gg")]
+position = Vector2(-1761, 103)
+
+[node name="PurpleBlock8" parent="PurpleBlock9" instance=ExtResource("2_8m7gg")]
+position = Vector2(-533, 7)
+
+[node name="PurpleBlock19" parent="PurpleBlock9" instance=ExtResource("2_8m7gg")]
+position = Vector2(-612, 7)
+
+[node name="PurpleBlock10" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(7139, -1239)
+
+[node name="PurpleBlock12" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(5539, -824)
+
+[node name="PurpleBlock46" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(6252, -932)
+
+[node name="PurpleBlock47" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(6026, -824)
+
+[node name="PurpleBlock48" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(6252, -990)
+
+[node name="PurpleBlock49" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(6511, -1042)
+
+[node name="PurpleBlock50" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(6511, -1100)
+
+[node name="Spike4" parent="." instance=ExtResource("3_n567q")]
+position = Vector2(3742, -46)
+
+[node name="Spike5" parent="." instance=ExtResource("3_n567q")]
+position = Vector2(2268, -27)
+
+[node name="Spike6" parent="." instance=ExtResource("3_n567q")]
+position = Vector2(4378, -376)
+
+[node name="Spike7" parent="." instance=ExtResource("3_n567q")]
+position = Vector2(4472, -462)
+
+[node name="Spike18" parent="." instance=ExtResource("3_n567q")]
+position = Vector2(11282, -939)
+scale = Vector2(0.8, 0.8)
+
+[node name="Spike19" parent="." instance=ExtResource("3_n567q")]
+position = Vector2(11493, -860)
+scale = Vector2(0.8, 0.8)
+
+[node name="Spike26" parent="." instance=ExtResource("3_n567q")]
+position = Vector2(13320, -1183)
+scale = Vector2(0.8, 0.8)
+
+[node name="Spike27" parent="." instance=ExtResource("3_n567q")]
+position = Vector2(13480, -1177)
+scale = Vector2(0.8, 0.8)
+
+[node name="Spike22" parent="." instance=ExtResource("3_n567q")]
+position = Vector2(13194, -899)
+scale = Vector2(0.8, 0.8)
+
+[node name="Spike23" parent="." instance=ExtResource("3_n567q")]
+position = Vector2(13354, -848)
+scale = Vector2(0.8, 0.8)
+
+[node name="Spike20" parent="." instance=ExtResource("3_n567q")]
+position = Vector2(12504, -1576)
+rotation = 3.14159
+scale = Vector2(3, 3)
+
+[node name="Spike21" parent="." instance=ExtResource("3_n567q")]
+position = Vector2(12911, -1395)
+rotation = 3.14159
+scale = Vector2(3, 3)
+
+[node name="Spike14" parent="." instance=ExtResource("3_n567q")]
+position = Vector2(7015, -1122)
+
+[node name="Spike16" parent="." instance=ExtResource("3_n567q")]
+position = Vector2(11283, -788)
+rotation = 3.14159
+scale = Vector2(0.8, 0.8)
+
+[node name="Spike17" parent="." instance=ExtResource("3_n567q")]
+position = Vector2(11495, -713)
+rotation = 3.14159
+scale = Vector2(0.8, 0.8)
+
+[node name="Spike24" parent="." instance=ExtResource("3_n567q")]
+position = Vector2(13402, -1058)
+rotation = 3.14159
+scale = Vector2(0.8, 0.8)
+
+[node name="Spike28" parent="." instance=ExtResource("3_n567q")]
+position = Vector2(13915, -1622)
+rotation = 3.14159
+scale = Vector2(0.8, 0.8)
+
+[node name="Spike25" parent="." instance=ExtResource("3_n567q")]
+position = Vector2(13994, -1540)
+rotation = 3.14159
+scale = Vector2(0.8, 0.8)
+
+[node name="Spike34" parent="." instance=ExtResource("3_n567q")]
+position = Vector2(15051, -1632)
+rotation = 3.14159
+scale = Vector2(0.8, 0.8)
+
+[node name="Spike35" parent="." instance=ExtResource("3_n567q")]
+position = Vector2(15133, -1632)
+rotation = 3.14159
+scale = Vector2(0.8, 0.8)
+
+[node name="Spike36" parent="." instance=ExtResource("3_n567q")]
+position = Vector2(15214, -1634)
+rotation = 3.14159
+scale = Vector2(0.8, 0.8)
+
+[node name="Spike37" parent="." instance=ExtResource("3_n567q")]
+position = Vector2(15296, -1634)
+rotation = 3.14159
+scale = Vector2(0.8, 0.8)
+
+[node name="Spike38" parent="." instance=ExtResource("3_n567q")]
+position = Vector2(15381, -1636)
+rotation = 3.14159
+scale = Vector2(0.8, 0.8)
+
+[node name="Spike39" parent="." instance=ExtResource("3_n567q")]
+position = Vector2(15463, -1636)
+rotation = 3.14159
+scale = Vector2(0.8, 0.8)
+
+[node name="Spike56" parent="." instance=ExtResource("3_n567q")]
+position = Vector2(31803, -105)
+rotation = 3.14159
+scale = Vector2(0.8, 0.8)
+
+[node name="Spike57" parent="." instance=ExtResource("3_n567q")]
+position = Vector2(31889, -105)
+rotation = 3.14159
+scale = Vector2(0.8, 0.8)
+
+[node name="Spike59" parent="." instance=ExtResource("3_n567q")]
+position = Vector2(28915, -113)
+rotation = 3.14159
+scale = Vector2(0.8, 0.8)
+
+[node name="Spike60" parent="." instance=ExtResource("3_n567q")]
+position = Vector2(28982, -113)
+rotation = 3.14159
+scale = Vector2(0.8, 0.8)
+
+[node name="Spike61" parent="." instance=ExtResource("3_n567q")]
+position = Vector2(29068, -113)
+rotation = 3.14159
+scale = Vector2(0.8, 0.8)
+
+[node name="Spike62" parent="." instance=ExtResource("3_n567q")]
+position = Vector2(29155, -113)
+rotation = 3.14159
+scale = Vector2(0.8, 0.8)
+
+[node name="Spike63" parent="." instance=ExtResource("3_n567q")]
+position = Vector2(29241, -113)
+rotation = 3.14159
+scale = Vector2(0.8, 0.8)
+
+[node name="Spike64" parent="." instance=ExtResource("3_n567q")]
+position = Vector2(29274, -113)
+rotation = 3.14159
+scale = Vector2(0.8, 0.8)
+
+[node name="Spike15" parent="." instance=ExtResource("3_n567q")]
+position = Vector2(6949, -1122)
+
+[node name="Spike8" parent="." instance=ExtResource("3_n567q")]
+position = Vector2(2180, -30)
+
+[node name="Spike10" parent="." instance=ExtResource("3_n567q")]
+position = Vector2(3464, -42)
+
+[node name="Spike11" parent="." instance=ExtResource("3_n567q")]
+position = Vector2(4811, -595)
+rotation = -1.5708
+
+[node name="Spike12" parent="." instance=ExtResource("3_n567q")]
+position = Vector2(5299, -1251)
+rotation = -1.5708
+
+[node name="Spike13" parent="." instance=ExtResource("3_n567q")]
+position = Vector2(5540, -1186)
+rotation = -1.5708
+
+[node name="Spike29" parent="." instance=ExtResource("3_n567q")]
+position = Vector2(13829, -1696)
+rotation = -1.5708
+scale = Vector2(0.9, 0.9)
+
+[node name="PurpleBlock13" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(4465, -285)
+
+[node name="PurpleBlock14" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(6812, -1224)
+
+[node name="PurpleBlock42" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(7630, -443)
+
+[node name="PurpleBlock80" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(9761, -614)
+
+[node name="PurpleBlock82" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(9924, -614)
+
+[node name="PurpleBlock83" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(9841, -614)
+
+[node name="PurpleBlock84" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(10088, -614)
+
+[node name="PurpleBlock85" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(10005, -614)
+
+[node name="PurpleBlock87" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(10168, -614)
+
+[node name="PurpleBlock124" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(26263, -24393)
+
+[node name="PurpleBlock126" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(26426, -24393)
+
+[node name="PurpleBlock133" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(26343, -24393)
+
+[node name="PurpleBlock135" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(26590, -24393)
+
+[node name="PurpleBlock183" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(26507, -24393)
+
+[node name="PurpleBlock184" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(26670, -24393)
+
+[node name="PurpleBlock202" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(26263, -24313)
+
+[node name="PurpleBlock203" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(26426, -24313)
+
+[node name="PurpleBlock204" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(26343, -24313)
+
+[node name="PurpleBlock205" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(26590, -24313)
+
+[node name="PurpleBlock207" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(26670, -24313)
+
+[node name="PurpleBlock226" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(26263, -24230)
+
+[node name="PurpleBlock228" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(26343, -24230)
+
+[node name="PurpleBlock230" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(26507, -24230)
+
+[node name="PurpleBlock231" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(26670, -24230)
+
+[node name="PurpleBlock232" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(26263, -24150)
+
+[node name="PurpleBlock233" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(26426, -24150)
+
+[node name="PurpleBlock234" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(26343, -24150)
+
+[node name="PurpleBlock235" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(26590, -24150)
+
+[node name="PurpleBlock236" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(26507, -24150)
+
+[node name="PurpleBlock237" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(26670, -24150)
+
+[node name="PurpleBlock185" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(25537, -24397)
+
+[node name="PurpleBlock197" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(25700, -24397)
+
+[node name="PurpleBlock198" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(25617, -24397)
+
+[node name="PurpleBlock199" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(25864, -24397)
+
+[node name="PurpleBlock200" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(25781, -24397)
+
+[node name="PurpleBlock201" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(25944, -24397)
+
+[node name="PurpleBlock208" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(25537, -24314)
+
+[node name="PurpleBlock210" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(25617, -24314)
+
+[node name="PurpleBlock211" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(25864, -24314)
+
+[node name="PurpleBlock212" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(25781, -24314)
+
+[node name="PurpleBlock213" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(25944, -24314)
+
+[node name="PurpleBlock214" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(25537, -24234)
+
+[node name="PurpleBlock215" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(25700, -24234)
+
+[node name="PurpleBlock217" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(25864, -24234)
+
+[node name="PurpleBlock219" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(25944, -24234)
+
+[node name="PurpleBlock220" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(25537, -24151)
+
+[node name="PurpleBlock221" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(25700, -24151)
+
+[node name="PurpleBlock222" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(25617, -24151)
+
+[node name="PurpleBlock223" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(25864, -24151)
+
+[node name="PurpleBlock224" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(25781, -24151)
+
+[node name="PurpleBlock225" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(25944, -24151)
+
+[node name="PurpleBlock51" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(7026, -1064)
+
+[node name="PurpleBlock52" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(6944, -1064)
+
+[node name="PurpleBlock53" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(7026, -981)
+
+[node name="PurpleBlock54" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(6943, -981)
+
+[node name="PurpleBlock55" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(7026, -898)
+
+[node name="PurpleBlock56" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(6943, -898)
+
+[node name="PurpleBlock57" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(7029, -815)
+
+[node name="PurpleBlock58" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(6946, -815)
+
+[node name="PurpleBlock16" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(4752, -526)
+
+[node name="PurpleBlock17" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(5211, -1025)
+
+[node name="PurpleBlock18" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(5359, -978)
+
+[node name="Floor" parent="." instance=ExtResource("5_7c1ax")]
+top_level = true
+position = Vector2(21, 65)
+
+[node name="yellowOrb" parent="." instance=ExtResource("6_s4y5u")]
+position = Vector2(8879, -993)
+type = 2
+
+[node name="yellowOrb5" parent="." instance=ExtResource("6_s4y5u")]
+position = Vector2(11927, -928)
+scale = Vector2(1.4, 1.4)
+type = 5
+
+[node name="yellowOrb6" parent="." instance=ExtResource("6_s4y5u")]
+position = Vector2(17335, -1482)
+scale = Vector2(1.4, 1.4)
+type = 5
+
+[node name="yellowOrb9" parent="." instance=ExtResource("6_s4y5u")]
+position = Vector2(16580, -961)
+scale = Vector2(1.4, 1.4)
+type = 5
+
+[node name="yellowOrb8" parent="." instance=ExtResource("6_s4y5u")]
+position = Vector2(16916, -1295)
+scale = Vector2(1.4, 1.4)
+type = 5
+
+[node name="yellowOrb2" parent="." instance=ExtResource("6_s4y5u")]
+position = Vector2(3517, -128)
+type = 1
+
+[node name="yellowOrb3" parent="." instance=ExtResource("6_s4y5u")]
+position = Vector2(4164, -326)
+type = 2
+
+[node name="yellowOrb7" parent="." instance=ExtResource("6_s4y5u")]
+position = Vector2(4906, -736)
+type = 2
+
+[node name="Saw" parent="." instance=ExtResource("7_5c0m2")]
+position = Vector2(3034, -327)
+
+[node name="Saw2" parent="." instance=ExtResource("7_5c0m2")]
+position = Vector2(3034, -265)
+
+[node name="Saw3" parent="." instance=ExtResource("7_5c0m2")]
+position = Vector2(3032, -392)
+
+[node name="Saw4" parent="." instance=ExtResource("7_5c0m2")]
+position = Vector2(3032, -454)
+
+[node name="Saw5" parent="." instance=ExtResource("7_5c0m2")]
+position = Vector2(3391, -32)
+scale = Vector2(0.8, 0.8)
+
+[node name="Saw12" parent="." instance=ExtResource("7_5c0m2")]
+position = Vector2(3337, -32)
+scale = Vector2(0.8, 0.8)
+
+[node name="Saw6" parent="." instance=ExtResource("7_5c0m2")]
+position = Vector2(4182, -104)
+
+[node name="Saw7" parent="." instance=ExtResource("7_5c0m2")]
+position = Vector2(4900, -615)
+
+[node name="Saw8" parent="." instance=ExtResource("7_5c0m2")]
+position = Vector2(4966, -618)
+
+[node name="Saw9" parent="." instance=ExtResource("7_5c0m2")]
+position = Vector2(6658, -1076)
+
+[node name="Saw10" parent="." instance=ExtResource("7_5c0m2")]
+position = Vector2(11171, -448)
+scale = Vector2(2.5, 2.5)
+
+[node name="Saw17" parent="." instance=ExtResource("7_5c0m2")]
+position = Vector2(18175, -1552)
+scale = Vector2(2.5, 2.5)
+
+[node name="Saw18" parent="." instance=ExtResource("7_5c0m2")]
+position = Vector2(18437, -2111)
+scale = Vector2(2.5, 2.5)
+
+[node name="Saw19" parent="." instance=ExtResource("7_5c0m2")]
+position = Vector2(25618, -24231)
+
+[node name="Saw20" parent="." instance=ExtResource("7_5c0m2")]
+position = Vector2(25701, -24316)
+
+[node name="Saw21" parent="." instance=ExtResource("7_5c0m2")]
+position = Vector2(25784, -24233)
+
+[node name="Saw22" parent="." instance=ExtResource("7_5c0m2")]
+position = Vector2(26421, -24231)
+
+[node name="Saw23" parent="." instance=ExtResource("7_5c0m2")]
+position = Vector2(26508, -24309)
+
+[node name="Saw24" parent="." instance=ExtResource("7_5c0m2")]
+position = Vector2(26591, -24231)
+
+[node name="Saw13" parent="." instance=ExtResource("7_5c0m2")]
+position = Vector2(11352, -300)
+scale = Vector2(2.5, 2.5)
+
+[node name="Saw14" parent="." instance=ExtResource("7_5c0m2")]
+position = Vector2(13533, -941)
+scale = Vector2(2.5, 2.5)
+
+[node name="Saw16" parent="." instance=ExtResource("7_5c0m2")]
+position = Vector2(14360, -446)
+scale = Vector2(2.5, 2.5)
+
+[node name="Saw15" parent="." instance=ExtResource("7_5c0m2")]
+position = Vector2(14391, -1186)
+scale = Vector2(5, 5)
+
+[node name="Saw11" parent="." instance=ExtResource("7_5c0m2")]
+position = Vector2(6400, -911)
+
+[node name="LevelEnd" type="Area2D" parent="." groups=["levelEnd"]]
+position = Vector2(186, -125)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LevelEnd" groups=["levelEnd"]]
+position = Vector2(61142, -32938)
+shape = SubResource("RectangleShape2D_plydf")
+
+[node name="trampoline" parent="." instance=ExtResource("8_n8gco")]
+position = Vector2(2851, -177)
+
+[node name="trampoline13" parent="." instance=ExtResource("8_n8gco")]
+position = Vector2(5541, -886)
+type = 2
+
+[node name="trampoline14" parent="." instance=ExtResource("8_n8gco")]
+position = Vector2(6019, -893)
+type = 1
+
+[node name="trampoline3" parent="." instance=ExtResource("8_n8gco")]
+position = Vector2(7136, -1299)
+type = 1
+
+[node name="trampoline5" parent="." instance=ExtResource("8_n8gco")]
+position = Vector2(10231, -681)
+type = 1
+
+[node name="PurpleBlock104" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(11043, -648)
+
+[node name="PurpleBlock105" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(11310, -579)
+
+[node name="PurpleBlock106" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(11123, -648)
+
+[node name="PurpleBlock107" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(11284, -862)
+
+[node name="PurpleBlock109" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(11475, -432)
+
+[node name="PurpleBlock118" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(11654, -477)
+
+[node name="PurpleBlock111" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(15807, -1032)
+
+[node name="PurpleBlock112" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(15135, -1710)
+
+[node name="PurpleBlock113" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(13193, -840)
+
+[node name="PurpleBlock114" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(13913, -1698)
+
+[node name="PurpleBlock116" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(11493, -782)
+
+[node name="PurpleBlock117" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(13996, -1616)
+
+[node name="PurpleBlock118Down" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(12184, -1402)
+rotation = 3.14159
+
+[node name="PurpleBlock136Down" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(12604, -1246)
+rotation = 3.14159
+
+[node name="PurpleBlock137Down" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(12863, -1121)
+rotation = 3.14159
+
+[node name="PurpleBlock138Down" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(12943, -1121)
+rotation = 3.14159
+
+[node name="PurpleBlock139Down" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(13026, -1121)
+rotation = 3.14159
+
+[node name="PurpleBlock140Down" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(14346, -802)
+rotation = 3.14159
+
+[node name="PurpleBlock118Down2" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(13280, -1394)
+rotation = 3.14159
+
+[node name="PurpleBlock140Down3" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(13530, -1604)
+rotation = 3.14159
+
+[node name="PurpleBlock118Down3" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(14434, -802)
+rotation = 3.14159
+
+[node name="PurpleBlock118Down4" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(14745, -1403)
+rotation = 3.14159
+
+[node name="PurpleBlock140Down5" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(14918, -1403)
+rotation = 3.14159
+
+[node name="PurpleBlock118Down5" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(14020, -1203)
+rotation = 3.14159
+
+[node name="PurpleBlock140Down6" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(13610, -1604)
+rotation = 3.14159
+
+[node name="PurpleBlock118Down6" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(13694, -1604)
+rotation = 3.14159
+
+[node name="PurpleBlock118Down7" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(14493, -802)
+rotation = 3.14159
+
+[node name="PurpleBlock118Down8" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(14830, -1403)
+rotation = 3.14159
+
+[node name="PurpleBlock140Down7" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(15007, -1403)
+rotation = 3.14159
+
+[node name="PurpleBlock118Down14" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(31803, -184)
+rotation = 3.14159
+
+[node name="PurpleBlock118Down15" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(31888, -184)
+rotation = 3.14159
+
+[node name="PurpleBlock140Down14" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(28918, -192)
+rotation = 3.14159
+
+[node name="PurpleBlock118Down16" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(28977, -192)
+rotation = 3.14159
+
+[node name="PurpleBlock140Down15" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(29150, -192)
+rotation = 3.14159
+
+[node name="PurpleBlock118Down17" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(29062, -192)
+rotation = 3.14159
+
+[node name="PurpleBlock140Down16" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(29239, -192)
+rotation = 3.14159
+
+[node name="PurpleBlock118Down18" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(29279, -192)
+rotation = 3.14159
+
+[node name="PurpleBlock140Down8" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(15604, -1353)
+rotation = 3.14159
+
+[node name="PurpleBlock118Down10" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(15345, -1409)
+rotation = 3.14159
+
+[node name="PurpleBlock136Down2" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(13322, -1121)
+rotation = 3.14159
+
+[node name="PurpleBlock137Down2" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(13402, -1121)
+rotation = 3.14159
+
+[node name="PurpleBlock138Down2" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(13483, -1121)
+rotation = 3.14159
+
+[node name="PurpleBlock139Down2" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(12345, -1402)
+rotation = 3.14159
+
+[node name="PurpleBlock140Down2" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(12263, -1402)
+rotation = 3.14159
+
+[node name="PurpleBlock119Down" parent="." instance=ExtResource("2_8m7gg")]
+visible = false
+position = Vector2(12100, -1402)
+rotation = 3.14159
+
+[node name="PurpleBlock120" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(13192, -761)
+
+[node name="PurpleBlock121" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(16015, -986)
+
+[node name="PurpleBlock122" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(13354, -710)
+
+[node name="PurpleBlock123" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(15724, -1032)
+
+[node name="PurpleBlock125" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(15639, -1032)
+
+[node name="PurpleBlock127" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(16098, -986)
+
+[node name="PurpleBlock128" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(15219, -1710)
+
+[node name="PurpleBlock129" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(15053, -1710)
+
+[node name="PurpleBlock130" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(15303, -1710)
+
+[node name="PurpleBlock131" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(15384, -1710)
+
+[node name="PurpleBlock132" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(15468, -1710)
+
+[node name="PurpleBlock134" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(12504, -1867)
+scale = Vector2(4, 4)
+
+[node name="PurpleBlock136" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(12895, -1675)
+scale = Vector2(4, 4)
+
+[node name="Spike30" parent="." instance=ExtResource("3_n567q")]
+position = Vector2(16630, -722)
+scale = Vector2(0.8, 0.8)
+
+[node name="Spike33" parent="." instance=ExtResource("3_n567q")]
+position = Vector2(12182, -689)
+scale = Vector2(8, 8)
+
+[node name="Spike31" parent="." instance=ExtResource("3_n567q")]
+position = Vector2(16708, -667)
+scale = Vector2(0.8, 0.8)
+
+[node name="PurpleBlock115" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(16629, -663)
+
+[node name="PurpleBlock137" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(16628, -584)
+
+[node name="PurpleBlock138" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(16708, -529)
+
+[node name="PurpleBlock139" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(16628, -584)
+
+[node name="PurpleBlock140" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(14589, -483)
+
+[node name="PurpleBlock141" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(16710, -608)
+
+[node name="Spike32" parent="." instance=ExtResource("3_n567q")]
+position = Vector2(16793, -739)
+scale = Vector2(0.8, 0.8)
+
+[node name="PurpleBlock142" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(16793, -601)
+
+[node name="PurpleBlock143" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(16793, -601)
+
+[node name="PurpleBlock144" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(16795, -680)
+
+[node name="Spike40" parent="." instance=ExtResource("3_n567q")]
+position = Vector2(16948, -1109)
+scale = Vector2(0.8, 0.8)
+
+[node name="Spike41" parent="." instance=ExtResource("3_n567q")]
+position = Vector2(17026, -1175)
+scale = Vector2(0.8, 0.8)
+
+[node name="PurpleBlock145" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(16947, -1050)
+
+[node name="PurpleBlock146" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(16946, -971)
+
+[node name="PurpleBlock147" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(17026, -1037)
+
+[node name="PurpleBlock148" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(16946, -971)
+
+[node name="PurpleBlock149" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(17028, -1116)
+
+[node name="Spike42" parent="." instance=ExtResource("3_n567q")]
+position = Vector2(17111, -1126)
+scale = Vector2(0.8, 0.8)
+
+[node name="PurpleBlock150" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(17111, -988)
+
+[node name="PurpleBlock151" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(17111, -988)
+
+[node name="PurpleBlock152" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(17113, -1067)
+
+[node name="Spike43" parent="." instance=ExtResource("3_n567q")]
+position = Vector2(17283, -1278)
+scale = Vector2(0.8, 0.8)
+
+[node name="Spike44" parent="." instance=ExtResource("3_n567q")]
+position = Vector2(17361, -1323)
+scale = Vector2(0.8, 0.8)
+
+[node name="PurpleBlock153" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(17282, -1219)
+
+[node name="PurpleBlock154" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(17281, -1140)
+
+[node name="PurpleBlock155" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(17361, -1185)
+
+[node name="PurpleBlock156" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(17281, -1140)
+
+[node name="PurpleBlock157" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(17363, -1264)
+
+[node name="Spike45" parent="." instance=ExtResource("3_n567q")]
+position = Vector2(17446, -1336)
+scale = Vector2(0.8, 0.8)
+
+[node name="Spike46" parent="." instance=ExtResource("3_n567q")]
+position = Vector2(18777, -1682)
+scale = Vector2(0.8, 0.8)
+
+[node name="Spike47" parent="." instance=ExtResource("3_n567q")]
+position = Vector2(18875, -1686)
+scale = Vector2(0.8, 0.8)
+
+[node name="PurpleBlock158" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(17446, -1198)
+
+[node name="PurpleBlock159" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(17446, -1198)
+
+[node name="PurpleBlock160" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(17448, -1277)
+
+[node name="PurpleBlock81" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(17735, -1607)
+
+[node name="PurpleBlock86" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(17898, -1607)
+
+[node name="PurpleBlock88" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(17815, -1607)
+
+[node name="PurpleBlock89" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(18062, -1607)
+
+[node name="PurpleBlock90" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(17979, -1607)
+
+[node name="PurpleBlock179" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(19190, -1607)
+
+[node name="PurpleBlock180" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(19353, -1607)
+
+[node name="PurpleBlock181" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(19270, -1607)
+
+[node name="PurpleBlock182" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(19434, -1607)
+
+[node name="PurpleBlock91" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(19506, -1606)
+
+[node name="PurpleBlock161" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(18867, -1607)
+
+[node name="PurpleBlock162" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(18784, -1607)
+
+[node name="PurpleBlock163" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(19031, -1607)
+
+[node name="PurpleBlock164" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(18948, -1607)
+
+[node name="PurpleBlock165" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(19111, -1607)
+
+[node name="PurpleBlock98" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(19589, -1607)
+
+[node name="PurpleBlock166" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(18376, -1607)
+
+[node name="PurpleBlock167" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(18293, -1607)
+
+[node name="PurpleBlock168" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(18540, -1607)
+
+[node name="PurpleBlock169" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(18457, -1607)
+
+[node name="PurpleBlock170" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(18245, -1687)
+
+[node name="PurpleBlock176" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(18683, -1689)
+
+[node name="PurpleBlock171" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(18621, -1607)
+
+[node name="PurpleBlock172" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(18684, -1770)
+
+[node name="PurpleBlock173" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(18057, -1686)
+
+[node name="PurpleBlock174" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(18702, -1607)
+
+[node name="PurpleBlock175" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(18057, -1767)
+
+[node name="PurpleBlock177" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(18984, -1694)
+
+[node name="PurpleBlock178" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(18984, -1775)
+
+[node name="trampoline23" parent="." instance=ExtResource("8_n8gco")]
+position = Vector2(10231, -681)
+type = 1
+
+[node name="trampoline28" parent="." instance=ExtResource("8_n8gco")]
+position = Vector2(10900, -1329)
+type = 3
+
+[node name="trampoline31" parent="." instance=ExtResource("8_n8gco")]
+position = Vector2(13699, -1535)
+rotation = 3.14159
+type = 6
+
+[node name="trampoline32" parent="." instance=ExtResource("8_n8gco")]
+position = Vector2(14018, -1136)
+rotation = 3.14159
+type = 6
+
+[node name="trampoline34" parent="." instance=ExtResource("8_n8gco")]
+position = Vector2(14526, -755)
+rotation = 3.14159
+scale = Vector2(0.2, 0.2)
+type = 6
+
+[node name="trampoline36" parent="." instance=ExtResource("8_n8gco")]
+position = Vector2(15638, -1306)
+rotation = 3.14159
+scale = Vector2(0.2, 0.2)
+type = 6
+
+[node name="trampoline38" parent="." instance=ExtResource("8_n8gco")]
+position = Vector2(15785, -1290)
+rotation = 3.14159
+scale = Vector2(0.8, 0.8)
+type = 6
+
+[node name="trampoline41" parent="." instance=ExtResource("8_n8gco")]
+position = Vector2(15866, -1292)
+rotation = 3.14159
+scale = Vector2(0.8, 0.8)
+type = 6
+
+[node name="trampoline40" parent="." instance=ExtResource("8_n8gco")]
+position = Vector2(15953, -1301)
+rotation = 3.14159
+scale = Vector2(0.65, 0.65)
+priority = 3
+type = 5
+
+[node name="trampoline35" parent="." instance=ExtResource("8_n8gco")]
+position = Vector2(14557, -533)
+scale = Vector2(0.3, 0.3)
+type = 1
+
+[node name="trampoline37" parent="." instance=ExtResource("8_n8gco")]
+position = Vector2(15669, -1084)
+scale = Vector2(0.3, 0.3)
+type = 1
+
+[node name="trampoline39" parent="." instance=ExtResource("8_n8gco")]
+position = Vector2(15813, -1097)
+scale = Vector2(0.8, 0.8)
+type = 1
+
+[node name="PurpleBlock119" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(15898, -1032)
+
+[node name="trampoline42" parent="." instance=ExtResource("8_n8gco")]
+position = Vector2(15904, -1097)
+scale = Vector2(0.8, 0.8)
+type = 1
+
+[node name="trampoline43" parent="." instance=ExtResource("8_n8gco")]
+position = Vector2(16122, -1050)
+scale = Vector2(0.8, 0.8)
+type = 2
+
+[node name="trampoline30" parent="." instance=ExtResource("8_n8gco")]
+position = Vector2(12107, -1324)
+rotation = 3.14159
+type = 5
+
+[node name="trampoline29" parent="." instance=ExtResource("8_n8gco")]
+position = Vector2(11486, -494)
+
+[node name="trampoline33" parent="." instance=ExtResource("8_n8gco")]
+position = Vector2(11646, -548)
+type = 2
+
+[node name="trampoline25" parent="." instance=ExtResource("8_n8gco")]
+position = Vector2(10277, -777)
+rotation = -3.14159
+type = 3
+
+[node name="trampoline6" parent="." instance=ExtResource("8_n8gco")]
+position = Vector2(19565, -1673)
+type = 1
+
+[node name="trampoline26" parent="." instance=ExtResource("8_n8gco")]
+position = Vector2(19611, -1769)
+rotation = -3.14159
+type = 3
+
+[node name="trampoline27" parent="." instance=ExtResource("8_n8gco")]
+position = Vector2(19654, -1673)
+type = 1
+
+[node name="trampoline44" parent="." instance=ExtResource("8_n8gco")]
+position = Vector2(19700, -1769)
+rotation = -3.14159
+type = 3
+
+[node name="trampoline7" parent="." instance=ExtResource("8_n8gco")]
+position = Vector2(19388, -1673)
+type = 1
+
+[node name="trampoline71" parent="." instance=ExtResource("8_n8gco")]
+position = Vector2(19434, -1769)
+rotation = -3.14159
+type = 3
+
+[node name="trampoline72" parent="." instance=ExtResource("8_n8gco")]
+position = Vector2(19477, -1673)
+type = 1
+
+[node name="trampoline73" parent="." instance=ExtResource("8_n8gco")]
+position = Vector2(19523, -1769)
+rotation = -3.14159
+type = 3
+
+[node name="PurpleBlock186" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(19674, -1606)
+
+[node name="trampoline45" parent="." instance=ExtResource("8_n8gco")]
+position = Vector2(19737, -1673)
+type = 1
+
+[node name="trampoline46" parent="." instance=ExtResource("8_n8gco")]
+position = Vector2(19783, -1769)
+rotation = -3.14159
+type = 3
+
+[node name="PurpleBlock99" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(19760, -1607)
+
+[node name="trampoline49" parent="." instance=ExtResource("8_n8gco")]
+position = Vector2(19825, -1673)
+type = 1
+
+[node name="trampoline50" parent="." instance=ExtResource("8_n8gco")]
+position = Vector2(19871, -1769)
+rotation = -3.14159
+type = 3
+
+[node name="PurpleBlock187" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(19845, -1606)
+
+[node name="trampoline51" parent="." instance=ExtResource("8_n8gco")]
+position = Vector2(19908, -1673)
+type = 1
+
+[node name="trampoline52" parent="." instance=ExtResource("8_n8gco")]
+position = Vector2(19954, -1769)
+rotation = -3.14159
+type = 3
+
+[node name="PurpleBlock188" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(19930, -1606)
+
+[node name="trampoline54" parent="." instance=ExtResource("8_n8gco")]
+position = Vector2(19993, -1673)
+type = 1
+
+[node name="trampoline55" parent="." instance=ExtResource("8_n8gco")]
+position = Vector2(20039, -1769)
+rotation = -3.14159
+type = 3
+
+[node name="PurpleBlock100" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(20016, -1607)
+
+[node name="trampoline56" parent="." instance=ExtResource("8_n8gco")]
+position = Vector2(20081, -1673)
+type = 1
+
+[node name="trampoline57" parent="." instance=ExtResource("8_n8gco")]
+position = Vector2(20127, -1769)
+rotation = -3.14159
+type = 3
+
+[node name="PurpleBlock189" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(20101, -1606)
+
+[node name="trampoline58" parent="." instance=ExtResource("8_n8gco")]
+position = Vector2(20164, -1673)
+type = 1
+
+[node name="trampoline59" parent="." instance=ExtResource("8_n8gco")]
+position = Vector2(20210, -1769)
+rotation = -3.14159
+type = 3
+
+[node name="PurpleBlock101" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(20189, -1607)
+
+[node name="trampoline47" parent="." instance=ExtResource("8_n8gco")]
+position = Vector2(20254, -1673)
+type = 1
+
+[node name="trampoline48" parent="." instance=ExtResource("8_n8gco")]
+position = Vector2(20300, -1769)
+rotation = -3.14159
+type = 3
+
+[node name="PurpleBlock190" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(20274, -1606)
+
+[node name="trampoline53" parent="." instance=ExtResource("8_n8gco")]
+position = Vector2(20337, -1673)
+type = 1
+
+[node name="trampoline60" parent="." instance=ExtResource("8_n8gco")]
+position = Vector2(20383, -1769)
+rotation = -3.14159
+type = 3
+
+[node name="PurpleBlock102" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(20360, -1607)
+
+[node name="trampoline10" parent="." instance=ExtResource("8_n8gco")]
+position = Vector2(20336, -1673)
+type = 1
+
+[node name="trampoline61" parent="." instance=ExtResource("8_n8gco")]
+position = Vector2(20425, -1673)
+type = 1
+
+[node name="trampoline62" parent="." instance=ExtResource("8_n8gco")]
+position = Vector2(20471, -1769)
+rotation = -3.14159
+type = 3
+
+[node name="PurpleBlock191" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(20445, -1606)
+
+[node name="trampoline63" parent="." instance=ExtResource("8_n8gco")]
+position = Vector2(20508, -1673)
+type = 1
+
+[node name="trampoline64" parent="." instance=ExtResource("8_n8gco")]
+position = Vector2(20554, -1769)
+rotation = -3.14159
+type = 3
+
+[node name="PurpleBlock192" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(20530, -1606)
+
+[node name="trampoline65" parent="." instance=ExtResource("8_n8gco")]
+position = Vector2(20593, -1673)
+type = 1
+
+[node name="trampoline66" parent="." instance=ExtResource("8_n8gco")]
+position = Vector2(20639, -1769)
+rotation = -3.14159
+type = 3
+
+[node name="PurpleBlock103" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(20616, -1607)
+
+[node name="trampoline67" parent="." instance=ExtResource("8_n8gco")]
+position = Vector2(20681, -1673)
+type = 1
+
+[node name="trampoline68" parent="." instance=ExtResource("8_n8gco")]
+position = Vector2(20727, -1769)
+rotation = -3.14159
+type = 3
+
+[node name="PurpleBlock193" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(20701, -1606)
+
+[node name="trampoline69" parent="." instance=ExtResource("8_n8gco")]
+position = Vector2(20764, -1673)
+type = 1
+
+[node name="trampoline70" parent="." instance=ExtResource("8_n8gco")]
+position = Vector2(20810, -1769)
+rotation = -3.14159
+type = 3
+
+[node name="PurpleBlock194" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(20783, -1606)
+
+[node name="trampoline75" parent="." instance=ExtResource("8_n8gco")]
+position = Vector2(20846, -1673)
+type = 1
+
+[node name="trampoline76" parent="." instance=ExtResource("8_n8gco")]
+position = Vector2(20892, -1769)
+rotation = -3.14159
+type = 3
+
+[node name="PurpleBlock108" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(20869, -1607)
+
+[node name="trampoline77" parent="." instance=ExtResource("8_n8gco")]
+position = Vector2(20934, -1673)
+type = 1
+
+[node name="trampoline78" parent="." instance=ExtResource("8_n8gco")]
+position = Vector2(20980, -1769)
+rotation = -3.14159
+type = 3
+
+[node name="PurpleBlock195" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(20954, -1606)
+
+[node name="trampoline79" parent="." instance=ExtResource("8_n8gco")]
+position = Vector2(21017, -1673)
+type = 1
+
+[node name="trampoline80" parent="." instance=ExtResource("8_n8gco")]
+position = Vector2(21063, -1769)
+rotation = -3.14159
+type = 3
+
+[node name="PurpleBlock110" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(21038, -1607)
+
+[node name="trampoline83" parent="." instance=ExtResource("8_n8gco")]
+position = Vector2(21103, -1673)
+type = 1
+
+[node name="trampoline84" parent="." instance=ExtResource("8_n8gco")]
+position = Vector2(21149, -1769)
+rotation = -3.14159
+type = 3
+
+[node name="trampoline86" parent="." instance=ExtResource("8_n8gco")]
+position = Vector2(22036, -12959)
+rotation = -3.14159
+scale = Vector2(10, 10)
+type = 3
+
+[node name="trampoline89" parent="." instance=ExtResource("8_n8gco")]
+position = Vector2(27714, -12453)
+rotation = 3.14159
+scale = Vector2(10, 10)
+type = 3
+
+[node name="trampoline90" parent="." instance=ExtResource("8_n8gco")]
+position = Vector2(23316, -18071)
+rotation = -3.14159
+scale = Vector2(10, 10)
+type = 6
+
+[node name="trampoline91" parent="." instance=ExtResource("8_n8gco")]
+position = Vector2(24795, -23235)
+rotation = -3.14159
+scale = Vector2(10, 10)
+type = 6
+
+[node name="PurpleBlock196" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(21123, -1606)
+
+[node name="trampoline85" parent="." instance=ExtResource("8_n8gco")]
+position = Vector2(21193, -1673)
+scale = Vector2(0.8, 0.8)
+type = 4
+
+[node name="trampoline87" parent="." instance=ExtResource("8_n8gco")]
+position = Vector2(26939, -26709)
+rotation = -3.14159
+scale = Vector2(50, 50)
+type = 3
+
+[node name="trampoline88" parent="." instance=ExtResource("8_n8gco")]
+position = Vector2(26518, -10211)
+scale = Vector2(50, 50)
+type = 3
+
+[node name="PurpleBlock92" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(6741, -183)
+
+[node name="PurpleBlock93" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(6904, -183)
+
+[node name="PurpleBlock94" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(6821, -183)
+
+[node name="PurpleBlock95" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(7068, -183)
+
+[node name="PurpleBlock96" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(6985, -183)
+
+[node name="PurpleBlock97" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(7148, -183)
+
+[node name="trampoline18" parent="." instance=ExtResource("8_n8gco")]
+position = Vector2(7211, -250)
+type = 3
+
+[node name="trampoline19" parent="." instance=ExtResource("8_n8gco")]
+position = Vector2(7271, -250)
+type = 3
+
+[node name="trampoline20" parent="." instance=ExtResource("8_n8gco")]
+position = Vector2(7214, -344)
+rotation = -3.14159
+type = 3
+
+[node name="trampoline21" parent="." instance=ExtResource("8_n8gco")]
+position = Vector2(7271, -343)
+rotation = -3.14159
+type = 3
+
+[node name="trampoline22" parent="." instance=ExtResource("8_n8gco")]
+position = Vector2(7325, -342)
+rotation = -3.14159
+type = 3
+
+[node name="Spike9" parent="." instance=ExtResource("3_n567q")]
+position = Vector2(3543, -44)
+
+[node name="PurpleBlock19" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(3917, -205)
+
+[node name="PurpleBlock21" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(2449, -108)
+
+[node name="PurpleBlock22" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(2848, -33)
+
+[node name="PurpleBlock23" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(2529, -108)
+
+[node name="PurpleBlock25" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(2530, -27)
+
+[node name="PurpleBlock5" parent="PurpleBlock25" instance=ExtResource("2_8m7gg")]
+position = Vector2(1759, -21)
+
+[node name="PurpleBlock6" parent="PurpleBlock25" instance=ExtResource("2_8m7gg")]
+position = Vector2(1761, -102)
+
+[node name="PurpleBlock21" parent="PurpleBlock25" instance=ExtResource("2_8m7gg")]
+position = Vector2(1983, -499)
+
+[node name="PurpleBlock24" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(2369, -28)
+
+[node name="PurpleBlock26" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(2369, -108)
+
+[node name="PurpleBlock27" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(2449, -108)
+
+[node name="PurpleBlock28" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(2449, -108)
+
+[node name="PurpleBlock29" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(2529, -108)
+
+[node name="PurpleBlock30" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(2530, -27)
+
+[node name="PurpleBlock5" parent="PurpleBlock30" instance=ExtResource("2_8m7gg")]
+position = Vector2(2062, -499)
+
+[node name="PurpleBlock6" parent="PurpleBlock30" instance=ExtResource("2_8m7gg")]
+position = Vector2(1762, -182)
+
+[node name="PurpleBlock21" parent="PurpleBlock30" instance=ExtResource("2_8m7gg")]
+position = Vector2(1547, -177)
+
+[node name="PurpleBlock31" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(2612, -27)
+
+[node name="PurpleBlock32" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(651, -5)
+
+[node name="PurpleBlock33" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(2612, -27)
+
+[node name="PurpleBlock34" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(2690, -28)
+
+[node name="PurpleBlock36" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(2690, -28)
+
+[node name="PurpleBlock37" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(2688, -108)
+
+[node name="PurpleBlock38" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(4363, -48)
+
+[node name="PurpleBlock40" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(2768, -108)
+
+[node name="PurpleBlock41" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(2849, -107)
+
+[node name="PurpleBlock43" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(2769, -29)
+
+[node name="PurpleBlock44" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(4374, -130)
+
+[node name="PurpleBlock45" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(2769, -29)
+
+[node name="trampoline15" parent="." instance=ExtResource("8_n8gco")]
+position = Vector2(7630, -509)
+type = 4
+
+[node name="PurpleBlock62" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(2816, -109)
+
+[node name="Spike83" parent="." instance=ExtResource("3_n567q")]
+position = Vector2(3822, -37)
+
+[node name="Spike84" parent="." instance=ExtResource("3_n567q")]
+position = Vector2(3924, -37)
+
+[node name="Spike85" parent="." instance=ExtResource("3_n567q")]
+position = Vector2(3718, -37)
+
+[node name="Spike86" parent="." instance=ExtResource("3_n567q")]
+position = Vector2(3622, -36)
+
+[node name="Spike87" parent="." instance=ExtResource("3_n567q")]
+position = Vector2(4264, -36)
+
+[node name="PurpleBlock65" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(4704, -139)
+
+[node name="PurpleBlock66" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(5002, -249)
+
+[node name="PurpleBlock67" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(5205, -147)
+
+[node name="PurpleBlock68" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(5392, -62)
+
+[node name="PurpleBlock69" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(5698, -156)
+
+[node name="PurpleBlock70" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(6015, -247)
+
+[node name="PurpleBlock73" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(29699, -75)
+
+[node name="PurpleBlock248" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(30701, -128)
+
+[node name="PurpleBlock249" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(30700, -209)
+
+[node name="PurpleBlock250" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(30019, -117)
+
+[node name="PurpleBlock251" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(30019, -37)
+
+[node name="PurpleBlock252" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(30323, -203)
+
+[node name="PurpleBlock253" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(30325, -40)
+
+[node name="PurpleBlock254" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(30324, -121)
+
+[node name="Spike99" parent="." instance=ExtResource("3_n567q")]
+position = Vector2(31008, -44)
+
+[node name="Spike100" parent="." instance=ExtResource("3_n567q")]
+position = Vector2(31109, -45)
+
+[node name="Spike101" parent="." instance=ExtResource("3_n567q")]
+position = Vector2(31527, -45)
+
+[node name="yellowOrb20" parent="." instance=ExtResource("6_s4y5u")]
+position = Vector2(31410, -119)
+
+[node name="yellowOrb21" parent="." instance=ExtResource("6_s4y5u")]
+position = Vector2(30843, -290)
+type = 1
+
+[node name="Saw31" parent="." instance=ExtResource("7_5c0m2")]
+position = Vector2(30188, -144)
+
+[node name="Saw32" parent="." instance=ExtResource("7_5c0m2")]
+position = Vector2(29861, -68)
+
+[node name="PurpleBlock255" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(30701, -128)
+
+[node name="PurpleBlock256" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(30700, -209)
+
+[node name="PurpleBlock262" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(30701, -38)
+
+[node name="PurpleBlock263" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(30700, -119)
+
+[node name="PurpleBlock264" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(30701, -38)
+
+[node name="PurpleBlock265" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(30700, -119)
+
+[node name="PurpleBlock257" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(30019, -117)
+
+[node name="PurpleBlock258" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(30019, -37)
+
+[node name="PurpleBlock259" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(30323, -203)
+
+[node name="PurpleBlock260" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(30325, -40)
+
+[node name="PurpleBlock261" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(30324, -121)
+
+[node name="Spike103" parent="." instance=ExtResource("3_n567q")]
+position = Vector2(31008, -44)
+
+[node name="Spike104" parent="." instance=ExtResource("3_n567q")]
+position = Vector2(31109, -45)
+
+[node name="Spike102" parent="." instance=ExtResource("3_n567q")]
+position = Vector2(30458, -44)
+
+[node name="Spike106" parent="." instance=ExtResource("3_n567q")]
+position = Vector2(30559, -45)
+
+[node name="Spike107" parent="." instance=ExtResource("3_n567q")]
+position = Vector2(30458, -44)
+
+[node name="Spike108" parent="." instance=ExtResource("3_n567q")]
+position = Vector2(30559, -45)
+
+[node name="Spike105" parent="." instance=ExtResource("3_n567q")]
+position = Vector2(31527, -45)
+
+[node name="yellowOrb22" parent="." instance=ExtResource("6_s4y5u")]
+position = Vector2(31410, -119)
+
+[node name="yellowOrb23" parent="." instance=ExtResource("6_s4y5u")]
+position = Vector2(30843, -290)
+type = 1
+
+[node name="Saw33" parent="." instance=ExtResource("7_5c0m2")]
+position = Vector2(30188, -144)
+
+[node name="trampoline8" parent="." instance=ExtResource("8_n8gco")]
+position = Vector2(29432, -35)
+type = 9
+
+[node name="Spike65" parent="." instance=ExtResource("3_n567q")]
+position = Vector2(31804, -105)
+rotation = 3.14159
+scale = Vector2(0.8, 0.8)
+
+[node name="Spike66" parent="." instance=ExtResource("3_n567q")]
+position = Vector2(31890, -105)
+rotation = 3.14159
+scale = Vector2(0.8, 0.8)
+
+[node name="Spike67" parent="." instance=ExtResource("3_n567q")]
+position = Vector2(31965, -105)
+rotation = 3.14159
+scale = Vector2(0.8, 0.8)
+
+[node name="Saw51" parent="." instance=ExtResource("7_5c0m2")]
+position = Vector2(32874, -95)
+scale = Vector2(2.5, 2.5)
+
+[node name="Saw52" parent="." instance=ExtResource("7_5c0m2")]
+position = Vector2(35083, -37)
+scale = Vector2(2.5, 2.5)
+
+[node name="Saw53" parent="." instance=ExtResource("7_5c0m2")]
+position = Vector2(35262, -138)
+scale = Vector2(2.5, 2.5)
+
+[node name="Saw54" parent="." instance=ExtResource("7_5c0m2")]
+position = Vector2(35262, -330)
+scale = Vector2(2.5, 2.5)
+
+[node name="Saw55" parent="." instance=ExtResource("7_5c0m2")]
+position = Vector2(32832, -677)
+scale = Vector2(0.8, 0.8)
+
+[node name="Saw56" parent="." instance=ExtResource("7_5c0m2")]
+position = Vector2(33421, -184)
+scale = Vector2(0.5, 0.5)
+
+[node name="Saw57" parent="." instance=ExtResource("7_5c0m2")]
+position = Vector2(34497, -204)
+scale = Vector2(0.5, 0.5)
+
+[node name="Saw58" parent="." instance=ExtResource("7_5c0m2")]
+position = Vector2(34077, -43)
+scale = Vector2(0.5, 0.5)
+
+[node name="Saw59" parent="." instance=ExtResource("7_5c0m2")]
+position = Vector2(34049, -43)
+scale = Vector2(0.5, 0.5)
+
+[node name="Saw60" parent="." instance=ExtResource("7_5c0m2")]
+position = Vector2(34018, -43)
+scale = Vector2(0.5, 0.5)
+
+[node name="Saw61" parent="." instance=ExtResource("7_5c0m2")]
+position = Vector2(33990, -43)
+scale = Vector2(0.5, 0.5)
+
+[node name="Saw62" parent="." instance=ExtResource("7_5c0m2")]
+position = Vector2(33957, -42)
+scale = Vector2(0.5, 0.5)
+
+[node name="Saw63" parent="." instance=ExtResource("7_5c0m2")]
+position = Vector2(33929, -42)
+scale = Vector2(0.5, 0.5)
+
+[node name="Saw64" parent="." instance=ExtResource("7_5c0m2")]
+position = Vector2(33898, -42)
+scale = Vector2(0.5, 0.5)
+
+[node name="Saw65" parent="." instance=ExtResource("7_5c0m2")]
+position = Vector2(33870, -42)
+scale = Vector2(0.5, 0.5)
+
+[node name="Saw66" parent="." instance=ExtResource("7_5c0m2")]
+position = Vector2(33841, -21)
+scale = Vector2(0.5, 0.5)
+
+[node name="Saw67" parent="." instance=ExtResource("7_5c0m2")]
+position = Vector2(33813, -21)
+scale = Vector2(0.5, 0.5)
+
+[node name="Saw68" parent="." instance=ExtResource("7_5c0m2")]
+position = Vector2(33782, -21)
+scale = Vector2(0.5, 0.5)
+
+[node name="Saw69" parent="." instance=ExtResource("7_5c0m2")]
+position = Vector2(33754, -21)
+scale = Vector2(0.5, 0.5)
+
+[node name="Saw70" parent="." instance=ExtResource("7_5c0m2")]
+position = Vector2(33721, -20)
+scale = Vector2(0.5, 0.5)
+
+[node name="Saw71" parent="." instance=ExtResource("7_5c0m2")]
+position = Vector2(33693, -20)
+scale = Vector2(0.5, 0.5)
+
+[node name="Saw72" parent="." instance=ExtResource("7_5c0m2")]
+position = Vector2(33662, -20)
+scale = Vector2(0.5, 0.5)
+
+[node name="Saw73" parent="." instance=ExtResource("7_5c0m2")]
+position = Vector2(33634, -20)
+scale = Vector2(0.5, 0.5)
+
+[node name="Saw74" parent="." instance=ExtResource("7_5c0m2")]
+position = Vector2(34737, -384)
+scale = Vector2(0.5, 0.5)
+
+[node name="Saw113" parent="." instance=ExtResource("7_5c0m2")]
+position = Vector2(19439, -1846)
+scale = Vector2(0.5, 0.5)
+
+[node name="Saw114" parent="." instance=ExtResource("7_5c0m2")]
+position = Vector2(19439, -1876)
+scale = Vector2(0.5, 0.5)
+
+[node name="Saw115" parent="." instance=ExtResource("7_5c0m2")]
+position = Vector2(19439, -1903)
+scale = Vector2(0.5, 0.5)
+
+[node name="Saw116" parent="." instance=ExtResource("7_5c0m2")]
+position = Vector2(19437, -1935)
+scale = Vector2(0.5, 0.5)
+
+[node name="Saw117" parent="." instance=ExtResource("7_5c0m2")]
+position = Vector2(19437, -1965)
+scale = Vector2(0.5, 0.5)
+
+[node name="Saw118" parent="." instance=ExtResource("7_5c0m2")]
+position = Vector2(19437, -1992)
+scale = Vector2(0.5, 0.5)
+
+[node name="Saw122" parent="." instance=ExtResource("7_5c0m2")]
+position = Vector2(19439, -2019)
+scale = Vector2(0.5, 0.5)
+
+[node name="Saw123" parent="." instance=ExtResource("7_5c0m2")]
+position = Vector2(19439, -2049)
+scale = Vector2(0.5, 0.5)
+
+[node name="Saw124" parent="." instance=ExtResource("7_5c0m2")]
+position = Vector2(19439, -2076)
+scale = Vector2(0.5, 0.5)
+
+[node name="Saw119" parent="." instance=ExtResource("7_5c0m2")]
+position = Vector2(19467, -1846)
+scale = Vector2(0.5, 0.5)
+
+[node name="Saw120" parent="." instance=ExtResource("7_5c0m2")]
+position = Vector2(19498, -1846)
+scale = Vector2(0.5, 0.5)
+
+[node name="Saw121" parent="." instance=ExtResource("7_5c0m2")]
+position = Vector2(19533, -1847)
+scale = Vector2(0.5, 0.5)
+
+[node name="Saw75" parent="." instance=ExtResource("7_5c0m2")]
+position = Vector2(35683, -783)
+scale = Vector2(0.3, 0.3)
+
+[node name="Saw76" parent="." instance=ExtResource("7_5c0m2")]
+position = Vector2(37646, -134)
+scale = Vector2(0.7, 0.7)
+
+[node name="Saw77" parent="." instance=ExtResource("7_5c0m2")]
+position = Vector2(33727, -1197)
+scale = Vector2(2.5, 2.5)
+
+[node name="Saw78" parent="." instance=ExtResource("7_5c0m2")]
+position = Vector2(33507, -1356)
+scale = Vector2(2.5, 2.5)
+
+[node name="Saw79" parent="." instance=ExtResource("7_5c0m2")]
+position = Vector2(35054, -1203)
+scale = Vector2(2.5, 2.5)
+
+[node name="Saw80" parent="." instance=ExtResource("7_5c0m2")]
+position = Vector2(35365, -1365)
+scale = Vector2(2.5, 2.5)
+
+[node name="Saw81" parent="." instance=ExtResource("7_5c0m2")]
+position = Vector2(35212, -1205)
+scale = Vector2(2.5, 2.5)
+
+[node name="Saw82" parent="." instance=ExtResource("7_5c0m2")]
+position = Vector2(35701, -1197)
+scale = Vector2(2.5, 2.5)
+
+[node name="Saw83" parent="." instance=ExtResource("7_5c0m2")]
+position = Vector2(36012, -1359)
+scale = Vector2(2.5, 2.5)
+
+[node name="Saw84" parent="." instance=ExtResource("7_5c0m2")]
+position = Vector2(35539, -1365)
+scale = Vector2(2.5, 2.5)
+
+[node name="Saw85" parent="." instance=ExtResource("7_5c0m2")]
+position = Vector2(35859, -1199)
+scale = Vector2(2.5, 2.5)
+
+[node name="Saw86" parent="." instance=ExtResource("7_5c0m2")]
+position = Vector2(34053, -1592)
+scale = Vector2(2.5, 2.5)
+
+[node name="Saw87" parent="." instance=ExtResource("7_5c0m2")]
+position = Vector2(34364, -1754)
+scale = Vector2(2.5, 2.5)
+
+[node name="Saw88" parent="." instance=ExtResource("7_5c0m2")]
+position = Vector2(34211, -1594)
+scale = Vector2(2.5, 2.5)
+
+[node name="Saw89" parent="." instance=ExtResource("7_5c0m2")]
+position = Vector2(34700, -1586)
+scale = Vector2(2.5, 2.5)
+
+[node name="Saw90" parent="." instance=ExtResource("7_5c0m2")]
+position = Vector2(35011, -1748)
+scale = Vector2(2.5, 2.5)
+
+[node name="Saw91" parent="." instance=ExtResource("7_5c0m2")]
+position = Vector2(36445, -1203)
+scale = Vector2(2.5, 2.5)
+
+[node name="Saw92" parent="." instance=ExtResource("7_5c0m2")]
+position = Vector2(36756, -1365)
+scale = Vector2(2.5, 2.5)
+
+[node name="Saw93" parent="." instance=ExtResource("7_5c0m2")]
+position = Vector2(36603, -1205)
+scale = Vector2(2.5, 2.5)
+
+[node name="Saw94" parent="." instance=ExtResource("7_5c0m2")]
+position = Vector2(37092, -1197)
+scale = Vector2(2.5, 2.5)
+
+[node name="Saw95" parent="." instance=ExtResource("7_5c0m2")]
+position = Vector2(37403, -1359)
+scale = Vector2(2.5, 2.5)
+
+[node name="Saw96" parent="." instance=ExtResource("7_5c0m2")]
+position = Vector2(36930, -1365)
+scale = Vector2(2.5, 2.5)
+
+[node name="Saw97" parent="." instance=ExtResource("7_5c0m2")]
+position = Vector2(37250, -1199)
+scale = Vector2(2.5, 2.5)
+
+[node name="Saw98" parent="." instance=ExtResource("7_5c0m2")]
+position = Vector2(37608, -1203)
+scale = Vector2(2.5, 2.5)
+
+[node name="Saw99" parent="." instance=ExtResource("7_5c0m2")]
+position = Vector2(37919, -1365)
+scale = Vector2(2.5, 2.5)
+
+[node name="Saw100" parent="." instance=ExtResource("7_5c0m2")]
+position = Vector2(37766, -1205)
+scale = Vector2(2.5, 2.5)
+
+[node name="Saw101" parent="." instance=ExtResource("7_5c0m2")]
+position = Vector2(38255, -1197)
+scale = Vector2(2.5, 2.5)
+
+[node name="Saw102" parent="." instance=ExtResource("7_5c0m2")]
+position = Vector2(38566, -1359)
+scale = Vector2(2.5, 2.5)
+
+[node name="Saw103" parent="." instance=ExtResource("7_5c0m2")]
+position = Vector2(38093, -1365)
+scale = Vector2(2.5, 2.5)
+
+[node name="Saw104" parent="." instance=ExtResource("7_5c0m2")]
+position = Vector2(38413, -1199)
+scale = Vector2(2.5, 2.5)
+
+[node name="Saw110" parent="." instance=ExtResource("7_5c0m2")]
+position = Vector2(38345, -348)
+scale = Vector2(2.5, 2.5)
+
+[node name="Saw111" parent="." instance=ExtResource("7_5c0m2")]
+position = Vector2(38345, -177)
+scale = Vector2(2.5, 2.5)
+
+[node name="Saw112" parent="." instance=ExtResource("7_5c0m2")]
+position = Vector2(38345, -48)
+scale = Vector2(2.5, 2.5)
+
+[node name="Saw105" parent="." instance=ExtResource("7_5c0m2")]
+position = Vector2(36402, -1748)
+scale = Vector2(2.5, 2.5)
+
+[node name="Saw106" parent="." instance=ExtResource("7_5c0m2")]
+position = Vector2(34538, -1754)
+scale = Vector2(2.5, 2.5)
+
+[node name="Saw107" parent="." instance=ExtResource("7_5c0m2")]
+position = Vector2(34858, -1588)
+scale = Vector2(2.5, 2.5)
+
+[node name="Saw108" parent="." instance=ExtResource("7_5c0m2")]
+position = Vector2(33028, -949)
+scale = Vector2(2.5, 2.5)
+
+[node name="Saw109" parent="." instance=ExtResource("7_5c0m2")]
+position = Vector2(33320, -1086)
+scale = Vector2(2.5, 2.5)
+
+[node name="PurpleBlock118Down19" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(31804, -184)
+rotation = 3.14159
+
+[node name="PurpleBlock140Down17" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(31965, -184)
+rotation = 3.14159
+
+[node name="PurpleBlock118Down20" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(31889, -184)
+rotation = 3.14159
+
+[node name="yellowOrb32" parent="." instance=ExtResource("6_s4y5u")]
+position = Vector2(32683, -484)
+scale = Vector2(1.4, 1.4)
+type = 3
+
+[node name="yellowOrb33" parent="." instance=ExtResource("6_s4y5u")]
+position = Vector2(33341, -234)
+scale = Vector2(1.4, 1.4)
+
+[node name="yellowOrb34" parent="." instance=ExtResource("6_s4y5u")]
+position = Vector2(33661, -284)
+scale = Vector2(1.4, 1.4)
+type = 4
+
+[node name="yellowOrb35" parent="." instance=ExtResource("6_s4y5u")]
+position = Vector2(34417, -234)
+scale = Vector2(1.4, 1.4)
+
+[node name="yellowOrb36" parent="." instance=ExtResource("6_s4y5u")]
+position = Vector2(34657, -284)
+scale = Vector2(1.1, 1.1)
+type = 1
+
+[node name="yellowOrb37" parent="." instance=ExtResource("6_s4y5u")]
+position = Vector2(34897, -264)
+scale = Vector2(1.1, 1.1)
+type = 2
+
+[node name="yellowOrb38" parent="." instance=ExtResource("6_s4y5u")]
+position = Vector2(35972, -902)
+scale = Vector2(1.1, 1.1)
+type = 3
+
+[node name="yellowOrb39" parent="." instance=ExtResource("6_s4y5u")]
+position = Vector2(35895, -915)
+scale = Vector2(1.1, 1.1)
+type = 3
+
+[node name="yellowOrb40" parent="." instance=ExtResource("6_s4y5u")]
+position = Vector2(36340, -284)
+scale = Vector2(1.1, 1.1)
+type = 4
+
+[node name="yellowOrb41" parent="." instance=ExtResource("6_s4y5u")]
+position = Vector2(37813, -284)
+scale = Vector2(2, 2)
+type = 2
+
+[node name="yellowOrb42" parent="." instance=ExtResource("6_s4y5u")]
+position = Vector2(38293, -766)
+scale = Vector2(1.1, 1.1)
+
+[node name="Spike116" parent="." instance=ExtResource("3_n567q")]
+position = Vector2(32426, -123)
+scale = Vector2(0.8, 0.8)
+
+[node name="Spike117" parent="." instance=ExtResource("3_n567q")]
+position = Vector2(33930, -1373)
+rotation = 1.57079
+scale = Vector2(2, 2)
+
+[node name="PurpleBlock140Down29" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(32264, -76)
+
+[node name="PurpleBlock140Down34" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(32323, -76)
+
+[node name="PurpleBlock140Down70" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(32523, -249.19)
+
+[node name="PurpleBlock140Down71" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(32602, -249.19)
+
+[node name="PurpleBlock140Down72" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(33161, -76)
+
+[node name="PurpleBlock140Down73" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(33221, -76)
+
+[node name="PurpleBlock140Down74" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(33581, -76)
+
+[node name="PurpleBlock140Down75" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(33844, -656)
+
+[node name="PurpleBlock140Down76" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(32690, -249.19)
+
+[node name="PurpleBlock140Down77" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(33794, -1435.19)
+
+[node name="PurpleBlock140Down78" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(33794, -1508)
+
+[node name="PurpleBlock140Down79" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(33796, -1319.19)
+
+[node name="PurpleBlock140Down80" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(33796, -1392)
+
+[node name="PurpleBlock140Down81" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(32903, -684)
+rotation = 3.14159
+
+[node name="PurpleBlock140Down82" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(32903, -684)
+rotation = 3.14159
+
+[node name="PurpleBlock140Down83" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(34217, -76)
+
+[node name="PurpleBlock140Down84" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(34137, -76)
+
+[node name="PurpleBlock140Down85" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(34297, -76)
+
+[node name="PurpleBlock140Down86" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(34577, -76)
+
+[node name="PurpleBlock140Down87" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(34817, -76)
+
+[node name="PurpleBlock140Down88" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(34736, -76)
+
+[node name="PurpleBlock140Down89" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(34737, -76)
+
+[node name="PurpleBlock140Down90" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(34656, -76)
+
+[node name="PurpleBlock140Down91" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(36146, -76)
+
+[node name="PurpleBlock140Down92" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(36065, -76)
+
+[node name="PurpleBlock140Down93" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(36066, -76)
+
+[node name="PurpleBlock140Down94" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(35985, -76)
+
+[node name="PurpleBlock140Down95" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(35408, -45)
+rotation = 3.14159
+
+[node name="PurpleBlock140Down96" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(35408, -128)
+rotation = 3.14159
+
+[node name="PurpleBlock140Down97" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(35408, -201)
+rotation = 3.14159
+
+[node name="PurpleBlock140Down98" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(35408, -284)
+rotation = 3.14159
+
+[node name="PurpleBlock140Down99" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(35408, -314)
+rotation = 3.14159
+
+[node name="PurpleBlock140Down100" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(35408, -397)
+rotation = 3.14159
+
+[node name="PurpleBlock140Down101" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(35328, -484)
+
+[node name="PurpleBlock140Down102" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(35266, -484)
+
+[node name="PurpleBlock140Down103" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(36220, -76)
+
+[node name="PurpleBlock140Down104" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(35835, -76)
+
+[node name="PurpleBlock140Down105" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(35754, -76)
+
+[node name="PurpleBlock140Down106" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(35755, -76)
+
+[node name="PurpleBlock140Down107" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(35674, -76)
+
+[node name="PurpleBlock140Down108" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(35909, -76)
+
+[node name="PurpleBlock140Down131" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(38822, -486)
+
+[node name="PurpleBlock140Down132" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(38823, -486)
+
+[node name="PurpleBlock140Down133" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(38742, -486)
+
+[node name="PurpleBlock140Down134" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(38592, -486)
+
+[node name="PurpleBlock140Down135" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(38511, -486)
+
+[node name="PurpleBlock140Down136" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(38512, -486)
+
+[node name="PurpleBlock140Down137" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(38431, -486)
+
+[node name="PurpleBlock140Down138" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(38666, -486)
+
+[node name="PurpleBlock140Down109" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(37586, -76)
+
+[node name="PurpleBlock140Down110" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(37560, -76)
+
+[node name="PurpleBlock140Down111" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(37481, -76)
+
+[node name="PurpleBlock140Down112" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(37455, -76)
+
+[node name="PurpleBlock140Down113" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(37432, -76)
+
+[node name="PurpleBlock140Down114" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(37406, -76)
+
+[node name="PurpleBlock140Down115" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(37327, -76)
+
+[node name="PurpleBlock140Down116" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(37301, -76)
+
+[node name="PurpleBlock140Down117" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(38150, -484)
+
+[node name="PurpleBlock140Down118" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(35603, -833)
+rotation = 3.14159
+
+[node name="PurpleBlock140Down119" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(35561, -833)
+rotation = 3.14159
+
+[node name="PurpleBlock140Down120" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(35485, -833)
+rotation = 3.14159
+
+[node name="PurpleBlock140Down121" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(36691, -584)
+rotation = 3.14159
+
+[node name="PurpleBlock140Down122" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(36751, -584)
+rotation = 3.14159
+
+[node name="PurpleBlock140Down123" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(36551, -584)
+rotation = 3.14159
+
+[node name="PurpleBlock140Down124" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(36611, -584)
+rotation = 3.14159
+
+[node name="Spike121" parent="." instance=ExtResource("3_n567q")]
+position = Vector2(32747, -52)
+
+[node name="Spike122" parent="." instance=ExtResource("3_n567q")]
+position = Vector2(33323, -79)
+scale = Vector2(1.3, 1.3)
+
+[node name="Spike123" parent="." instance=ExtResource("3_n567q")]
+position = Vector2(34420, -50)
+
+[node name="Spike124" parent="." instance=ExtResource("3_n567q")]
+position = Vector2(34499, -49)
+
+[node name="Spike125" parent="." instance=ExtResource("3_n567q")]
+position = Vector2(35408, -484)
+
+[node name="PurpleBlock140Down125" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(35489, -45)
+rotation = 3.14159
+
+[node name="PurpleBlock140Down126" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(35489, -128)
+rotation = 3.14159
+
+[node name="PurpleBlock140Down127" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(35489, -201)
+rotation = 3.14159
+
+[node name="PurpleBlock140Down128" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(35489, -284)
+rotation = 3.14159
+
+[node name="PurpleBlock140Down129" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(35489, -314)
+rotation = 3.14159
+
+[node name="PurpleBlock140Down130" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(35489, -397)
+rotation = 3.14159
+
+[node name="Spike126" parent="." instance=ExtResource("3_n567q")]
+position = Vector2(35489, -484)
+
+[node name="Spike127" parent="." instance=ExtResource("3_n567q")]
+position = Vector2(36301, -49)
+
+[node name="Spike128" parent="." instance=ExtResource("3_n567q")]
+position = Vector2(36395, -50)
+
+[node name="Spike129" parent="." instance=ExtResource("3_n567q")]
+position = Vector2(37036, -49)
+
+[node name="Spike130" parent="." instance=ExtResource("3_n567q")]
+position = Vector2(38210, -484)
+
+[node name="Spike131" parent="." instance=ExtResource("3_n567q")]
+position = Vector2(37220, -50)
+
+[node name="Spike132" parent="." instance=ExtResource("3_n567q")]
+position = Vector2(33854, -584)
+rotation = 3.14159
+scale = Vector2(0.6, 0.6)
+
+[node name="trampoline74" parent="." instance=ExtResource("8_n8gco")]
+position = Vector2(33070, -644)
+rotation = 3.14159
+scale = Vector2(1.5, 1.5)
+type = 3
+
+[node name="trampoline81" parent="." instance=ExtResource("8_n8gco")]
+position = Vector2(34021, -784)
+rotation = 3.14159
+scale = Vector2(1.5, 1.5)
+type = 3
+
+[node name="trampoline82" parent="." instance=ExtResource("8_n8gco")]
+position = Vector2(34122, -858)
+rotation = 3.14159
+scale = Vector2(1.5, 1.5)
+type = 3
+
+[node name="trampoline92" parent="." instance=ExtResource("8_n8gco")]
+position = Vector2(37146, -707)
+rotation = 3.14159
+scale = Vector2(1.5, 1.5)
+type = 5
+
+[node name="trampoline93" parent="." instance=ExtResource("8_n8gco")]
+position = Vector2(37266, -786)
+rotation = 3.14159
+scale = Vector2(1.5, 1.5)
+type = 5
+
+[node name="trampoline94" parent="." instance=ExtResource("8_n8gco")]
+position = Vector2(35468, -662)
+rotation = 3.14159
+scale = Vector2(0.5, 0.5)
+type = 5
+
+[connection signal="area_entered" from="LevelEnd" to="Player" method="_on_level_end_area_entered"]
