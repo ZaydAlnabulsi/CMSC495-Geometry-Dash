@@ -8,7 +8,7 @@ _data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
 point_count = 2
 
 [sub_resource type="Gradient" id="Gradient_6dir7"]
-colors = PackedColorArray(0.609819, 0.187394, 0.617445, 1, 0.976471, 0.709804, 0.796078, 1)
+colors = PackedColorArray(0.851335, 0.424284, 0.0717028, 1, 0.996078, 0.737255, 0.478431, 0)
 
 [node name="trail" type="Line2D"]
 top_level = true
