@@ -68,9 +68,6 @@ position = Vector2(3637, -45)
 [node name="Spike2" parent="." instance=ExtResource("3_n567q")]
 position = Vector2(4295, -298)
 
-[node name="Spike3" parent="Spike2" instance=ExtResource("3_n567q")]
-position = Vector2(-2735, 256)
-
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_8m7gg")
 autoplay = true
@@ -115,7 +112,7 @@ position = Vector2(6511, -1100)
 position = Vector2(3742, -46)
 
 [node name="Spike5" parent="." instance=ExtResource("3_n567q")]
-position = Vector2(2268, -27)
+position = Vector2(2268, -38)
 
 [node name="Spike6" parent="." instance=ExtResource("3_n567q")]
 position = Vector2(4378, -376)
@@ -259,7 +256,7 @@ scale = Vector2(0.8, 0.8)
 position = Vector2(6949, -1122)
 
 [node name="Spike8" parent="." instance=ExtResource("3_n567q")]
-position = Vector2(2180, -30)
+position = Vector2(2180, -38)
 
 [node name="Spike10" parent="." instance=ExtResource("3_n567q")]
 position = Vector2(3464, -42)
@@ -291,22 +288,25 @@ position = Vector2(6812, -1224)
 position = Vector2(7630, -443)
 
 [node name="PurpleBlock80" parent="." instance=ExtResource("2_8m7gg")]
-position = Vector2(9761, -614)
+position = Vector2(9730, -614)
 
 [node name="PurpleBlock82" parent="." instance=ExtResource("2_8m7gg")]
-position = Vector2(9924, -614)
+position = Vector2(9893, -614)
 
 [node name="PurpleBlock83" parent="." instance=ExtResource("2_8m7gg")]
-position = Vector2(9841, -614)
+position = Vector2(9810, -614)
 
 [node name="PurpleBlock84" parent="." instance=ExtResource("2_8m7gg")]
-position = Vector2(10088, -614)
+position = Vector2(10057, -614)
 
 [node name="PurpleBlock85" parent="." instance=ExtResource("2_8m7gg")]
-position = Vector2(10005, -614)
+position = Vector2(9974, -614)
 
 [node name="PurpleBlock87" parent="." instance=ExtResource("2_8m7gg")]
-position = Vector2(10168, -614)
+position = Vector2(10137, -614)
+
+[node name="PurpleBlock238" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(10217, -613)
 
 [node name="PurpleBlock124" parent="." instance=ExtResource("2_8m7gg")]
 position = Vector2(26263, -24393)
@@ -771,6 +771,10 @@ rotation = 3.14159
 
 [node name="PurpleBlock139Down2" parent="." instance=ExtResource("2_8m7gg")]
 position = Vector2(12345, -1402)
+rotation = 3.14159
+
+[node name="PurpleBlock139Down3" parent="." instance=ExtResource("2_8m7gg")]
+position = Vector2(10281, -851)
 rotation = 3.14159
 
 [node name="PurpleBlock140Down2" parent="." instance=ExtResource("2_8m7gg")]
@@ -1507,13 +1511,13 @@ type = 3
 position = Vector2(3543, -44)
 
 [node name="PurpleBlock19" parent="." instance=ExtResource("2_8m7gg")]
-position = Vector2(3917, -205)
+position = Vector2(3917, -204)
 
 [node name="PurpleBlock21" parent="." instance=ExtResource("2_8m7gg")]
 position = Vector2(2449, -108)
 
 [node name="PurpleBlock22" parent="." instance=ExtResource("2_8m7gg")]
-position = Vector2(2848, -33)
+position = Vector2(2848, -29)
 
 [node name="PurpleBlock23" parent="." instance=ExtResource("2_8m7gg")]
 position = Vector2(2529, -108)
@@ -1522,7 +1526,7 @@ position = Vector2(2529, -108)
 position = Vector2(2530, -27)
 
 [node name="PurpleBlock5" parent="PurpleBlock25" instance=ExtResource("2_8m7gg")]
-position = Vector2(1759, -21)
+position = Vector2(1762, -21)
 
 [node name="PurpleBlock6" parent="PurpleBlock25" instance=ExtResource("2_8m7gg")]
 position = Vector2(1761, -102)
@@ -1561,10 +1565,10 @@ position = Vector2(1547, -177)
 position = Vector2(2612, -27)
 
 [node name="PurpleBlock32" parent="." instance=ExtResource("2_8m7gg")]
-position = Vector2(651, -5)
+position = Vector2(651, -32)
 
 [node name="PurpleBlock33" parent="." instance=ExtResource("2_8m7gg")]
-position = Vector2(2612, -27)
+position = Vector2(2610, -27)
 
 [node name="PurpleBlock34" parent="." instance=ExtResource("2_8m7gg")]
 position = Vector2(2690, -28)
@@ -1576,7 +1580,7 @@ position = Vector2(2690, -28)
 position = Vector2(2688, -108)
 
 [node name="PurpleBlock38" parent="." instance=ExtResource("2_8m7gg")]
-position = Vector2(4363, -48)
+position = Vector2(4374, -47)
 
 [node name="PurpleBlock40" parent="." instance=ExtResource("2_8m7gg")]
 position = Vector2(2768, -108)
@@ -1596,9 +1600,6 @@ position = Vector2(2769, -29)
 [node name="trampoline15" parent="." instance=ExtResource("8_n8gco")]
 position = Vector2(7630, -509)
 type = 4
-
-[node name="PurpleBlock62" parent="." instance=ExtResource("2_8m7gg")]
-position = Vector2(2816, -109)
 
 [node name="Spike83" parent="." instance=ExtResource("3_n567q")]
 position = Vector2(3822, -37)
@@ -2430,5 +2431,8 @@ position = Vector2(35468, -662)
 rotation = 3.14159
 scale = Vector2(0.5, 0.5)
 type = 5
+
+[node name="Spike3" parent="." instance=ExtResource("3_n567q")]
+position = Vector2(1560, -38)
 
 [connection signal="area_entered" from="LevelEnd" to="Player" method="_on_level_end_area_entered"]
