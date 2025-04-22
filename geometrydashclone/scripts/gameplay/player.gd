@@ -9,9 +9,9 @@ var JUMP_VELOCITY = -1300.0
 var is_orb = false
 var force_orb = 0
 var gravity = 4100
-var player_rotation = 270
-var can_invert = false
-var is_dead = false
+var player_rotation = 395
+var canInvert = false
+
 
 
 ##	This is called at a fixed frame rate by Godot
@@ -23,11 +23,21 @@ func _physics_process(delta):
 		$PlayerBody.rotation_degrees += player_rotation * delta
 
 	else :
-		$PlayerBody.rotation_degrees = round(round($PlayerBody.rotation_degrees/90)*90)
+		var module = int($PlayerBody.rotation_degrees) % 90;
+		if module > 45 :
+			$PlayerBody.rotation_degrees += (90 - module)
+		else :
+			$PlayerBody.rotation_degrees -= module
 
 	##	Jump if the jump action input is pressed and the player is on the floor
 	if Input.is_action_pressed("jump") and on_ground:
 		velocity.y = JUMP_VELOCITY
+		
+		# addition to make jump more responsive to button press and release 
+	#adds ability to do shorter + higher jump in one. also makes jump feel more lively (I think) 
+	#--press of the jump button
+	if Input.is_action_just_released("jump") and velocity.y < ( JUMP_VELOCITY / 5 ):	
+			velocity.y = JUMP_VELOCITY / 5
 
 	## 	Moves the player
 	velocity.x = delta * SPEED
@@ -35,9 +45,10 @@ func _physics_process(delta):
 	##	Applies force to the player depending on the orb type
 	if is_orb and (Input.is_action_just_pressed("jump") or Input.is_action_just_released("jump")):
 		velocity.y = -force_orb
-		if can_invert == true :
+		# added on_floor so jump response works correctly with orbs
+		if canInvert == true and not is_on_floor():
 			gravity = -gravity
-			JUMP_VELOCITY = -JUMP_VELOCITY
+			JUMP_VELOCITY = -JUMP_VELOCITY 
 			player_rotation = -player_rotation
 			is_orb = false
 
@@ -47,10 +58,9 @@ func _physics_process(delta):
 	
 	##	Allows the user to pause the game
 	if Input.is_action_pressed("pause"):
-		if not is_dead:
-			get_tree().paused = true
-			if Global.scene_manager.current_scene.scene_file_path == "res://scenes/gameplay.tscn":
-				Global.scene_manager.current_scene.display_pause_menu_overlay()
+		get_tree().paused = true
+		if Global.scene_manager.current_scene.scene_file_path == "res://scenes/gameplay.tscn":
+			Global.scene_manager.current_scene.display_pause_menu_overlay()
 
 ##	Called upon the player's death
 func death():
@@ -67,7 +77,7 @@ func _on_external_collsion_area_entered(area):
 	if area.is_in_group("orb") :
 		is_orb = true
 		force_orb = area.force
-		can_invert = area.invert
+		canInvert = area.invert
 	if area.is_in_group("trampoline") :
 		velocity.y = -area.force
 		if area.invert == true :
@@ -80,10 +90,10 @@ func _on_external_collsion_area_exited(area):
 	if area.is_in_group("orb") :
 		is_orb = false
 		force_orb = 0
-		can_invert = false
+		canInvert = false
 	if area.is_in_group("trampoline") :
 		force_orb = 0
-		can_invert = false
+		canInvert = false
 
 
 ##	Function to update the sound effects
