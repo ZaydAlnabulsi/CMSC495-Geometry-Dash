@@ -6,9 +6,16 @@ extends Area2D
 var force = 0
 var invert = false
 
+var speed = 600
+var angle_speed = PI * 2
+
+##	Rotates the saw
+func _process(delta: float) -> void:
+	rotation += angle_speed * delta
 
 ##	Sets the appropriate force and sprite texture depending on the type
 func _ready():
+	$Pulse.play("Pulse")
 	"""
 	0: Yellow
 	1: Blue
@@ -21,24 +28,24 @@ func _ready():
 	match type :
 		0 :
 			force = 800 ## 600
-			sprite.texture = load("res://Images/platformPack_tile012.png")
+			sprite.texture = load("res://images/disc_yellow.png")
 		1 :
 			force = 1200
-			sprite.texture = load("res://Images/platformPack_tile011.png")
+			sprite.texture = load("res://images/disc_blue.png")
 		2 :
 			force = 1800
-			sprite.texture = load("res://Images/platformPack_tile023.png")
+			sprite.texture = load("res://images/disc_green.png")
 		3 :
 			force = -2000
 			invert = true
-			sprite.texture = load("res://Images/platformPack_tile024.png")
+			sprite.texture = load("res://images/disc_orange.png")
 		4 :
 			force = -1000
 			invert = true
-			sprite.texture = load("res://Images/platformPack_tile025.png")
+			sprite.texture = load("res://images/disc_purple.png")
 		5 :
 			force = 1900
-			sprite.texture = load("res://Images/platformPack_tile023.png")
+			sprite.texture = load("res://images/disc_green.png")
 		_ :
 			force = 0
-			sprite.texture = load("res://Images/face_h.png")
+			sprite.texture = load("res://images/face_h.png")

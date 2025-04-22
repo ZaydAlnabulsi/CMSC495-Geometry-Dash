@@ -14,8 +14,12 @@ var level_end	##	Level end node
 ##	Loads the appropriate level and sets the variables
 ##	Updates the volumes based on global variables
 func _ready() -> void:
-	var scene = preload("res://scenes/levels/level1.exp.tscn")
-	instance = scene.instantiate()
+	if Global.get_scene_change_root() == 1 :
+		var scene = preload("res://scenes/levels/level1.exp.tscn")
+		instance = scene.instantiate()
+	if Global.get_scene_change_root() == 2 :
+		var scene = preload("res://scenes/levels/level1.tscn")
+		instance = scene.instantiate()
 	audio_stream_player = instance.get_node("AudioStreamPlayer")
 	player = instance.get_node("Player")
 	level_end = instance.get_node("LevelEnd")
@@ -26,7 +30,8 @@ func _ready() -> void:
 ##	Displays the death overlay
 func display_death_overlay() -> void:
 	death_overlay.visible = true
-	get_node("CanvasLayer/DeathOverlay/CompletionLabel").text = "Level Complete: " + str("%0.2f" % (player.position.x/level_end.position.x)) + "%"
+	audio_stream_player.playing = false
+	get_node("CanvasLayer/DeathOverlay/CompletionLabel").text = "Level Complete: " + str("%0.2f" % (100 * player.position.x / level_end.position.x)) + "%"
 
 ##	Displays the pause menu overlay
 func display_pause_menu_overlay() -> void:
@@ -34,7 +39,7 @@ func display_pause_menu_overlay() -> void:
 
 func display_level_end_overlay() -> void:
 	end_overlay.visible = true
-	get_node("CanvasLayer/LevelCompleteOverlay/Label").text = "You Win! You completed " + str("%0.2f" % (player.position.x/level_end.position.x)) + "%"
+	get_node("CanvasLayer/LevelCompleteOverlay/Label").text = "You Win! You completed " + str("%0.2f" % (100 * player.position.x / level_end.position.x)) + "%"
 
 ##	Pause menu overlay unpause button connected function
 ##	Hides the pause menu overlay and unpauses the game
@@ -86,4 +91,9 @@ func _on_new_game_button_pressed() -> void:
 	Global.scene_manager.change_scene("res://scenes/gameplay.tscn")
 
 func _on_return_to_main_menu_button_pressed() -> void:
+	Global.scene_manager.change_scene("res://scenes/main_menu.tscn")
+
+
+func _on_quit_button_pressed() -> void:
+	get_tree().paused = false
 	Global.scene_manager.change_scene("res://scenes/main_menu.tscn")

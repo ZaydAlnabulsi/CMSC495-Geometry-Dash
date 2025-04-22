@@ -1,26 +1,20 @@
-[gd_scene load_steps=28 format=3 uid="uid://kwtgggq20hns"]
+[gd_scene load_steps=27 format=3 uid="uid://kwtgggq20hns"]
 
 [ext_resource type="Script" uid="uid://c5elrpbp3qq2n" path="res://scripts/scenes/settings_menu.gd" id="1_wswnh"]
+[ext_resource type="Texture2D" uid="uid://b060uyotkgai4" path="res://Images/menu_background.png" id="2_n0fy7"]
 [ext_resource type="FontFile" uid="uid://kix12tgfjm8k" path="res://Images/Slackey-Regular.ttf" id="2_wswnh"]
-[ext_resource type="Texture2D" uid="uid://bh6sq2n545mr8" path="res://Images/purple_body_square.png" id="4_bgjg7"]
-[ext_resource type="Texture2D" uid="uid://6eqn3t8uo55v" path="res://Images/platformPack_tile043.png" id="5_48ojb"]
-[ext_resource type="Texture2D" uid="uid://cg8p18rjpells" path="res://Images/platformPack_tile044.png" id="6_n35ux"]
-[ext_resource type="Texture2D" uid="uid://c0dfwxx8krn8j" path="res://Images/platformPack_tile012.png" id="7_n0fy7"]
-[ext_resource type="Texture2D" uid="uid://vmvcnopswbrw" path="res://Images/platformPack_tile011.png" id="8_jpbdv"]
-[ext_resource type="Texture2D" uid="uid://co4ucb8rfp4gk" path="res://Images/platformPack_tile023.png" id="9_puhno"]
-[ext_resource type="Texture2D" uid="uid://ce83b80n15iui" path="res://Images/platformPack_tile024.png" id="10_75x6d"]
-[ext_resource type="Texture2D" uid="uid://b8g5ct5vhxyq2" path="res://Images/platformPack_tile025.png" id="11_x0dr5"]
-[ext_resource type="Texture2D" uid="uid://bvf7jda48x6bx" path="res://Images/platformPack_tile054.png" id="12_gdgfw"]
-
-[sub_resource type="Gradient" id="Gradient_jrqig"]
-colors = PackedColorArray(0, 0, 0, 1, 0.707768, 0.00210505, 0.90159, 1)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_jrqig"]
-gradient = SubResource("Gradient_jrqig")
-fill_to = Vector2(1, 1)
+[ext_resource type="Texture2D" uid="uid://c1q1k5yiv3p2h" path="res://Images/image1.png" id="4_bgjg7"]
+[ext_resource type="Texture2D" uid="uid://cmwjdgfbbljma" path="res://Images/game_icons_spikes.png" id="4_jrqig"]
+[ext_resource type="Texture2D" uid="uid://b6rtxkwswys5f" path="res://Images/disc_blue.png" id="5_48ojb"]
+[ext_resource type="Texture2D" uid="uid://d1amlunwur2t8" path="res://Images/game_icons_saw.png" id="5_n0fy7"]
+[ext_resource type="Texture2D" uid="uid://b1we8qgnnxcnt" path="res://Images/disc_green.png" id="6_n35ux"]
+[ext_resource type="Texture2D" uid="uid://bmeo3nb4ernd1" path="res://Images/disc_purple.png" id="7_n0fy7"]
+[ext_resource type="Texture2D" uid="uid://dio5cruttx8fe" path="res://Images/disc_orange.png" id="8_jpbdv"]
+[ext_resource type="Texture2D" uid="uid://d0qo8wrlovkyu" path="res://Images/disc_yellow.png" id="9_puhno"]
+[ext_resource type="Texture2D" uid="uid://dvywqpicomrii" path="res://Images/btn_orange.png" id="12_gdgfw"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jpbdv"]
-texture = SubResource("GradientTexture2D_jrqig")
+texture = ExtResource("2_n0fy7")
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_labj1"]
 
@@ -64,25 +58,25 @@ corner_radius_bottom_left = 16
 texture = ExtResource("4_bgjg7")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2ctot"]
-texture = ExtResource("5_48ojb")
+texture = ExtResource("4_jrqig")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jrqig"]
-texture = ExtResource("6_n35ux")
+texture = ExtResource("5_n0fy7")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vymnv"]
-texture = ExtResource("7_n0fy7")
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2tyyr"]
-texture = ExtResource("8_jpbdv")
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wambi"]
 texture = ExtResource("9_puhno")
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2tyyr"]
+texture = ExtResource("5_48ojb")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wambi"]
+texture = ExtResource("6_n35ux")
+
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_khnq6"]
-texture = ExtResource("10_75x6d")
+texture = ExtResource("8_jpbdv")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vlw5p"]
-texture = ExtResource("11_x0dr5")
+texture = ExtResource("7_n0fy7")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fmx0a"]
 texture = ExtResource("12_gdgfw")
@@ -280,7 +274,7 @@ theme_override_constants/outline_size = 5
 theme_override_fonts/font = ExtResource("2_wswnh")
 theme_override_font_sizes/font_size = 20
 text = "Players can jump 
-onto purple blocks"
+onto grass blocks"
 
 [node name="Panel2" type="Panel" parent="VBoxContainer/GridContainer3"]
 custom_minimum_size = Vector2(64, 64)

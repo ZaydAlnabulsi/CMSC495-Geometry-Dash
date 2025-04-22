@@ -1,17 +1,11 @@
-[gd_scene load_steps=10 format=3 uid="uid://b71uf4h6gea50"]
+[gd_scene load_steps=9 format=3 uid="uid://b71uf4h6gea50"]
 
 [ext_resource type="Script" uid="uid://cmw1aai77hwm" path="res://scripts/scenes/main_menu.gd" id="1_l6cm7"]
+[ext_resource type="Texture2D" uid="uid://b060uyotkgai4" path="res://Images/menu_background.png" id="2_bqqt6"]
 [ext_resource type="FontFile" uid="uid://kix12tgfjm8k" path="res://Images/Slackey-Regular.ttf" id="3_bqqt6"]
 
-[sub_resource type="Gradient" id="Gradient_ekxnf"]
-colors = PackedColorArray(0, 0, 0, 1, 0.707768, 0.00210505, 0.90159, 1)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_n0fy7"]
-gradient = SubResource("Gradient_ekxnf")
-fill_to = Vector2(1, 1)
-
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bqqt6"]
-texture = SubResource("GradientTexture2D_n0fy7")
+texture = ExtResource("2_bqqt6")
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bqqt6"]
 

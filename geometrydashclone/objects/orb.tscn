@@ -1,17 +1,61 @@
-[gd_scene load_steps=4 format=3 uid="uid://cevo1b1uejnoa"]
+[gd_scene load_steps=7 format=3 uid="uid://cevo1b1uejnoa"]
 
 [ext_resource type="Script" uid="uid://c6h1uqkk1wge3" path="res://scripts/gameplay/orb.gd" id="1_3ycvi"]
-[ext_resource type="Texture2D" uid="uid://c0dfwxx8krn8j" path="res://Images/platformPack_tile012.png" id="2_i1flq"]
+[ext_resource type="Texture2D" uid="uid://d0qo8wrlovkyu" path="res://Images/disc_yellow.png" id="2_3ycvi"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sve6i"]
 size = Vector2(96.5, 136.812)
+
+[sub_resource type="Animation" id="Animation_i1flq"]
+resource_name = "Pulse"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.433333, 0.966667),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.3, 1.3), Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_3ycvi"]
+resource_name = "pulse"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.1, 1.1), Vector2(1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_8wqbk"]
+_data = {
+&"Pulse": SubResource("Animation_i1flq"),
+&"pulse": SubResource("Animation_3ycvi")
+}
 
 [node name="yellowOrb" type="Area2D" groups=["orb"]]
 script = ExtResource("1_3ycvi")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_i1flq")
+texture = ExtResource("2_3ycvi")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(1, -2)
 shape = SubResource("RectangleShape2D_sve6i")
+
+[node name="Pulse" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_8wqbk")
+}

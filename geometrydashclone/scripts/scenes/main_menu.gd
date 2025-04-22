@@ -3,7 +3,7 @@ extends Control
 ##	Main menu new game button connected function
 ##	Opens the gameplay scene
 func _on_new_game_button_pressed() -> void:
-	Global.scene_manager.change_scene("res://scenes/gameplay.tscn")
+	Global.scene_manager.change_scene("res://scenes/level_select.tscn")
 
 ##	Main menu settings button connected function
 ##	Opens the settings scene
