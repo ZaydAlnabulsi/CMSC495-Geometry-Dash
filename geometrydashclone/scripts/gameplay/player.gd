@@ -11,7 +11,7 @@ var force_orb = 0
 var gravity = 4100
 var player_rotation = 395
 var canInvert = false
-
+var is_dead = false
 
 
 ##	This is called at a fixed frame rate by Godot
