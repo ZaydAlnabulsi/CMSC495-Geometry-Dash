@@ -1,19 +1,19 @@
 [gd_scene load_steps=32 format=3 uid="uid://4indvae0g4bu"]
 
 [ext_resource type="Script" uid="uid://bxvbyqn6ykh8o" path="res://scripts/scenes/how_to_play.gd" id="1_oityv"]
-[ext_resource type="Texture2D" uid="uid://b060uyotkgai4" path="res://Images/menu_background.png" id="2_3cyrb"]
-[ext_resource type="FontFile" uid="uid://kix12tgfjm8k" path="res://Images/Slackey-Regular.ttf" id="3_e3seu"]
-[ext_resource type="Texture2D" uid="uid://c1q1k5yiv3p2h" path="res://Images/image1.png" id="4_8o3bc"]
-[ext_resource type="Texture2D" uid="uid://cmwjdgfbbljma" path="res://Images/game_icons_spikes.png" id="5_rxf65"]
-[ext_resource type="Texture2D" uid="uid://d1amlunwur2t8" path="res://Images/game_icons_saw.png" id="6_2woeq"]
-[ext_resource type="Texture2D" uid="uid://d0qo8wrlovkyu" path="res://Images/disc_yellow.png" id="7_swued"]
-[ext_resource type="Texture2D" uid="uid://b6rtxkwswys5f" path="res://Images/disc_blue.png" id="8_bhlba"]
-[ext_resource type="Texture2D" uid="uid://b1we8qgnnxcnt" path="res://Images/disc_green.png" id="9_b0nfl"]
-[ext_resource type="Texture2D" uid="uid://dio5cruttx8fe" path="res://Images/disc_orange.png" id="10_2nlg1"]
-[ext_resource type="Texture2D" uid="uid://b6f6huc3r5ig0" path="res://Images/btn_yellow.png" id="11_jfkb7"]
-[ext_resource type="Texture2D" uid="uid://c0m84iyf4k7q" path="res://Images/btn_blue.png" id="12_m2x7g"]
-[ext_resource type="Texture2D" uid="uid://bag40bavxpxu6" path="res://Images/btn_green.png" id="13_jc7j2"]
-[ext_resource type="Texture2D" uid="uid://dvywqpicomrii" path="res://Images/btn_orange.png" id="14_sf8ws"]
+[ext_resource type="Texture2D" uid="uid://b060uyotkgai4" path="res://images/menu_background.png" id="2_3cyrb"]
+[ext_resource type="FontFile" uid="uid://kix12tgfjm8k" path="res://images/Slackey-Regular.ttf" id="3_e3seu"]
+[ext_resource type="Texture2D" uid="uid://c1q1k5yiv3p2h" path="res://images/image1.png" id="4_8o3bc"]
+[ext_resource type="Texture2D" uid="uid://cmwjdgfbbljma" path="res://images/game_icons_spikes.png" id="5_rxf65"]
+[ext_resource type="Texture2D" uid="uid://d1amlunwur2t8" path="res://images/game_icons_saw.png" id="6_2woeq"]
+[ext_resource type="Texture2D" uid="uid://d0qo8wrlovkyu" path="res://images/disc_yellow.png" id="7_swued"]
+[ext_resource type="Texture2D" uid="uid://b6rtxkwswys5f" path="res://images/disc_blue.png" id="8_bhlba"]
+[ext_resource type="Texture2D" uid="uid://b1we8qgnnxcnt" path="res://images/disc_green.png" id="9_b0nfl"]
+[ext_resource type="Texture2D" uid="uid://dio5cruttx8fe" path="res://images/disc_orange.png" id="10_2nlg1"]
+[ext_resource type="Texture2D" uid="uid://b6f6huc3r5ig0" path="res://images/btn_yellow.png" id="11_jfkb7"]
+[ext_resource type="Texture2D" uid="uid://c0m84iyf4k7q" path="res://images/btn_blue.png" id="12_m2x7g"]
+[ext_resource type="Texture2D" uid="uid://bag40bavxpxu6" path="res://images/btn_green.png" id="13_jc7j2"]
+[ext_resource type="Texture2D" uid="uid://dvywqpicomrii" path="res://images/btn_orange.png" id="14_sf8ws"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6x7oh"]
 texture = ExtResource("2_3cyrb")
@@ -181,7 +181,7 @@ theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 5
 theme_override_fonts/font = ExtResource("3_e3seu")
 theme_override_font_sizes/font_size = 24
-text = "Spacebar / Left Click to jump.
+text = "Spacebar / Left Click / UP Arrow to jump.
 Escape to pause game."
 horizontal_alignment = 1
 
