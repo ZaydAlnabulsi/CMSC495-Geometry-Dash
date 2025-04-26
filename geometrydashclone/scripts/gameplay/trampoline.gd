@@ -35,14 +35,13 @@ func _ready():
 		5 :
 			force = -15
 			invert = true
-			sprite.texture = load("res://images/btn_blue.png")
+			sprite.texture = load("res://images/btn_purple.png")
 		6 :
 			force = -2000
 			sprite.texture = load("res://images/btn_blue.png")
 		7 :
 			force = -1300
 			sprite.texture = load("res://images/btn_blue.png")
-		
 		8:
 			force = 2000
 			sprite.texture = load("res://images/btn_blue.png")
