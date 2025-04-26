@@ -766,7 +766,7 @@ position = Vector2(15604, -1353)
 rotation = 3.14159
 
 [node name="PurpleBlock118Down10" parent="." instance=ExtResource("2_8m7gg")]
-position = Vector2(15345, -1409)
+position = Vector2(15290, -1405)
 rotation = 3.14159
 
 [node name="PurpleBlock136Down2" parent="." instance=ExtResource("2_8m7gg")]
