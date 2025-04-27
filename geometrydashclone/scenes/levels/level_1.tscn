@@ -1457,7 +1457,7 @@ position = Vector2(21250, -1604)
 position = Vector2(21090, -1604)
 
 [node name="trampoline85" parent="." instance=ExtResource("8_n8gco")]
-position = Vector2(21193, -1673)
+position = Vector2(21210, -1673)
 scale = Vector2(0.8, 0.8)
 type = 4
 
