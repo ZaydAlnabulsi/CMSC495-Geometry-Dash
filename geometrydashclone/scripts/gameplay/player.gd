@@ -60,13 +60,15 @@ func _physics_process(delta):
 
 ##	Called upon the player's death
 func death():
-	SPEED = 0
-	gravity = 0
-	velocity.y = 0
-	velocity.x = 0
 	is_dead = true
 	$PlayerBody.visible = false
 	$Death.play()
+	
+##	Called upon beating the level
+func applause():
+	is_dead = true
+	$PlayerBody.visible = false
+	$Applause.play()
 
 ##	Sets the force on entering an orb
 func _on_external_collsion_area_entered(area):
@@ -95,3 +97,4 @@ func _on_external_collsion_area_exited(area):
 ##	Function to update the sound effects
 func update_sound_effects_volume() -> void:
 	$Death.volume_db = -30 + (Global.sound_effects_volume * 3)
+	$Applause.volume_db = -30 + (Global.sound_effects_volume * 3)

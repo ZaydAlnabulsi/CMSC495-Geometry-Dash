@@ -1,10 +1,11 @@
-[gd_scene load_steps=10 format=3 uid="uid://dnx6h0tsjr3m1"]
+[gd_scene load_steps=11 format=3 uid="uid://dnx6h0tsjr3m1"]
 
 [ext_resource type="Script" uid="uid://ce7cs26b413d3" path="res://scripts/gameplay/player.gd" id="1_qhqgy"]
 [ext_resource type="Texture2D" uid="uid://b6i3li2u8vc6e" path="res://images/game_icons_cube.png" id="2_3rerk"]
 [ext_resource type="Script" uid="uid://egaf8h4ntsny" path="res://scripts/gameplay/external_collsion.gd" id="4_f46kd"]
 [ext_resource type="Script" uid="uid://dmhqd64kpim3l" path="res://scripts/gameplay/player_death.gd" id="4_nmc1l"]
 [ext_resource type="AudioStream" uid="uid://b7xw1xdxceo3y" path="res://sounds/pixel-explosion-319166.mp3" id="6_3rerk"]
+[ext_resource type="AudioStream" uid="uid://bjkc7b66ltetq" path="res://sounds/applause-105579.mp3" id="7_3rfka"]
 [ext_resource type="PackedScene" uid="uid://bwmo2kx7ojl7n" path="res://objects/trail.tscn" id="7_i825w"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dqkch"]
@@ -43,6 +44,9 @@ stream = ExtResource("6_3rerk")
 
 [node name="trail" parent="." instance=ExtResource("7_i825w")]
 default_color = Color(0.206903, 0.583622, 0.263315, 1)
+
+[node name="Applause" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("7_3rfka")
 
 [connection signal="area_entered" from="ExternalCollsion" to="." method="_on_external_collsion_area_entered"]
 [connection signal="area_entered" from="ExternalCollsion" to="ExternalCollsion" method="_on_area_entered"]
