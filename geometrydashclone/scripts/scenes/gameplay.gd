@@ -40,6 +40,7 @@ func display_pause_menu_overlay() -> void:
 ##	Displays the level end overlay
 func display_level_end_overlay() -> void:
 	end_overlay.visible = true
+	audio_stream_player.playing = false
 
 ##	Pause menu overlay unpause button connected function
 ##	Hides the pause menu overlay and unpauses the game
