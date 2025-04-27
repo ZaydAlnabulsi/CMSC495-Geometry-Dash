@@ -5,6 +5,7 @@ extends Area2D
 @onready var sprite = $Sprite2D
 var force = 0
 var invert = false
+var interacted = false
 
 ##	Sets the appropriate force and sprite texture depending on the type
 func _ready():

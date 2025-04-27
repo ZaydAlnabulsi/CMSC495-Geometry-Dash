@@ -5,6 +5,7 @@ extends Area2D
 @onready var sprite = $Sprite2D
 var force = 0
 var invert = false
+var interacted = false
 
 var speed = 600
 var angle_speed = PI * 2
