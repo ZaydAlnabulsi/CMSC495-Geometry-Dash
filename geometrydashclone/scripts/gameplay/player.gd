@@ -73,15 +73,19 @@ func applause():
 ##	Sets the force on entering an orb
 func _on_external_collsion_area_entered(area):
 	if area.is_in_group("orb") :
-		is_orb = true
-		force_orb = area.force
-		can_invert = area.invert
+		if area.interacted == false :
+			is_orb = true
+			force_orb = area.force
+			can_invert = area.invert
+			area.interacted = true
 	if area.is_in_group("trampoline") :
-		velocity.y = -area.force
-		if area.invert == true :
-			gravity = -gravity
-			JUMP_VELOCITY = -JUMP_VELOCITY
-			player_rotation = -player_rotation
+		if area.interacted == false :
+			velocity.y = -area.force
+			area.interacted = true
+			if area.invert == true :
+				gravity = -gravity
+				JUMP_VELOCITY = -JUMP_VELOCITY
+				player_rotation = -player_rotation
 
 ##	Resets the force on exiting the orb
 func _on_external_collsion_area_exited(area):
