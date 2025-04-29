@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://cevo1b1uejnoa"]
 
 [ext_resource type="Script" uid="uid://c6h1uqkk1wge3" path="res://scripts/gameplay/orb.gd" id="1_3ycvi"]
-[ext_resource type="Texture2D" uid="uid://d0qo8wrlovkyu" path="res://Images/disc_yellow.png" id="2_3ycvi"]
+[ext_resource type="Texture2D" uid="uid://d0qo8wrlovkyu" path="res://images/disc_yellow.png" id="2_3ycvi"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sve6i"]
 size = Vector2(96.5, 136.812)
