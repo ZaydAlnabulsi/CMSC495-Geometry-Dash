@@ -6,4 +6,4 @@ var angle_speed = PI * 2
 
 ##	Rotates the saw
 func _process(delta: float) -> void:
-	rotation += angle_speed * delta
+	$Sprite2D.rotation += angle_speed * delta
