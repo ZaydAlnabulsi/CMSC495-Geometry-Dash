@@ -81,7 +81,7 @@ func _on_external_collsion_area_entered(area):
 	if area.is_in_group("trampoline") :
 		if area.interacted == false :
 			velocity.y = -area.force
-			area.interacted = true
+			#area.interacted = true
 			if area.invert == true :
 				gravity = -gravity
 				JUMP_VELOCITY = -JUMP_VELOCITY
